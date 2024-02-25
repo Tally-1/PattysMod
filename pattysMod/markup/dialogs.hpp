@@ -1,0 +1,1 @@
+#include "dialogs\life_GUI.hpp"

@@ -1,0 +1,13 @@
+[Life-system]
+
+Building the GUI:                             ~3 hours
+Implementing the mechanics for multiplayer:   ~3 hours
+Testing/Bugfixing:                            ~2 hours
+
+Estimated time: ~8 hours
+Estimated Price: 60-100 USD
+
+Comment:
+I am not familiar with the ingame ticket system, however it seems like a practical way of going about it.
+Alternatively I'd build a similar system from scratch.
+Keeping the old menu style should not be an issue.
