@@ -30,28 +30,32 @@ class CfgFunctions
 		class life_manager
 		{
 			file = "\pattysMod\functions\dialogs\life_manager";
-			class openLifeGUI                                {};
-			class initLifeGUI                                {};
-			class initLifeGUIFrame                           {};
-			class initLifeGUIList                            {};
-			class lifeGUIListaddPlayers                      {};
-			class lifeMenuLbChange                           {};
+			class openLifeGUI                               {};
+			class initLifeGUI                               {};
+			class initLifeGUIFrame                          {};
+			class initLifeGUIList                           {};
+			class lifeGUIListaddPlayers                     {};
+			class lifeMenuLbChange                          {};
 			
-			class initLifeGUIButtons                         {};
-			class lifeGUIComponents                          {};
-			class LifeManagerDisableButtons                  {};
-			class lifeGUIListColorAndIcon                    {};
+			class initLifeGUIButtons                        {};
+			class lifeGUIComponents                         {};
+			class LifeManagerDisableButtons                 {};
+			class lifeGUIListColorAndIcon                   {};
 			
-			class lifeGUIalterLives                          {};
-			class getLives                                   {};
-			class showLives                                  {};
-			class getPlayers                                 {};
+			class lifeGUIalterLives                         {};
+			class getLives                                  {};
+			class showLives                                 {};
+			class getPlayers                                {};
+
+			class setDefaultLives                           {};
+			class addBotLives                               {};
 		};
 
 		class init
 		{
 			file = "\pattysMod\functions\init";
-			class initPatty {postInit = 1;};
+			class initPatty  {postInit = 1;};
+			class initClient {};
 
 
 		};

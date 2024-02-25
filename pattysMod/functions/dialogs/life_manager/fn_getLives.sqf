@@ -8,6 +8,7 @@ private _templatesUsed = getMissionConfigValue "RespawnTemplates";
 if(isNil "_templatesUsed")
 exitWith{
 	Hint parseText("No respawn template defined!<br/>Set up respawn in mission editor.");
+	"No respawn template defined!<br/>Set up respawn in mission editor." call PTDBG;
 	nil;
 };
 

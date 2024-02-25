@@ -5,6 +5,9 @@ params[
 private _players = [] call PTTY_fnc_getPlayers;
 private _myIndex = 0;
 
+// Just an extra security
+_players insert [0,allPlayers,true];
+
 {
 	private _index = _listbox lbAdd (name _x);
 	_listbox lbSetData [_index,getPlayerUID _x];
@@ -13,7 +16,7 @@ private _myIndex = 0;
 		_myIndex = _index;
 	};
 
-	if (getPlayerUID _x in PTTY_adminUIDs) then {
+	if ([_x] call PTTY_fnc_isAdmin) then {
 		_listbox lbSetPicture [_index,"a3\ui_f\data\GUI\Cfg\Ranks\general_gs.paa"];
 		_listbox lbSetColor [_index,[0,0.627,1,1]];
 	};

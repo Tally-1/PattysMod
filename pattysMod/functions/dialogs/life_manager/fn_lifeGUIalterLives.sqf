@@ -50,23 +50,32 @@ switch _action do {
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 	};
 
-	case "reset": {
-		if (_unitsLives isNotEqualTo PTTY_defaultLives) then {
-			[_unit,PTTY_defaultLives - _unitsLives] call BIS_fnc_respawnTickets;
-			_listbox lbSetTextRight [_index,str(PTTY_defaultLives)];
+	case "reset": { 
+		private _default = PTTY_defaultLives;
+		private _isMedic = [_unit] call PTTY_fnc_isMedic;
+
+		if(_isMedic)then{_default=_default+1};
+
+		if (_unitsLives isNotEqualTo _default) then {
+			[_unit, _default - _unitsLives] call BIS_fnc_respawnTickets;
+			_listbox lbSetTextRight [_index,str(_default)];
 			_listbox lbSetColorRight [_index,[0,1,0,1]];
 		};
 	};
 
 	case "resetAll": {
-		for "_i" from 0 to (lbSize _listbox)-1 do {
+		for "_i" from 0 to (lbSize _listbox)-1 do { 
 			private _uid = _listbox lbData _i; 
 			private _unit = [_uid] call PTTY_fnc_findPlayerByUID;
 			private _unitsLives = [_unit] call PTTY_fnc_getLives;
+			private _default = PTTY_defaultLives;
+			private _isMedic = [_unit] call PTTY_fnc_isMedic;
 
-			if (_unitsLives isNotEqualTo PTTY_defaultLives) then {
-				[_unit,PTTY_defaultLives - _unitsLives] call BIS_fnc_respawnTickets;
-				_listbox lbSetTextRight [_i,str(PTTY_defaultLives)];
+			if(_isMedic)then{_default=_default+1};
+
+			if (_unitsLives isNotEqualTo _default) then {
+				[_unit,_default - _unitsLives] call BIS_fnc_respawnTickets;
+				_listbox lbSetTextRight [_i,str(_default)];
 				_listbox lbSetColorRight [_i,[0,1,0,1]];
 			};
 		};
