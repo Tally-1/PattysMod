@@ -3,7 +3,7 @@ params[
 	["_listBox", nil, [controlNull]],
 	["_index",   nil,           [0]]
 ];
-private _default    = PTTY_defaultLives;
+private _default    = PTTY_defaultLives-1;
 private _isMedic    = [_man] call PTTY_fnc_isMedic;
 private _unitsLives = [_man] call PTTY_fnc_getLives;
 
