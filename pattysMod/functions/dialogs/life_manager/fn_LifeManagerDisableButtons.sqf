@@ -9,14 +9,11 @@ params[
 	["_closeBtn",    nil, [controlNull]]
 	
 ];
-private _isMedic = [player] call PTTY_fnc_isMedic;
 
-_giveBtn   ctrlEnable false;
-_removeBtn ctrlEnable false;
-_resetBtn  ctrlEnable false;
-_closeBtn  ctrlEnable false;
-
-if!(_isMedic)then{_transferBtn ctrlEnable false;};
-
+_giveBtn     ctrlEnable false;
+_removeBtn   ctrlEnable false;
+_resetBtn    ctrlEnable false;
+_resetAllBtn ctrlEnable false;
+_transferBtn ctrlEnable false;
 
 true;

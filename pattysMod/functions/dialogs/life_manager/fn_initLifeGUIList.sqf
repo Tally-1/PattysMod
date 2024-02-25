@@ -1,12 +1,12 @@
 params[
-	["_list", nil, [controlNull]]
+	["_listbox", nil, [controlNull]]
 ];
-private _players = [] call PTTY_fnc_getPlayers;
+[_listbox] call PTTY_fnc_lifeGUIListaddPlayers;
 
-for "_i"from 0 to (count _players)-1 do { 
-	[
-		_players#_i,
-		_list
+_listbox ctrlAddEventHandler ["LBSelChanged", {_this call PTTY_fnc_lifeMenuLbChange}];
 
-	] call PTTY_fnc_addPlayerTolifeGUIList;
-};
+[_listbox, 0] call PTTY_fnc_lifeMenuLbChange;
+
+_listbox ctrlSetBackgroundColor [0,0,0, 0.5];
+
+true;
