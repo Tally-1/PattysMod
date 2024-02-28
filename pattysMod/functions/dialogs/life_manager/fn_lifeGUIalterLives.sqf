@@ -1,6 +1,7 @@
 /*
 	File: fn_alterLives.sqf
 	Author: Dom
+	Edited by: Tally
 	Description: Adjusts the players lives depending on selection
 */
 params [
@@ -13,6 +14,7 @@ private _index      = lbCurSel _listbox;
 private _uid        = _listbox lbData _index;
 private _unit       = [_uid]  call PTTY_fnc_findPlayerByUID;
 private _unitsLives = [_unit] call PTTY_fnc_getLives;
+Private _title      = "New Life!";//for the notification.
 
 switch _action do {
 	
@@ -36,8 +38,8 @@ switch _action do {
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
-		private _txt = [name player, " has transferred a life to you"] joinString "";
-		[_txt] remoteExecCall ["hint", _unit];
+		private _txt   = [name player, " has transferred a life to you"] joinString "";	
+		[false, _title, _txt] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "give": {
@@ -47,7 +49,7 @@ switch _action do {
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
 		private _txt = ["You have been given a life"] joinString "";
-		[_txt] remoteExecCall ["hint", _unit];
+		[false, _title, _txt] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "remove": {

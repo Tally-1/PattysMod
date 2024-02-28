@@ -23,8 +23,9 @@ class CfgFunctions
 		class dialogs_misc
 		{
 			file = "\pattysMod\functions\dialogs\misc";
-			class normalizeTextSize  {};
-			class setCtrlArrTxtSizes {};
+			class normalizeTextSize        {};
+			class setCtrlArrTxtSizes       {};
+			class setNotificationIconColor {};
 
 		};
 
@@ -51,6 +52,8 @@ class CfgFunctions
 			class setDefaultLives                           {};
 			class addBotLives                               {};
 			class updateLifeManager                         {};
+			class livesLeftNotification                     {};
+			class livesLeftColor                            {};
 		};
 
 		class init
