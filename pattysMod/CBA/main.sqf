@@ -1,4 +1,4 @@
-private _categoryName                    = "Pattys Mod 0.2";
+private _categoryName                    = "Pattys Mod 0.3";
 private _subCategoryLifeManager_Keybinds = "Life Manager Keybindings";
 private _subCategoryLifeManager_Settings = "Life Manager Settings";
 

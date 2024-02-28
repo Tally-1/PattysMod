@@ -9,6 +9,7 @@ class CfgFunctions
 			class getPlayerUID    {};
 			class isAdmin         {};
 			class isMedic         {};
+			class rgbToA3         {};
 			
 		};
 
@@ -49,6 +50,7 @@ class CfgFunctions
 
 			class setDefaultLives                           {};
 			class addBotLives                               {};
+			class updateLifeManager                         {};
 		};
 
 		class init

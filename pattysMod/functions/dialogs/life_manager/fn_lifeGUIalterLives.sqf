@@ -24,6 +24,7 @@ switch _action do {
 				_myIndex = _i;
 			};
 		};
+
 		[player,-1] call BIS_fnc_respawnTickets;
 		[_unit,1] call BIS_fnc_respawnTickets;
 
@@ -34,6 +35,9 @@ switch _action do {
 		_unitsLives = _unitsLives + 1;
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
+
+		private _txt = [name player, " has transferred a life to you"] joinString "";
+		[_txt] remoteExecCall ["hint", _unit];
 	};
 
 	case "give": {
@@ -41,6 +45,9 @@ switch _action do {
 		_unitsLives = _unitsLives + 1;
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
+
+		private _txt = ["You have been given a life"] joinString "";
+		[_txt] remoteExecCall ["hint", _unit];
 	};
 
 	case "remove": {
@@ -81,5 +88,7 @@ switch _action do {
 		};
 	};
 };
+
+[] remoteExecCall ["PTTY_fnc_updateLifeManager", -clientOwner];
 
 _listbox lbSetCurSel _index;
