@@ -9,12 +9,13 @@ params [
 ];
 private _display    = uiNamespace getVariable "PTTY_LifeManager";
 private _components = [_display] call PTTY_fnc_lifeGUIComponents;
-private _listbox    = _components#1;//_display displayCtrl 1500;
+private _listbox    = _components#1;
 private _index      = lbCurSel _listbox;
 private _uid        = _listbox lbData _index;
 private _unit       = [_uid]  call PTTY_fnc_findPlayerByUID;
 private _unitsLives = [_unit] call PTTY_fnc_getLives;
-Private _title      = "New Life!";//for the notification.
+private _title      = "New Life!";                            // For the notification.
+private _icon       = "pattysMod\images\SkullBones_Icon.paa"; // For the notification.
 
 switch _action do {
 	
@@ -39,7 +40,7 @@ switch _action do {
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
 		private _txt   = [name player, " has transferred a life to you"] joinString "";	
-		[false, _title, _txt] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "give": {
@@ -49,7 +50,7 @@ switch _action do {
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
 		private _txt = ["You have been given a life"] joinString "";
-		[false, _title, _txt] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "remove": {

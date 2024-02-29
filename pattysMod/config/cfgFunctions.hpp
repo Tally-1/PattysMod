@@ -64,6 +64,13 @@ class CfgFunctions
 
 
 		};
+
+		class events
+		{
+			file = "\pattysMod\functions\events";
+			class respawnEh {};
+			class killedEh  {};
+		};
 	};
 
 };
