@@ -1,3 +1,4 @@
+if(!hasInterface)exitWith{};
 
 private _default    = PTTY_defaultLives;
 private _amount     = _default + 1;
