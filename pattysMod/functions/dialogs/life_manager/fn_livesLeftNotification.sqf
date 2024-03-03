@@ -1,8 +1,9 @@
 params[
-	["_respawn",    false, [true]],
-	["_customTitl", nil,     [""]],
-	["_customText", nil,     [""]],
-	["_customIcon", nil,     [""]]
+	["_respawn",     false, [true]],
+	["_customTitl",  nil,     [""]],
+	["_customText",  nil,     [""]],
+	["_customIcon",  nil,     [""]],
+	["_customColor", nil,     [[]]]
 ];
 
 private _lives    = [player] call PTTY_fnc_getLives;
@@ -17,11 +18,12 @@ if(_respawn)           then{_title = "LIFE LOST!"};
 
 private _text = parseText(["You have ", _lives, _strLife, " left!"]joinString"");
 
-if(!isNil "_customTitl") then{_title = _customTitl;};
-if(!isNil "_customText") then{_text  = _customText;};
-if(!isNil "_customIcon") then{
+if(!isNil "_customTitl")  then{_title = _customTitl;};
+if(!isNil "_customText")  then{_text  = _customText;};
+if(!isNil "_customColor") then{_color = _customColor;};
+if(!isNil "_customIcon")  then{
 	_iconText = "";
-	_icon     = _customIcon; 
+	_icon     = _customIcon;
 };
 
 _color call PTTY_fnc_setNotificationIconColor;

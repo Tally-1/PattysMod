@@ -39,8 +39,9 @@ switch _action do {
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
+		private _color = [0.11, 0.87, 0.43, 1];
 		private _txt   = [name player, " has transferred a life to you"] joinString "";	
-		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+		[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "give": {
@@ -49,8 +50,9 @@ switch _action do {
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
-		private _txt = ["You have been given a life by ", name player," (Admin)"] joinString "";
-		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+		private _color = [0.11, 0.87, 0.43, 1];
+		private _txt   = ["You have been given a life by ", name player," (Admin)"] joinString "";
+		[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "remove": {
@@ -59,6 +61,7 @@ switch _action do {
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
+		private _color = [0.83,0.4,0.08,1];
 		private _icon  = "\pattysMod\images\Wounded_Icon.paa";
 		private _title = "Life removed";
 		private _txt   = ["One of your lives was removed by ", name player," (Admin)"] joinString "";
@@ -76,10 +79,11 @@ switch _action do {
 			_listbox lbSetTextRight [_index,str(_default)];
 			_listbox lbSetColorRight [_index,[0,1,0,1]];
 
+			private _color = [0.99, 0.89,0.77, 1];
 			private _icon  = "\pattysMod\images\Wounded_Icon.paa";
 			private _title = "Lives reset";
 			private _txt   = ["Your life-count was reset by ", name player," (Admin)"] joinString "";
-			[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+			[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 		};
 	};
 
@@ -98,10 +102,11 @@ switch _action do {
 				_listbox lbSetTextRight [_i,str(_default)];
 				_listbox lbSetColorRight [_i,[0,1,0,1]];
 
+				private _color = [0.99, 0.89,0.77, 1];
 				private _icon  = "\pattysMod\images\Wounded_Icon.paa";
 				private _title = "Lives reset";
 				private _txt   = [name player,"(Admin) Has reset lives for all players."] joinString "";
-				[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
+				[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", -clientOwner];
 			};
 		};
 	};
