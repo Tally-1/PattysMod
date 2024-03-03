@@ -1,8 +1,8 @@
 params[
-	["_respawn",     false, [true]],
-	["_customTitl", nil,      [""]],
-	["_customText",  nil,     [""]],
-	["_customIcon",  nil,     [""]]
+	["_respawn",    false, [true]],
+	["_customTitl", nil,     [""]],
+	["_customText", nil,     [""]],
+	["_customIcon", nil,     [""]]
 ];
 
 private _lives    = [player] call PTTY_fnc_getLives;

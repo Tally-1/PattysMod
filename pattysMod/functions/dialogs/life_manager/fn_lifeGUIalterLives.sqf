@@ -49,7 +49,7 @@ switch _action do {
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
 
-		private _txt = ["You have been given a life"] joinString "";
+		private _txt = ["You have been given a life by ", name player," (Admin)"] joinString "";
 		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
@@ -58,6 +58,11 @@ switch _action do {
 		_unitsLives = _unitsLives - 1;
 		_listbox lbSetTextRight [_index,str(_unitsLives)];
 		[_unitsLives,_unit,_listbox,_index] call PTTY_fnc_lifeGUIListColorAndIcon;
+
+		private _icon  = "\pattysMod\images\Wounded_Icon.paa";
+		private _title = "Life removed";
+		private _txt   = ["One of your lives was removed by ", name player," (Admin)"] joinString "";
+		[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 	};
 
 	case "reset": { 
@@ -70,16 +75,21 @@ switch _action do {
 			[_unit, _default - _unitsLives] call BIS_fnc_respawnTickets;
 			_listbox lbSetTextRight [_index,str(_default)];
 			_listbox lbSetColorRight [_index,[0,1,0,1]];
+
+			private _icon  = "\pattysMod\images\Wounded_Icon.paa";
+			private _title = "Lives reset";
+			private _txt   = ["Your life-count was reset by ", name player," (Admin)"] joinString "";
+			[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 		};
 	};
 
 	case "resetAll": {
 		for "_i" from 0 to (lbSize _listbox)-1 do { 
-			private _uid = _listbox lbData _i; 
-			private _unit = [_uid] call PTTY_fnc_findPlayerByUID;
+			private _uid        = _listbox lbData _i; 
+			private _unit       = [_uid] call PTTY_fnc_findPlayerByUID;
 			private _unitsLives = [_unit] call PTTY_fnc_getLives;
-			private _default = PTTY_defaultLives;
-			private _isMedic = [_unit] call PTTY_fnc_isMedic;
+			private _default    = PTTY_defaultLives;
+			private _isMedic    = [_unit] call PTTY_fnc_isMedic;
 
 			if(_isMedic)then{_default=_default+1};
 
@@ -87,11 +97,17 @@ switch _action do {
 				[_unit,_default - _unitsLives] call BIS_fnc_respawnTickets;
 				_listbox lbSetTextRight [_i,str(_default)];
 				_listbox lbSetColorRight [_i,[0,1,0,1]];
+
+				private _icon  = "\pattysMod\images\Wounded_Icon.paa";
+				private _title = "Lives reset";
+				private _txt   = [name player,"(Admin) Has reset lives for all players."] joinString "";
+				[false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _unit];
 			};
 		};
 	};
 };
 
+//This should in theory update the Menu for all players.
 [] remoteExecCall ["PTTY_fnc_updateLifeManager", -clientOwner];
 
 _listbox lbSetCurSel _index;
