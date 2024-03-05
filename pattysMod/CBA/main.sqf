@@ -1,4 +1,4 @@
-PTTY_Version = 0.37;
+PTTY_Version = 0.38;
 
 private _categoryName                    = ["Pattys Mod ", PTTY_Version] joinString "";
 private _subCategoryLifeManager_Keybinds = "Life Manager Keybindings";

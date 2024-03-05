@@ -54,6 +54,7 @@ class CfgFunctions
 			class updateLifeManager                         {};
 			class livesLeftNotification                     {};
 			class livesLeftColor                            {};
+			class livesLeftIcon                             {};
 		};
 
 		class init
