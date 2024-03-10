@@ -6,9 +6,9 @@ addMissionEventHandler ["EntityKilled", {
 	private _lives = [_man] call PTTY_fnc_getLives;
 	if(_lives > 0)exitWith{};
 	// private _excluded = 0-(owner _man);
-	private _title    = "Player eliminated!";
-	private _text     = [name _man, " died and has no more lives..."] joinString "";
-	private _icon     = "pattysMod\images\SkullBones_Icon.paa";
+	private _title    = "ALERT:";
+	private _text     = [name _man, " Has been eliminated"] joinString "";
+	private _icon     = "pattysMod\images\Dead4.paa";
 	[
 		true,
 		_title,

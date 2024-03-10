@@ -14,7 +14,7 @@ private _icon     = [_lives] call PTTY_fnc_livesLeftIcon;
 private _color    = [1,1,1,1];//[_lives] call PTTY_fnc_livesLeftColor;
 
 if(_lives isEqualTo 1) then{_strLife = " life"};
-if(_respawn)           then{_title = "LIFE LOST!"};
+if(_respawn)           then{_title = "Caution!"};
 
 private _text = parseText(["You have ", _lives, _strLife, " left!"]joinString"");
 
