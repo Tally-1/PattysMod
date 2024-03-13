@@ -44,17 +44,30 @@ class CfgFunctions
 			class LifeManagerDisableButtons                 {};
 			class lifeGUIListColorAndIcon                   {};
 			
-			class lifeGUIalterLives                         {};
 			class getLives                                  {};
 			class showLives                                 {};
 			class getPlayers                                {};
 
 			class setDefaultLives                           {};
-			class addBotLives                               {};
+			class setBotLives                               {};
 			class updateLifeManager                         {};
 			class livesLeftNotification                     {};
 			class livesLeftColor                            {};
 			class livesLeftIcon                             {};
+		};
+
+		class lifeAlterActions 
+		{
+			file = "\pattysMod\functions\dialogs\life_manager\alterActions";
+			class lifeGUIalterLives     {};
+			class addLifeToAi           {};
+			class removeLifeFromAi      {};
+
+			class lifeGUItransferAction {};
+			class lifeGUIgiveAction     {};
+			class lifeGUIremoveAction   {};
+			class lifeGUIresetAction    {};
+			class lifeGUIresetAllAction {};
 		};
 
 		class init

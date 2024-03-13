@@ -1,10 +1,10 @@
 private _showMsg = missionNamespace getVariable ["PTTY_Debug", false];
 params[ 
-	["_text",        nil,            [""]],
-    ["_print",       _showMsg,     [true]],
-    ["_log",         _showMsg,     [true]],
-    ["_displayType", 0,               [0]],
-    ["_signature",   "Pattys Mod: ", [""]]
+	["_text",        nil           ],
+    ["_print",       _showMsg      ],
+    ["_log",         _showMsg      ],
+    ["_displayType", 0             ],
+    ["_signature",   "Pattys Mod: "]
 ];
 
 if(typeName _this isEqualTo    "STRING") then{_text = _this};

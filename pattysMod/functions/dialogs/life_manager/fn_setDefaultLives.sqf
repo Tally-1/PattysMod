@@ -13,7 +13,3 @@ if(_isMedic)then{_default=_default+1};
 
 if(_unitsLives isNotEqualTo _default)
 then{[_man, _default - _unitsLives] call BIS_fnc_respawnTickets};
-
-// if((!isNil "_listBox")
-// && {!isNil "_index"})
-// then{};

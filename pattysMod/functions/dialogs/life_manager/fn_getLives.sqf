@@ -1,8 +1,7 @@
 params [
-	["_unit",objNull,[objNull]]
+	["_man",objNull,[objNull]]
 ];
-
-private _lives = [_unit] call BIS_fnc_respawnTickets;
+private _lives = [_man] call BIS_fnc_respawnTickets;
 private _templatesUsed = getMissionConfigValue "RespawnTemplates";
 
 if(isNil "_templatesUsed")
@@ -14,6 +13,11 @@ exitWith{
 
 if ("Tickets" in _templatesUsed) then {
 	_lives = _lives - 1; //display 1 less life as we are subtracting on death
+};
+
+
+if!(_man in allPlayers)then{
+	_lives = [_man, 0] call PTTY_fnc_addLifeToAi;
 };
 
 _lives;
