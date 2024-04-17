@@ -4,6 +4,9 @@ private _default    = PTTY_defaultLives;
 private _amount     = _default + 1;
 private _unitsLives = ([player] call PTTY_fnc_getLives);
 
+if(isNil "_unitsLives")
+exitWith{"Cannot get lives, check game respawn settings" call PTDBG;};
+
 if(_unitsLives > 0)
 then{_amount = _amount-_unitsLives;};
 

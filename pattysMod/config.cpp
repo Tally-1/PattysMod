@@ -6,7 +6,5 @@
 #include "config\cfgNotifications.hpp"
 #include "config\preInitEvents.hpp"
 
-
-#include "markup\assets.hpp"
 #include "markup\dialogs.hpp"
 #include "markup\displays.hpp"

@@ -20,11 +20,11 @@ for "_i" from 0 to (lbSize _listbox)-1 do {
 
 		_listbox lbSetTextRight [_i,str(_default)];
 		_listbox lbSetColorRight [_i,[0,1,0,1]];
-
-		private _color = [0.99, 0.89,0.77, 1];
-		private _icon  = "\pattysMod\images\Notification.paa";
-		private _title = "Alert!";
-		private _txt   = ["Admin has reset all lives for all players."] joinString "";
-		[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", -clientOwner];
 	};
 };
+
+private _color = [0.99, 0.89,0.77, 1];
+private _icon  = "\pattysMod\images\Notification.paa";
+private _title = "Alert!";
+private _txt   = ["Admin has reset all lives for all players."] joinString "";
+[false, _title, _txt, _icon, _color] remoteExecCall ["PTTY_fnc_livesLeftNotification", 0];

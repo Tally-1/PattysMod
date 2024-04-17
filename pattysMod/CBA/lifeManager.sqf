@@ -26,6 +26,22 @@
 ] call CBA_fnc_addSetting;
 
 [
+	"PTTY_AdminBlue",
+	"CHECKBOX",
+	["Admin Blue Name", "Admins will be highlighted with blue names."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	true
+] call cba_settings_fnc_init;
+
+[
+	"PTTY_MedicGreen",
+	"CHECKBOX",
+	["Medic Green Name", "Medics will be highlighted with green names."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	true
+] call cba_settings_fnc_init;
+
+[
 	"PTTY_Debug",
 	"CHECKBOX",
 	["Debug mode", "Shows & logs debug messages, Adds bots as players for testing purposes."],
