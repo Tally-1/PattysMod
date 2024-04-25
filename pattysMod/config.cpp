@@ -1,4 +1,3 @@
-#include "BIS_AddonInfo.hpp"
 #include "\a3\ui_f\hpp\definecommongrids.inc"
 
 #include "config\CfgFunctions.hpp"
