@@ -1,0 +1,4 @@
+skipLobby = 1;
+respawn = 2;
+
+#include "Config\Config_Groups.hpp"

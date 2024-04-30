@@ -1,4 +1,4 @@
- author       = "Tally & Dom";                             // Affects Arma 3 Launcher, when the mod are loaded as local
+ author       = "Patty, Dom & Tally";                      // Affects Arma 3 Launcher, when the mod are loaded as local
  name         = "Patty's Mod";                            // Name of your mod
  tooltip      = "Patty's Mod";                           // Shown when Mouse hovers over mod-icon
  tooltipOwned = "Patty's Mod";                          // Tool tip displayed when the mouse is left over, in the main menu
