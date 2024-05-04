@@ -6,6 +6,7 @@ class squadlead {
 	name = $STR_B_SOLDIER_SL_F0;
 	rank = "Lieutenant";
 	description = $STR_DT_SqLe_Description;
+	maxCount    = 2;
 	traits[] = {
 
 	};

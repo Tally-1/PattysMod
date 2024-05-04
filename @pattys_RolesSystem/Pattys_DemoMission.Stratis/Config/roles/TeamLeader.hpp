@@ -6,6 +6,7 @@ class teamlead {
 	name = $STR_B_SOLDIER_TL_F0;
 	rank = "Sergeant";
 	description = $STR_DT_TeLe_Description;
+	maxCount    = 4;
 	traits[] = {
 
 	};

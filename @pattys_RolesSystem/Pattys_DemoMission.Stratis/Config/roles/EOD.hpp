@@ -6,6 +6,7 @@ class eod {
 	name = $STR_B_SOLDIER_EXP_F0;
 	rank = "Corporal";
 	description = $STR_DT_EOD_Description;
+	maxCount    = 2;
 	traits[] = {
 		{"ExplosiveSpecialist",true}
 	};
@@ -13,6 +14,7 @@ class eod {
 
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconManExplosive_ca.paa";
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
 
 	defaultLoadout[] = {
 		{"arifle_MXC_Holo_pointer_F","","acc_pointer_IR","optic_Holosight",{"30Rnd_65x39_caseless_mag",30},{},""},

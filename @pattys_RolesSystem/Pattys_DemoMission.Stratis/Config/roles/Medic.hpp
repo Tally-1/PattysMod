@@ -6,6 +6,7 @@ class medic {
 	name = $STR_B_MEDIC_F0;
 	rank = "Corporal";
 	description = $STR_DT_Medic_Description;
+	maxCount    = 6;
 	traits[] = {
 		{"Medic",true}
 	};
@@ -13,6 +14,7 @@ class medic {
 		{"ace_medical_medicClass",2,true}
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconManMedic_ca.paa";
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
 
 	defaultLoadout[] = {
 		{"arifle_MX_pointer_F","","acc_pointer_IR","",{"30Rnd_65x39_caseless_mag",30},{},""},

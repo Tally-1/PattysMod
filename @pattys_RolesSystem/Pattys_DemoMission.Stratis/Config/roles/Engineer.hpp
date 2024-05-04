@@ -6,6 +6,7 @@ class engineer {
 	name = $STR_B_ENGINEER_F0;
 	rank = "Corporal";
 	description = $STR_DT_Engineer_Description;
+	maxCount    = 3;
 	traits[] = {
 		{"Engineer",true}
 	};
@@ -13,6 +14,7 @@ class engineer {
 		{"ace_isEngineer",2,true}
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconManEngineer_ca.paa";
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
 
 	defaultLoadout[] = {
 		{"arifle_MXC_Holo_pointer_F","","acc_pointer_IR","optic_Holosight",{"30Rnd_65x39_caseless_mag",30},{},""},

@@ -6,6 +6,7 @@ class officer {
 	name = $STR_B_OFFICER_F0;
 	rank = "Captain";
 	description = $STR_DT_Officer_Description;
+	maxCount    = 1;
 	traits[] = {
 
 	};
@@ -13,7 +14,8 @@ class officer {
 
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconManCommander_ca.paa";
-
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
+	
 	defaultLoadout[] = {
 		{"arifle_MXC_ACO_F","","","optic_Aco",{"30Rnd_65x39_caseless_mag",30},{},""},
 		{},

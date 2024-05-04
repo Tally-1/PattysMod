@@ -13,6 +13,7 @@ class roleClassname { //this class is used when defining which roles are in what
 
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa"; //this icon is shown on the menu when picking a role
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa"; // This icon is shown on the right side of the list item.
 
 	defaultLoadout[] = { //this is the default loadout the player will get when selecting the role, can be acquired by using getUnitLoadout player
 		{"arifle_SDAR_F","","","",{"20Rnd_556x45_UW_mag",20},{},""},

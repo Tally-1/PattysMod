@@ -1,22 +1,28 @@
-class Dynamic_Roles {
-	#include "Config_Officer.hpp"
+class Dynamic_Roles { 
 
-	#include "Config_Rifleman.hpp"
-	#include "Config_Medic.hpp"
-	#include "Config_Engineer.hpp"
-	#include "Config_TeamLeader.hpp"
-	#include "Config_SquadLeader.hpp"
+	defaultRoleLimit = 3;
 
-	#include "Config_EOD.hpp"
-	#include "Config_Diver.hpp"
-	#include "Config_Sniper.hpp"
-	#include "Config_Spotter.hpp"
-	#include "Config_Paratrooper.hpp"
+	#include "roles\Officer.hpp"
 
-	#include "Config_Pilot.hpp"
-	#include "Config_UAVOp.hpp"
+	#include "roles\Rifleman.hpp"
+	#include "roles\AT_Light.hpp"
+	#include "roles\AT_Heavy.hpp"
+	#include "roles\operator.hpp"
+	#include "roles\Medic.hpp"
+	#include "roles\Engineer.hpp"
+	#include "roles\TeamLeader.hpp"
+	#include "roles\SquadLeader.hpp"
 
-	#include "Config_Crewman.hpp"
+	#include "roles\EOD.hpp"
+	#include "roles\Diver.hpp"
+	#include "roles\Sniper.hpp"
+	#include "roles\Spotter.hpp"
+	#include "roles\Paratrooper.hpp"
+
+	#include "roles\Pilot.hpp"
+	#include "roles\UAVOp.hpp"
+
+	#include "roles\Crewman.hpp"
 };
 
 class Common_Arsenal {

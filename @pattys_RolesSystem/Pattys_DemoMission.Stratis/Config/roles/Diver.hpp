@@ -6,6 +6,7 @@ class diver {
 	name = $STR_B_DIVER_F0;
 	rank = "Private";
 	description = $STR_DT_Diver_Description;
+	maxCount    = 10;
 	traits[] = {
 
 	};
@@ -13,6 +14,7 @@ class diver {
 
 	};
 	icon = "a3\ui_f\data\map\vehicleicons\iconMan_ca.paa";
+	iconR = "\a3\ui_f\data\igui\cfg\simpletasks\types\defend_ca.paa";
 
 	defaultLoadout[] = {
 		{"arifle_SDAR_F","","","",{"20Rnd_556x45_UW_mag",20},{},""},
