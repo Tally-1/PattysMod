@@ -1,4 +1,4 @@
-if(!isMultiplayer)exitWith{systemChat "Role system only available in multiplayer";};
+if(!isMultiplayer)exitWith{};
 
 isNil{
     if(isServer)     then{[] call   PTG_fnc_serverInit;};

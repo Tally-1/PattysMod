@@ -50,7 +50,7 @@ if (_isRespawn) then {
 	};
 
 	private _roleRank = getText(_roleConfig >> "rank");
-	player setUnitRank _roleRank;
+	// player setUnitRank _roleRank;
 
 	private _roleTraits = getArray(_roleConfig >> "traits");
 	{

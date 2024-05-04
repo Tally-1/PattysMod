@@ -7,3 +7,5 @@
 For details on the previously unpaid updates:
 "pattysMod\Project\Life System\appraisals\0.39 timeList.md"
 "pattysMod\Project\Life System\appraisals\0.40 timeList.md"
+
+**The work sessions listed above has been paid in full**

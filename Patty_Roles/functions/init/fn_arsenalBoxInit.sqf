@@ -9,4 +9,5 @@ then{PTG_arsenalBoxes = []};
 
 PTG_arsenalBoxes pushBackUnique _this;
 
+missionNamespace setVariable ["PTG_arsenalBoxes", PTG_arsenalBoxes];
 true;

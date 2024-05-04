@@ -1,55 +1,51 @@
 /*
 	File: fn_initGroupMenu.sqf
-	Author: Dom
+	Author: Dom & Tally.
 	Description: Open and populates the group menu
 */
+(call PTG_fnc_groupMenuSettings)
+params[
+	["_backColor", nil,[[]]],
+	["_titleColor",nil,[[]]],
+	["_title",     nil,[""]]
+];
 
-private _display = createDialog ["PTG_groupMenu",true];
-private _tree = _display displayCtrl 1500;
+private _display    = createDialog ["PTG_groupMenu",true];
+private _frame      = _display ctrlCreate ["RscFrame", 1001];
+private _tree       = _display displayCtrl 1500;
+private _header     = _display displayCtrl 1080;
+private _backGround = _display displayCtrl 1082;
+private _headerText = _display displayCtrl 1000;
 
-private _factionName = getText(missionConfigFile >> "Dynamic_Groups" >> "faction_name");
-(_display displayCtrl 1000) ctrlSetText format ["%1 %2",_factionName,localize "Role Selection"];
+private _boxPos     = ctrlPosition _backGround;
+private _headerPos  = ctrlPosition _header;
+private _txtSize    = 0.05;
 
-private _rolesArray = missionConfigFile >> "Dynamic_Roles";
+_frame      ctrlSetTextColor       _titleColor;
+_backGround ctrlSetBackgroundColor _backColor;
+_header     ctrlSetBackgroundColor [0,0,0,0];
+
+_frame ctrlSetFontHeight _txtSize;
+_frame ctrlSetPosition   _boxPos;
+_frame ctrlCommit 0;
+
+_frame ctrlSetPosition [
+	_boxPos#0, 
+	(_boxPos#1)-(_txtSize*0.85), 
+	_boxPos#2, 
+	(_boxPos#3)+(_txtSize*2)
+];
+
+_frame ctrlCommit 0.5;
+[
+	_frame,
+	_title,
+	1,
+	0.5
+] spawn PTG_fnc_spawnCtrlText;
+
 private _myPath = [0,0];
 
-{
-	_x params ["_groupName","_roles","_conditions","","_units"];
-
-	private _treeIndex = _tree tvAdd [[],_groupName];
-
-	if (call compile _conditions) then {
-		{
-			private _roleInfo = _rolesArray >> _x;
-			private _roleName = getText(_roleInfo >> "name");
-			private _roleIcon = getText(_roleInfo >> "icon");
-			private _roleRank = getText(_roleInfo >> "rank");
-
-			private _playerInRole = _units select _forEachIndex;
-			private _alpha = 1;
-			private _name = format["%1: ",_roleName];
-
-			if !(isNull _playerInRole) then {
-				_alpha = 0.4;
-				_name = format ["%1%2",_name,name _playerInRole];
-			};
-
-			private _unitIndex = _tree tvAdd [[_treeIndex],_name];
-			_tree tvSetColor [[_treeIndex,_unitIndex],[1,1,1,_alpha]];
-
-			private _data = [netID _playerInRole,_x];
-			_tree tvSetData [[_treeIndex,_unitIndex],str(_data)];
-
-			_tree tvSetPicture [[_treeIndex,_unitIndex],_roleIcon];
-			_tree tvSetPictureColor [[_treeIndex,_unitIndex],[1,1,1,_alpha]];
-			_tree tvSetPictureRight [[_treeIndex,_unitIndex],format["a3\ui_f\data\GUI\Cfg\Ranks\%1_gs.paa",_roleRank]];
-			_tree tvSetPictureRightColor [[_treeIndex,_unitIndex],[1,1,1,_alpha]];
-
-			if (player isEqualTo _playerInRole) then {
-				_myPath = [_treeIndex,_unitIndex];
-			};
-		} forEach _roles;
-	};
-} forEach PTG_dynamicGroups;
+{[_x] call PTG_fnc_addGroupMenuEntry} forEach PTG_dynamicGroups;
 
 _tree tvSetCurSel _myPath;

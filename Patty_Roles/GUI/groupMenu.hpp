@@ -14,6 +14,7 @@ class PTG_groupMenu : RscDisplayTeamSwitch
 		class RoleList : RscTree
 		{
 			idc = 1500;
+			onTreeMouseHold  = "_this call PTG_fnc_onMouseStill;";
 			onTreeSelChanged = "_this call PTG_fnc_onGroupMenuTvSelectChange;";
 			x = "1.2 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
 			y = "2.3 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";

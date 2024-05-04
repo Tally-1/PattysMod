@@ -1,56 +1,19 @@
-/*
-	File: fn_assignPlayer.sqf
-	Author: Dom
-	Description: Assigns the player in the desired group
-*/
 params [
 	["_unit",           objNull, [objNull]],
 	["_selectionPath",  [],           [[]]],
-	["_desiredRole",    "",           [""]],
+	["_desiredRole",    "",           ["",0]],
 	["_isRespawn",      false,      [true]]
 ];
 
-_selectionPath params ["_groupIndex","_unitIndex"];
-private _groupToUpdate = PTG_dynamicGroups select _groupIndex;
-private _unitsInGroup = _groupToUpdate select 4;
-private _desiredUnit = _unitsInGroup select _unitIndex;
+[
+	_desiredRole,
+	_isRespawn
 
-if (!isNull _desiredUnit && {!_isRespawn}) exitWith {
-	["Role already taken."] remoteExecCall ["hint",_unit];
-};
+] remoteExecCall ["PTG_fnc_setupPlayer",_unit];
+[
+	PTG_dynamicGroups,
+	_oldSelectionPath,
+	[],
+	_unit
 
-private _oldSelectionPath = if (_isRespawn) then {[]} else {[_unit] call PTG_fnc_removeFromGroup};
-
-private _selectedGroup = _groupToUpdate select 3;
-if (isNull _selectedGroup) then {
-	_selectedGroup = createGroup [side _unit,true];
-	_selectedGroup setGroupIdGlobal [_groupToUpdate select 0];
-	_groupToUpdate set [3,_selectedGroup];
-};
-
-if !(_unit in (units _selectedGroup)) then {
-	[_unit] joinSilent _selectedGroup;
-};
-
-_unitsInGroup set [_unitIndex,_unit];
-[_desiredRole,_isRespawn] remoteExecCall ["PTG_fnc_setupPlayer",_unit];
-
-private _fnc_getRankNumber = {
-	params ["_rankString"];
-
-	switch (toUpper _rankString) do {
-		case "CORPORAL": {1};
-		case "SERGEANT": {2};
-		case "LIEUTENANT": {3};
-		case "CAPTAIN": {4};
-		case "MAJOR": {5};
-		case "COLONEL": {6};
-		default {0};
-	};
-};
-
-if ([getText(missionConfigFile >> "Dynamic_Roles" >> _desiredRole >> "rank")] call _fnc_getRankNumber > rankId (leader _selectedGroup)) then {
-	[_selectedGroup,_unit] remoteExecCall ["selectLeader",groupOwner _selectedGroup];
-};
-
-[PTG_dynamicGroups,_oldSelectionPath,_selectionPath,_unit] remoteExecCall ["PTG_fnc_updateGroups",-2,"PTG_DG_JIP"];
+] remoteExecCall ["PTG_fnc_updateGroups",-2,"PTG_DG_JIP"];
