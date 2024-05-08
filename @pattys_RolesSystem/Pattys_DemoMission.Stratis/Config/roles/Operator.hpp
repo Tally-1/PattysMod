@@ -24,38 +24,4 @@ class operator {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-		"LMG_Mk200_F",
-		"LMG_Mk200_black_F",
-
-		"launch_B_Titan_short_F",
-		"launch_B_Titan_F",
-		"launch_MRAWS_green_rail_F",
-		"launch_MRAWS_olive_rail_F",
-		"launch_MRAWS_sand_rail_F",
-		"srifle_EBR_F",
-		"srifle_LRR_F",
-
-		"launch_MRAWS_green_F",
-		"launch_MRAWS_olive_F",
-		"launch_MRAWS_sand_F",
-		"launch_NLAW_F",
-
-		"launch_B_Titan_F", 
-		"launch_B_Titan_olive_F",
-		"launch_B_Titan_short_F",
-		"launch_B_Titan_short_tna_F",
-		"launch_B_Titan_tna_F"
-	};
-	arsenalMagazines[] = {
-		
-	};
-	arsenalItems[] = {
-		"optic_AMS",
-		"optic_AMS_snd",
-		"optic_LRPS"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

@@ -25,17 +25,4 @@ class spotter {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-		
-	};
-	arsenalMagazines[] = {
-		
-	};
-	arsenalItems[] = {
-		"U_B_GhillieSuit", "U_B_T_Sniper_F", "U_B_FullGhillie_ard", "U_B_FullGhillie_lsh", "U_B_FullGhillie_sard", "U_B_T_FullGhillie_tna_F",
-		"Rangefinder"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

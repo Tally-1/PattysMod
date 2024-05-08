@@ -25,35 +25,4 @@ class paratrooper {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-		"launch_B_Titan_short_F",
-		"launch_B_Titan_F",
-		"launch_MRAWS_green_rail_F",
-		"launch_MRAWS_olive_rail_F",
-		"launch_MRAWS_sand_rail_F",
-
-		"launch_RPG32_green_F",
-		"launch_RPG7_F",
-		"launch_MRAWS_green_F",
-		"launch_MRAWS_olive_F",
-		"launch_MRAWS_sand_F",
-		"launch_NLAW_F",
-
-		"launch_B_Titan_F", 
-		"launch_B_Titan_olive_F",
-		"launch_B_Titan_short_F",
-		"launch_B_Titan_short_tna_F",
-		"launch_B_Titan_tna_F"
-	};
-	arsenalMagazines[] = {
-		
-	};
-	arsenalItems[] = {
-		"optic_AMS",
-		"optic_AMS_snd",
-		"optic_LRPS"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

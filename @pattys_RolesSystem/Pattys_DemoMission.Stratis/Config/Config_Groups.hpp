@@ -1,11 +1,11 @@
 class Dynamic_Groups { //format: {"Group Name",{"Group","Roles","Matching","Role","Configs"},"Conditions for the group to be shown"}
 	faction_name = "CTRG";
 	group_setup[] = {
-		{"Commanders",    {"officer","squadlead","teamlead"},             "true"},
-		{"Grunts",        {"rifleman","AT_Light","AT_Heavy", "operator"}, "true"},
-		{"Crew",          {"pilot","crewman", "paratrooper"},             "true"},
-		{"Specialists",   {"medic","diver","eod","engineer","uavop"},     "true"},
-		{"Sharpshooters", {"sniper","spotter"},                           "true"}
+		{"Commanders",    {"officer","squadlead","teamlead","SquadLeaderP"}, "true"},
+		{"Grunts",        {"rifleman","AT_Light","AT_Heavy", "operator"},    "true"},
+		{"Crew",          {"pilot","crewman", "paratrooper"},                "true"},
+		{"Specialists",   {"medic","diver","eod","engineer","uavop"},        "true"},
+		{"Sharpshooters", {"sniper","spotter"},                              "true"}
 	};
 };
 

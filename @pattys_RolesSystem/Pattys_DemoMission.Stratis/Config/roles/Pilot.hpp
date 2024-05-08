@@ -26,19 +26,4 @@ class pilot {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-		
-	};
-	arsenalMagazines[] = {
-		
-	};
-	arsenalItems[] = {
-		"U_B_HeliPilotCoveralls", "U_B_PilotCoveralls",
-
-		"H_PilotHelmetHeli_B",
-		"H_CrewHelmetHeli_B"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

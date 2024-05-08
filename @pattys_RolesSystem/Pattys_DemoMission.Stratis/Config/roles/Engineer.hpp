@@ -27,16 +27,4 @@ class engineer {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-
-	};
-	arsenalMagazines[] = {
-
-	};
-	arsenalItems[] = {
-		"ToolKit", "MineDetector"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

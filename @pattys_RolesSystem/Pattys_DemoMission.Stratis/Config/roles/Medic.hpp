@@ -27,16 +27,4 @@ class medic {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-
-	};
-	arsenalMagazines[] = {
-
-	};
-	arsenalItems[] = {
-		"Medikit"
-	};
-	arsenalBackpacks[] = {
-
-	};
 };

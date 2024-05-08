@@ -27,16 +27,4 @@ class diver {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""}
 	};
 
-	arsenalWeapons[] = {
-		"arifle_SDAR_F"
-	};
-	arsenalMagazines[] = {
-
-	};
-	arsenalItems[] = {
-		"U_B_survival_uniform", "U_B_Wetsuit", "V_RebreatherB", "G_B_Diving"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

@@ -1,5 +1,5 @@
 PTG_isACEEnabled = isClass (configFile >> "CfgPatches" >> "ace_common");
-player addEventHandler ["Respawn",PTG_fnc_onRespawn];
+player addEventHandler ["Respawn",{_this call PTG_fnc_onRespawn}];
 
 if(isNil "PTG_arsenalBoxes")then{PTG_arsenalBoxes=[]};
 

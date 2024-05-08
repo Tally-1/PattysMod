@@ -27,16 +27,4 @@ class crewman {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-
-	};
-	arsenalMagazines[] = {
-
-	};
-	arsenalItems[] = {
-		"ToolKit", "H_HelmetCrew_B"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };

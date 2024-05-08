@@ -26,16 +26,4 @@ class roleClassname { //this class is used when defining which roles are in what
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""}
 	};
 
-	arsenalWeapons[] = { //weapons that will be in the arsenal specific to this role
-		"arifle_SDAR_F"
-	};
-	arsenalMagazines[] = { //magazines that will be in the arsenal specific to this role
-
-	};
-	arsenalItems[] = { //any item not covered by other categories that will be in the arsenal specific to this role
-		"U_B_survival_uniform", "U_B_Wetsuit", "V_RebreatherB", "G_B_Diving"
-	};
-	arsenalBackpacks[] = { //backpacks that will be in the arsenal specific to this role
-		
-	};
 };

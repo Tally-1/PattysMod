@@ -27,9 +27,6 @@ if(_count >= _roleLimit
 ||{player in _roleHolders})
 then{_alpha = 0.4};
 
-if(player in _roleHolders)
-then{_rankIcon = "\A3\ui_f\data\map\markers\military\warning_CA.paa";};
-
 private _unitIndex = _tree tvAdd [[_treeIndex],_roleText];
 _tree tvSetColor [[_treeIndex,_unitIndex],[1,1,1,_alpha]];
 

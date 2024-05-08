@@ -8,5 +8,6 @@
 [65m]  Role population limit config.
 [134m] Population Menu debug, menu design, menu config options.
 [153m] Mouse-hover list, bugfixing, new config options, demo mission, packing mod
-
 ~959 (15,98hrs)
+
+**The work sessions listed above has been paid in full**

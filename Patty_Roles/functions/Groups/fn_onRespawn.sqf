@@ -7,21 +7,12 @@ params [
 	["_unit",objNull,[objNull]],
 	["_corpse",objNull,[objNull]]
 ];
+private _oldRole = _corpse getVariable ["PTG_role",""];
 
-private _oldPath = [];
-private _oldRole = "";
+if(_oldRole isEqualTo "")
+exitWith{call PTG_fnc_initGroupMenu;};
 
-{
-	_x params ["","_roles","","","_units"];
-	private _groupIndex = _forEachIndex;
-	{
-		if (_x isEqualTo _corpse) exitWith {
-			_oldPath = [_groupIndex,_forEachIndex];
-			_oldRole = _roles select _forEachIndex;
-		};
-	} forEach _units;
-} forEach PTG_dynamicGroups;
-
-if (_oldPath isEqualTo []) exitWith {[] call PTG_fnc_initGroupMenu};
-
-[_unit,_oldPath,_oldRole,true] remoteExecCall ["PTG_fnc_assignPlayer",2];
+[
+	_oldRole,
+	true
+] remoteExecCall ["PTG_fnc_setupPlayer",_unit];

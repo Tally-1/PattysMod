@@ -27,16 +27,4 @@ class officer {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch",""}
 	};
 
-	arsenalWeapons[] = {
-
-	};
-	arsenalMagazines[] = {
-
-	};
-	arsenalItems[] = {
-		"H_Beret_Colonel", "U_I_E_Uniform_01_officer_F"
-	};
-	arsenalBackpacks[] = {
-
-	};
 };

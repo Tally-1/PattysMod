@@ -25,22 +25,4 @@ class sniper {
 		{"ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"}
 	};
 
-	arsenalWeapons[] = {
-		"srifle_DMR_02_camo_F", "srifle_DMR_02_F", "srifle_DMR_02_sniper_F", "srifle_GM6_F", "srifle_LRR_camo_F", "srifle_LRR_F", "srifle_LRR_tna_F"
-	};
-	arsenalMagazines[] = {
-		
-	};
-	arsenalItems[] = {
-		"optic_LRPS", "optic_LRPS_tna_F",
-		"optic_Nightstalker",
-		"optic_tws",
-		"optic_tws_mg",
-		"Rangefinder",
-
-		"U_B_GhillieSuit", "U_B_T_Sniper_F", "U_B_FullGhillie_ard", "U_B_FullGhillie_lsh", "U_B_FullGhillie_sard", "U_B_T_FullGhillie_tna_F"
-	};
-	arsenalBackpacks[] = {
-		
-	};
 };
