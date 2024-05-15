@@ -5,3 +5,6 @@ class CA_ButtonContinue;
 class RscStructuredText;
 class RscControlsGroup;
 class RscTree;
+class RscFrame;
+class RscListBox;
+class RscButton;

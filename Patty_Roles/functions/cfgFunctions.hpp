@@ -21,6 +21,7 @@ class CfgFunctions {
 			class initRoleHolderList        {};
 			class closeRoleHolderList       {};
 			class onMouseStill              {};
+			class initGroupMenuButtons      {};
 		};
 
 		class init {

@@ -6,7 +6,7 @@ class CfgPatches
         name             = "Pattys Mod";
         author           = "Dom, Patty & Tally";
         requiredVersion  = 1.60;
-        requiredAddons[] = {"Pattys_Mode"};
+        requiredAddons[] = {"A3_Functions_F", "CBA_settings"};
         units[]          = {};
         weapons[]        = {};
     };

@@ -16,10 +16,12 @@ private _tree       = _display displayCtrl 1500;
 private _header     = _display displayCtrl 1080;
 private _backGround = _display displayCtrl 1082;
 private _headerText = _display displayCtrl 1000;
-
-private _boxPos     = ctrlPosition _backGround;
 private _headerPos  = ctrlPosition _header;
+private _boxPos     = ctrlPosition _backGround;
 private _txtSize    = 0.05;
+
+_boxPos params["_boxX", "_boxY", "_boxW", "_boxH"];
+call PTG_fnc_initGroupMenuButtons;
 
 _frame      ctrlSetTextColor       _titleColor;
 _backGround ctrlSetBackgroundColor _backColor;
@@ -30,10 +32,10 @@ _frame ctrlSetPosition   _boxPos;
 _frame ctrlCommit 0;
 
 _frame ctrlSetPosition [
-	_boxPos#0, 
-	(_boxPos#1)-(_txtSize*0.85), 
-	_boxPos#2, 
-	(_boxPos#3)+(_txtSize*2)
+	_boxX, 
+	_boxY-(_txtSize*0.5), 
+	_boxW, 
+	_boxH+(_txtSize*0.5)
 ];
 
 _frame ctrlCommit 0.5;

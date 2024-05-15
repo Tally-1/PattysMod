@@ -7,6 +7,17 @@ class PTG_groupMenu : RscDisplayTeamSwitch
 	onUnload = "";
 	class Controls : Controls
 	{
+		// class CancelBtn : RscButton
+		// {
+		// 	text = "$STR_DISP_CANCEL";
+		// };
+		// class SelectRoleBtn : RscButton
+		// {
+		// 	idc = 2400;
+		// 	text = "$STR_A3_TO_C01M02_TASK_CHOOSEMISSION_TITLE";
+		// 	onButtonClick = "[] call PTG_fnc_selectPosition;";
+		// };		
+		
 		class Title : CA_TSTitle
 		{
 			text = "$STR_PTG_role_Menu_Title";
@@ -45,15 +56,6 @@ class PTG_groupMenu : RscDisplayTeamSwitch
                 };
 			};
 		};
-		class CancelBtn : CA_ButtonCancel
-		{
-			text = "$STR_DISP_CANCEL";
-		};
-		class SelectRoleBtn : CA_ButtonContinue
-		{
-			idc = 2400;
-			text = "$STR_A3_TO_C01M02_TASK_CHOOSEMISSION_TITLE";
-			onButtonClick = "[] call PTG_fnc_selectPosition;";
-		};
+		
 	};
 };

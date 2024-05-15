@@ -1,3 +1,4 @@
+#include "\a3\ui_f\hpp\definecommongrids.inc"
 #include "cfgPatches.hpp"
 #include "GUI\defines.hpp"
 #include "GUI\groupMenu.hpp"
