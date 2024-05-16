@@ -3,8 +3,44 @@
 	"SLIDER",
 	["Default lives","The default amount of lives assigned to each player"],
 	[_categoryName, _subCategoryLifeManager_Settings],
-	[1,100,5,0],
-	1
+	[1,100,5,0]
+] call CBA_fnc_addSetting;
+
+[
+	"PTTY_woundedGreen",
+	"SLIDER",
+	["Green Wounded Icon","How many (or more) lives left to show a green wounded icon."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	[
+		1,
+		100,
+		(missionNamespace getVariable ["PTTY_defaultLives", 5]),
+		0
+	]
+] call CBA_fnc_addSetting;
+
+[
+	"PTTY_woundedYellow",
+	"SLIDER",
+	["Yellow Wounded Icon","How many (or less) lives left to show a yellow wounded icon."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	[1,100,4,0]
+] call CBA_fnc_addSetting;
+
+[
+	"PTTY_woundedOrange",
+	"SLIDER",
+	["Orange Wounded Icon","How many (or less) lives left to show a Orange wounded icon."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	[1,100,3,0]
+] call CBA_fnc_addSetting;
+
+[
+	"PTTY_woundedRed",
+	"SLIDER",
+	["Red Wounded Icon","How many (or less) lives left to show a Red wounded icon."],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	[1,100,1,0]
 ] call CBA_fnc_addSetting;
 
 [

@@ -27,4 +27,4 @@ _cancelButton ctrlCommit _animTime;
 [_cancelButton, "CANCEL",      1, _animTime] spawn PTG_fnc_spawnCtrlText;
 
 _selectButton ctrlAddEventHandler ["buttonClick", "[] call PTG_fnc_selectPosition;"];
-_selectButton ctrlAddEventHandler ["buttonClick", "closeDialog 2;"];
+_cancelButton ctrlAddEventHandler ["buttonClick", "closeDialog 0;"];

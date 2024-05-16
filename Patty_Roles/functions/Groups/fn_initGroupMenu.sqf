@@ -3,6 +3,7 @@
 	Author: Dom & Tally.
 	Description: Open and populates the group menu
 */
+
 (call PTG_fnc_groupMenuSettings)
 params[
 	["_backColor", nil,[[]]],
