@@ -17,16 +17,18 @@ if(isNull _playerList)
 then{_playerList = call PTG_fnc_initRoleHolderList};
 
 private _textArr  = [
-	"<t shadow='2' font='PuristaBold'>"
+	"<t shadow='2' font='PuristaLight'>"
 ];
 
 for "_i" from 0 to _count do {
 	private _entry = [name (_players#_i), "<br/>"]joinString"";
 	_textArr pushBack _entry;
 };
+
 private _position = ctrlPosition _playerList;
 private _text     = parseText(_textArr joinString "");
 private _height   = (_count* 0.03)+0.05;
+
 _playerList ctrlSetStructuredText _text;
 
 true;
