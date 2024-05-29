@@ -1,9 +1,12 @@
 params[
 	["_count", nil, [0]]
 ];
-private _color = [0,1,0,1];
-if(_count <  5) then {_color = [0.9,0.9,0.1,1]};
-if(_count <  3) then {_color = [1,0.451,0,1]};
-if(_count <  1) then {_color = [1,0,0,1]};
 
-_color;
+if(_count >=  PTTY_woundedGreen)  exitWith {[0,1,0.1,1]};
+if(_count >=  PTTY_woundedYellow) exitWith {[1,1,0,1]};
+if(_count >=  PTTY_woundedOrange) exitWith {[1,0.5,0,1]};
+if(_count <=  PTTY_woundedRed
+||{_count <  PTTY_woundedOrange}) exitWith {[1,0,0,1]};
+
+
+[1,1,1,1];

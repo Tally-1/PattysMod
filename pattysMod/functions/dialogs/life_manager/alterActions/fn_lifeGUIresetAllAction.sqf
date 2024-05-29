@@ -23,7 +23,7 @@ for "_i" from 0 to (lbSize _listbox)-1 do {
 	};
 };
 
-private _color = [0.99, 0.89,0.77, 1];
+private _color = [1,1,1,1]; 
 private _icon  = "\pattysMod\images\Notification.paa";
 private _title = "Alert!";
 private _txt   = ["Admin has reset all lives for all players."] joinString "";

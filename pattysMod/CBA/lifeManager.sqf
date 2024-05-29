@@ -12,7 +12,7 @@
 	["Green Wounded Icon","How many (or more) lives left to show a green wounded icon."],
 	[_categoryName, _subCategoryLifeManager_Settings],
 	[
-		1,
+		0,
 		100,
 		(missionNamespace getVariable ["PTTY_defaultLives", 5]),
 		0
@@ -24,7 +24,7 @@
 	"SLIDER",
 	["Yellow Wounded Icon","How many (or less) lives left to show a yellow wounded icon."],
 	[_categoryName, _subCategoryLifeManager_Settings],
-	[1,100,4,0]
+	[0,100,4,0]
 ] call CBA_fnc_addSetting;
 
 [
@@ -32,7 +32,7 @@
 	"SLIDER",
 	["Orange Wounded Icon","How many (or less) lives left to show a Orange wounded icon."],
 	[_categoryName, _subCategoryLifeManager_Settings],
-	[1,100,3,0]
+	[0,100,3,0]
 ] call CBA_fnc_addSetting;
 
 [
@@ -40,22 +40,22 @@
 	"SLIDER",
 	["Red Wounded Icon","How many (or less) lives left to show a Red wounded icon."],
 	[_categoryName, _subCategoryLifeManager_Settings],
-	[1,100,1,0]
+	[0,100,1,0]
 ] call CBA_fnc_addSetting;
 
 [
 	"PTTY_adminUIDs",
 	"EDITBOX",
-	["Admin UIDs","List of admin UIDs, admins have full access to the life manager."],
+	["Full Access UIDs","List of admin UIDs, admins have full access to the life manager."],
 	[_categoryName, _subCategoryLifeManager_Settings],
-	"[76561198034951030]",
+	"[]",
 	1
 ] call CBA_fnc_addSetting;
 
 [
 	"PTTY_transferOverrideUIDs",
 	"EDITBOX",
-	["Priviliged UIDs","UIDs in this list can transfer lives without being medic or admin."],
+	["Transfer Access UIDs","UIDs in this list can transfer lives without being medic or admin."],
 	[_categoryName, _subCategoryLifeManager_Settings],
 	"[]",
 	1

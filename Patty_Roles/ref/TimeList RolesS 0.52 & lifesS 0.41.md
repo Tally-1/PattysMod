@@ -13,3 +13,5 @@ Rolesystem 0.52: "\Patty_Roles\ref\timelist 0.52.md"
 10 x 6.7 = 67 USD.
 
 Final Price 67 USD.
+
+**The work sessions listed above has been paid in full**

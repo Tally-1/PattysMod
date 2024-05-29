@@ -20,4 +20,4 @@ if!(_man in allPlayers)then{
 	_lives = [_man, 0] call PTTY_fnc_addLifeToAi;
 };
 
-_lives;
+round _lives;

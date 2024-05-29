@@ -5,3 +5,4 @@
 10 USD pr hour
 
 16 USD
+**The work sessions listed above has been paid in full**

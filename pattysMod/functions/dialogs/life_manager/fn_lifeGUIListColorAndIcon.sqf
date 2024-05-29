@@ -3,7 +3,7 @@ Original Author: DOM
 Edited by: Tally
 
 */
-params [
+params [  
 	["_lifeCount", 0,                     [0]],
 	["_unit",      objNull,         [objNull]],
 	["_list",      controlNull, [controlNull]],

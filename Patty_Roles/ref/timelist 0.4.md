@@ -8,4 +8,5 @@
 
 ~3.2 hours (194 minutes).
 10 USD pr hour
-32 USD
+32 
+**The work sessions listed above has been paid in full**
