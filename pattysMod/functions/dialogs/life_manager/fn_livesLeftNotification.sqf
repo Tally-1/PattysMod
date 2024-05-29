@@ -8,10 +8,10 @@ params[
 
 private _lives    = [player] call PTTY_fnc_getLives;
 private _strLife  = " lives";
-private _iconText = "";//str _lives;
+private _iconText = "";
 private _title    = "STATUS:";
 private _icon     = [_lives] call PTTY_fnc_livesLeftIcon;
-private _color    = [1,1,1,1];//[_lives] call PTTY_fnc_livesLeftColor;
+private _color    = [1,1,1,1];
 
 if(_lives isEqualTo 1) then{_strLife = " life"};
 if(_respawn)           then{_title = "Caution!"};

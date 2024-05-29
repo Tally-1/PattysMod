@@ -17,7 +17,7 @@ if(isNull _playerList)
 then{_playerList = call PTG_fnc_initRoleHolderList};
 
 private _textArr  = [
-	"<t shadow='2' font='PuristaLight'>"
+	"<t shadow='2' >"
 ];
 
 for "_i" from 0 to _count do {

@@ -1,7 +1,7 @@
 // Define the action to be used to open the group menu.
 private _groupCategory = [
 	"groupCategory",
-	"Roles menu",
+	"Role Manager",
 	"\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\meet_ca.paa",
 	{[] call PTG_fnc_initGroupMenu},
 	{
