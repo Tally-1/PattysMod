@@ -1,0 +1,1 @@
+(_self get "crate")setVariable ["PSA_crateData", _self, true];
