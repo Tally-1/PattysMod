@@ -1,6 +1,15 @@
 class CfgFunctions {
 	class PSA {
-
+		
+		class actions {
+			file = "\PATTY_ABILITIES\functions\actions";
+			class aceActionPlaceCrate                {};
+			class aceActionRetrieveCrate             {};
+			class setPlayerActionsACE                {};
+			class retrieveCrateAction                {};
+			class placeCrateAction                   {};
+			class setPlayerActions                   {};
+		};
 
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
@@ -20,7 +29,6 @@ class CfgFunctions {
 			class pickupCrate              {};
 			class canRetrieveMyCrate       {};
 			class retrieveMyCrate          {};
-			
 		};
 
 		class init {

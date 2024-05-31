@@ -5,5 +5,6 @@
 [50m]  Crate Destruction and deactivation
 [37m]  Crate retrieval
 [42m]  Code cleanup, refactoring, packing, testing.
-
 ~443 minutes (7.38 hours)
+
+[76m] adding crate actions (vanilla & ACE)

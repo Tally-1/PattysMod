@@ -11,8 +11,8 @@ Main Features:
 5)  Notification on specific events:
      - When it is destroyed.
 
-<!-- 6)  3D marker visible to all players within a certain distance (Addon option?). -->
-<!-- 7)  Map marker visible to all players. -->
+6)  3D marker visible to all players within a certain distance (Addon option?).
+7)  Map marker visible to all players.
 8)  Enemies can destroy crate by being within 5m (Addon option).
 9)  Destruction timer of 60 seconds (Addon option).
 10) 10 minute cooldown if destroyed.
