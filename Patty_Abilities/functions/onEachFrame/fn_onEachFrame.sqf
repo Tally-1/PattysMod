@@ -1,5 +1,4 @@
-{
-	_x params["_params", "_code"];
-	_params call _code;
-	
-} forEach PSA_clientFrameTasks;
+call PSA_fnc_execPrFrameTasks;
+
+if(time >= PSA_clientPrSecondTimer)
+then PSA_fnc_execPrSecondTasks;

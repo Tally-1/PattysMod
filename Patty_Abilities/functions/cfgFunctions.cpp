@@ -9,6 +9,8 @@ class CfgFunctions {
 			class retrieveCrateAction                {};
 			class placeCrateAction                   {};
 			class setPlayerActions                   {};
+			class selfActionCategoryACE              {};
+			class simpleSelfActionACE                {};
 		};
 
 		class crate { 
@@ -16,6 +18,7 @@ class CfgFunctions {
 			class cratePlacementKeyHandler {};
 			class canPlaceCrate            {};
 			class initCratePlacement       {};
+			class onEachCrateFrame         {};
 			class endCratePlacement        {};
 			class initSpecialCrate         {};
 			class crateMarker              {};
@@ -43,10 +46,28 @@ class CfgFunctions {
 			class frameLoop                 {};
 			class onEachFrame               {};
 			class 3dIcons                   {};
-			class addToClientFrameTasks     {};
-			class deleteAtClientFrameTasks  {};
-			class onEachCrateFrame          {};
+			class addClientFrameTask        {};
+			class removeClientFrameTask     {};
+			class addClientSecondTasks      {};
+			class removeClientSecondTask    {};
 			class 3dCrates                  {};
+			class execPrFrameTasks          {};
+			class execPrSecondTasks         {};
+		};
+
+		class rscTimers {
+			file = "\PATTY_ABILITIES\functions\rscTimers";
+			class addRscTimer           {};
+			class getTimerDisplay       {};
+			class initTimerDisplay      {};
+			class getAllTimerYPositions {};
+			class firstAvailYpos        {};
+			class getTimerPos           {};
+			class updateRscTimer        {};
+			class stopRscTimer          {};
+
+			// Task specific timers:
+			class crateCoolDownTimer    {};
 		};
 
 		class misc {

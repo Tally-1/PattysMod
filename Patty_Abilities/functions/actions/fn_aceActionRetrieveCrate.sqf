@@ -1,12 +1,15 @@
-private _statement = PSA_fnc_retrieveMyCrate;
+private _man       = player;
+private _title     = "Retrieve Resupply Crate";
 private _condition = PSA_fnc_canRetrieveMyCrate;
+private _function  = PSA_fnc_retrieveMyCrate;
+private _icon      = "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa";
 
-private _placeAction = [
-	"crateCategory",
-	"Retrieve Resupply Crate",
-	"\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",
-	_statement,
-	_condition
-] call ace_interact_menu_fnc_createAction;
+[
+	_man,
+	_title,
+	_condition,
+	_function,
+	_icon
+] call PSA_fnc_simpleSelfActionACE;
 
-_placeAction;
+true;

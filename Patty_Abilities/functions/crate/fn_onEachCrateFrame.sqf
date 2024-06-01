@@ -5,5 +5,6 @@ params[
 private _cratePos = _man modelToWorldVisual [0,3,1]; 
 
 _crate setPosATL [_cratePos#0,_cratePos#1, 0];
+_crate setVectorUp surfaceNormal _cratePos;
 
 true;

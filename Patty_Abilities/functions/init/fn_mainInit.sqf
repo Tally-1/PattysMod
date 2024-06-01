@@ -1,8 +1,9 @@
 isNil{
 	P_dbg                        = PSA_fnc_debugMessage;
-	PSA_crateDestructionCooldown = 6;
+	PSA_crateDestructionCooldown = 20;
 	PSA_3dCrateMarkerDistance    = 50;
     PSA_cratePickupDistance      = 10;
+	PSA_crateProxDestrTimer      = 20;
 	PSA_debug                    = true;
 
     if(isServer)     then{[] call   PSA_fnc_serverInit;};

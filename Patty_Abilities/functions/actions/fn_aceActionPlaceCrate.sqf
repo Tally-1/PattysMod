@@ -1,12 +1,15 @@
-private _statement = { [player] call PSA_fnc_initCratePlacement};
+private _man       = player;
+private _title     = "Place Resupply Crate";
 private _condition = { [player] call PSA_fnc_canPlaceCrate};
+private _function  = { [player] call PSA_fnc_initCratePlacement};
+private _icon      = "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa";
 
-private _placeAction = [
-	"crateCategory",
-	"Place Resupply Crate",
-	"\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",
-	_statement,
-	_condition
-] call ace_interact_menu_fnc_createAction;
+[
+	_man,
+	_title,
+	_condition,
+	_function,
+	_icon
+] call PSA_fnc_simpleSelfActionACE;
 
-_placeAction;
+true;

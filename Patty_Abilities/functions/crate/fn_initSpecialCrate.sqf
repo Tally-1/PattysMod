@@ -9,11 +9,20 @@ private _3dColor   = [_side] call PSA_fnc_sideColor;
 private _marker    = [_crate, _side] call PSA_fnc_crateMarker;
 private _allCrates = missionNamespace getVariable "PSA_specialCrates";
 
+
 _crate setDir _dir;
-_crate setPosATL _pos;
+_crate setPosATL [_pos#0,_pos#1,(_pos#2)+0.1];
+_crate setVectorUp surfaceNormal _pos;
+
+// So it doesnt get destroyed on spawn because of some random glitch.
+_crate allowDamage false;
+
+
 _crate addEventHandler ["Killed",      {_this spawn PSA_fnc_crateKilled}];
 _crate addEventHandler ["Deleted",     {_this call  PSA_fnc_crateDeleted}];
 _crate addEventHandler ["HandleDamage",{_this call  PSA_fnc_crateDamaged}];
+
+
 
 private _dataArr = [
     ["owner",      _man],
@@ -39,5 +48,13 @@ _allCrates pushBackUnique _crate;
 missionNamespace setVariable ["PSA_specialCrates",_allCrates,true];
 
 getPos _crate;
+
+_crate spawn{
+	sleep 0.1; 
+	_this setVelocityModelSpace [0,0,0];
+	sleep 0.5;
+	_this setVelocityModelSpace [0,0,0];
+	_this allowDamage true;
+};
 
 true;
