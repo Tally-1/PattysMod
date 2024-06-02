@@ -24,6 +24,7 @@ class CfgFunctions {
 			class crateMarker              {};
 			class crateDamaged             {};
 			class destroyCrate             {};
+			class destroyCrateRemote       {};
 			class crateKilled              {};
 			class globalizeCrateData       {};
 			class retrieveCrate            {};
@@ -32,6 +33,12 @@ class CfgFunctions {
 			class pickupCrate              {};
 			class canRetrieveMyCrate       {};
 			class retrieveMyCrate          {};
+			class nearCrateEnemies         {};
+
+			class toggleContestedCrate     {};
+			class onContestedCrateStart    {};
+			class handleAllCrates          {};
+
 		};
 
 		class init {
@@ -41,8 +48,19 @@ class CfgFunctions {
 			class serverInit                  {};
 		};
 
-		class onEachFrame { 
-			file = "\PATTY_ABILITIES\functions\onEachFrame";
+		class onEachFrameServer { 
+			file = "\PATTY_ABILITIES\functions\onEachFrame\server";
+			class onEachFrameServer          {};
+			class frameTasksServer           {};
+			class addServerFrameTask         {};
+			class removeServerFrameTask      {};
+			class addServer_1_secondTask     {};
+			class removeServer_1_secondTask  {};
+			class exec_1_secondTasksServer   {};
+		};
+
+		class onEachFrameClient { 
+			file = "\PATTY_ABILITIES\functions\onEachFrame\client";
 			class frameLoop                 {};
 			class onEachFrame               {};
 			class 3dIcons                   {};
@@ -56,7 +74,7 @@ class CfgFunctions {
 		};
 
 		class rscTimers {
-			file = "\PATTY_ABILITIES\functions\rscTimers";
+			file = "\PATTY_ABILITIES\functions\rscTimers\frameWork";
 			class addRscTimer           {};
 			class getTimerDisplay       {};
 			class initTimerDisplay      {};
@@ -66,8 +84,14 @@ class CfgFunctions {
 			class updateRscTimer        {};
 			class stopRscTimer          {};
 
-			// Task specific timers:
-			class crateCoolDownTimer    {};
+		};
+
+		class taskTimers { 
+			file = "\PATTY_ABILITIES\functions\rscTimers\taskTimers";
+			class crateCoolDownTimer         {};
+			class crateDestructionTimer      {};
+			class crateDestructionTimerAbort {};
+			class crateDestructionTimerEnd   {};
 		};
 
 		class misc {
@@ -79,6 +103,18 @@ class CfgFunctions {
 			class sideColor          {};
 			class debugMessage       {};
 			
+		};
+
+		class objectDetection { 
+			file = "\PATTY_ABILITIES\functions\objectDetection";
+			class enemiesInZone   {};
+			class hostile         {};
+			class validLandEntity {};
+			class validVehicle    {};
+			class deadCrew        {};
+			class functionalMan   {};
+			class isRealMan       {};
+			class unconscious     {};
 		};
 	};
 

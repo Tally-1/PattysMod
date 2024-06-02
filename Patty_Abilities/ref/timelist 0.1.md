@@ -11,3 +11,6 @@
 [28m]  Testing timer, Crate coolDown timer.
 [54m]  Code cleanup, bugfixing, crate placement tweaks.
 ~14.03 hours (842 minutes)
+---
+[50m]  Server Initial Taskmanager.
+[134m] Crate proximity destruction, Crate destruction timer.

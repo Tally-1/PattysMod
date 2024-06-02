@@ -15,8 +15,8 @@ private _ctrl          = _display ctrlCreate ["RscStructuredText", _ctrlIdd];
 
 _ctrl ctrlSetBackgroundColor _bckColor;
 _ctrl ctrlSetTextColor       _txtColor;
-_ctrl ctrlSetPosition        _ctrlPos;
-_ctrl ctrlCommit 0;
+_ctrl ctrlSetPosition         _ctrlPos;
+_ctrl ctrlCommit                     0;
 
 private _dataArr      = [
 	["display",              _display],

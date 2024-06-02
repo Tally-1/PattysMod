@@ -2,7 +2,7 @@ params[
 	["_display", nil, [displayNull]]
 ];
 private _activeTimers = _display getVariable ["PSA_AllTimers", []];
-private _width        = 0.35;
+private _width        = 0.4;
 private _height       = 0.07;
 private _xPos         = 0.1+ safeZoneX;
 private _yPos         = 0.1+ safeZoneY;
