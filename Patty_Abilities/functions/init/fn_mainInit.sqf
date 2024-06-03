@@ -6,6 +6,6 @@ isNil{
     PSA_cratePickupDistance      = 10;
 	PSA_debug                    = true;
 
-    if(isServer)     then{[] call   PSA_fnc_serverInit;};
-    if(hasInterface) then{[] spawn  PSA_fnc_clientInit;};
+    if(isServer)     then{[] spawn PSA_fnc_serverInit;};
+    if(hasInterface) then{[] spawn PSA_fnc_clientInit;};
 };

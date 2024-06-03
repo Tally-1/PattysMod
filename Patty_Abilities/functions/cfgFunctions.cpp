@@ -3,14 +3,22 @@ class CfgFunctions {
 		
 		class actions {
 			file = "\PATTY_ABILITIES\functions\actions";
-			class aceActionPlaceCrate                {};
-			class aceActionRetrieveCrate             {};
-			class setPlayerActionsACE                {};
-			class retrieveCrateAction                {};
-			class placeCrateAction                   {};
 			class setPlayerActions                   {};
-			class selfActionCategoryACE              {};
+			class setPlayerActionsACE                {};
+			
+			class retrieveCrateAction                {};
+			class aceActionRetrieveCrate             {};
+			
+			class placeCrateAction                   {};
+			class aceActionPlaceCrate                {};
+
+			class setSpecialCrateActions             {};
+			class specialCrateResupplyAction         {};
+			class specialCrateResupplyActionACE      {};
+
 			class simpleSelfActionACE                {};
+			class simpleObjectActionACE              {};
+			class selfActionCategoryACE              {};
 		};
 
 		class crate { 
@@ -18,6 +26,7 @@ class CfgFunctions {
 			class cratePlacementKeyHandler {};
 			class canPlaceCrate            {};
 			class initCratePlacement       {};
+			class cratePlacementHint       {};
 			class onEachCrateFrame         {};
 			class endCratePlacement        {};
 			class initSpecialCrate         {};
@@ -39,6 +48,24 @@ class CfgFunctions {
 			class onContestedCrateStart    {};
 			class handleAllCrates          {};
 
+			class setSpecialCrateData      {};
+			class setSpecialCrateEvents    {};
+			
+
+		};
+
+		class arsenal
+		{
+			file = "\PATTY_ABILITIES\functions\arsenal";
+			class arsenalEh    {postInit = 1;};
+			class arsenalOpened             {};
+			class arsenalClosed             {};
+			class arsenalSaveDialog         {};
+			class arsenalSaveDialogElements {};
+			class arsenalSaveYes            {};
+			class arsenalSaveNo             {};
+			class saveLoadOut               {};
+			class applyLoadOut              {};
 		};
 
 		class init {
@@ -96,12 +123,14 @@ class CfgFunctions {
 
 		class misc {
 			file = "\PATTY_ABILITIES\functions\misc";
-			class normalizeTextSize  {};
-			class spawnCtrlText      {};
-			class posMarker          {};
-			class getSideMarkerColor {};
-			class sideColor          {};
-			class debugMessage       {};
+			class normalizeTextSize     {};
+			class spawnCtrlText         {};
+			class posMarker             {};
+			class getSideMarkerColor    {};
+			class sideColor             {};
+			class debugMessage          {};
+			class stopVelocityAndDamage {};
+			
 			
 		};
 

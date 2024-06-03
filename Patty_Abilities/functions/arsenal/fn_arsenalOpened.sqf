@@ -1,0 +1,1 @@
+player setVariable ["PSA_tempLoadOut", getUnitLoadout player];
