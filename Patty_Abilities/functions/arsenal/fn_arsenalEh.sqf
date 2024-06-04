@@ -8,4 +8,7 @@ waitUntil { time > 1 &&{isTouchingGround player}};
 [missionNamespace, "arsenalOpened", {_this call PSA_fnc_arsenalOpened}] call BIS_fnc_addScriptedEventHandler;
 [missionNamespace, "arsenalClosed", {_this call PSA_fnc_arsenalClosed}] call BIS_fnc_addScriptedEventHandler;
 
+["ace_arsenal_displayOpened", {_this call PSA_fnc_arsenalOpened}] call CBA_fnc_addEventHandler;
+["ace_arsenal_displayClosed", {_this call PSA_fnc_arsenalClosed}] call CBA_fnc_addEventHandler;
+
 }}};

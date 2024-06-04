@@ -25,3 +25,5 @@ Extra Features:
 <!-- 4) Zeus placeable version of the crate, with some adjustments: -->
    <!-- - Cannot be destroyed (proximity). -->
    <!-- - No Map marker. -->
+
+   5) Placing/picking it up will put the player in an animation that lasts for 10s ( Customisable )
