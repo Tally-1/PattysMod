@@ -22,6 +22,6 @@ Extra Features:
     - Should be triggable by admin as well. -->
 <!-- 2) Crate Loadout should be applied by an action on the crate (resupply). -->
 <!-- 3) Crate Loadout should be applied on respawn (resupply). -->
-4) Zeus placeable version of the crate, with some adjustments:
-    - Cannot be destroyed (proximity).
-    - No Map marker.
+<!-- 4) Zeus placeable version of the crate, with some adjustments: -->
+   <!-- - Cannot be destroyed (proximity). -->
+   <!-- - No Map marker. -->

@@ -2,6 +2,7 @@ params[
     ["_crate", nil,[objNull]],
     ["_side",  nil,   [west]]    
 ];
+
 private _pos    = getPosATLVisual _crate;
 private _color  = [_side] call PSA_fnc_getSideMarkerColor;
 private _icon   = "loc_Box";

@@ -9,7 +9,9 @@ private _destroyed = _crateData get "destroyed";
 private _retrieved = _crateData get "retrieved";
 private _marker    = _crateData get "marker";
 
-deleteMarker _marker;
+if(!isNil "_marker")
+then{deleteMarker _marker};
+
 
 _allCrates deleteAt _index;
 _owner setVariable ["PSA_myCrate", nil, true];

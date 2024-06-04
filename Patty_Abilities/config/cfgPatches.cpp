@@ -1,13 +1,13 @@
 class CfgPatches
 {
-    class Pattys_Roles
+    class Pattys_Abilities
     {
         
         name             = "Pattys Special Abilities";
         author           = "Patty (Design and funding) & Tally (Code)";
         requiredVersion  = 2;
-        requiredAddons[] = {"A3_Functions_F", "CBA_settings"};
-        units[]          = {};
+        requiredAddons[] = {"A3_Functions_F", "CBA_settings", "A3_Supplies_F_AoW"};
+        units[]          = {"PSA_resupplyCrate_F"};
         weapons[]        = {};
     };
 };

@@ -9,8 +9,8 @@ private _startTime = time;
 private _timeSpent = time - _startTime;
 private _sleep     = (1 - _timeSpent);
 
-if(_sleep < 0)then{_sleep = 0};
+if(_sleep < 0.02)then{_sleep = 0.02};
 
-PSA_server_1_secondTimer =PSA_server_1_secondTimer+1;
+PSA_server_1_secondTimer =time+_sleep;
 
 true;

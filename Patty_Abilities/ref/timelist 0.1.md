@@ -21,3 +21,8 @@
 [20m]  Resupply on respawn.
 [73m]  Notifications
 ~22.64 hours (1359 minutes)
+[44m] CBA settings, initial test (New bugs discovered)
+[39m] Bugfixing
+[35m] Curator crate (Only in 3DEN for now)
+---
+[71m] Curator crate global init and functionality.

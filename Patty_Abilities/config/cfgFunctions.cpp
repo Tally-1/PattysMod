@@ -23,6 +23,7 @@ class CfgFunctions {
 
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
+			class addToAllCrates           {};
 			class cratePlacementKeyHandler {};
 			class canPlaceCrate            {};
 			class initCratePlacement       {};
@@ -30,6 +31,7 @@ class CfgFunctions {
 			class onEachCrateFrame         {};
 			class endCratePlacement        {};
 			class initSpecialCrate         {};
+			class initResupplyCrate        {};
 			class crateMarker              {};
 			class crateDamaged             {};
 			class destroyCrate             {};
@@ -50,6 +52,7 @@ class CfgFunctions {
 
 			class setSpecialCrateData      {};
 			class setSpecialCrateEvents    {};
+			
 			
 
 		};
