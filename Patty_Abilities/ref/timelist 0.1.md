@@ -17,3 +17,7 @@
 ---
 [186m] Arsenal Eventhandlers, bugfix, Loadout save
 [54m]  Resupply actions (ACE & vanilla)
+---
+[20m]  Resupply on respawn.
+[73m]  Notifications
+~22.64 hours (1359 minutes)

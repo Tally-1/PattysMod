@@ -75,6 +75,17 @@ class CfgFunctions {
 			class serverInit                  {};
 		};
 
+		class missionEh {
+			file = "\PATTY_ABILITIES\functions\missionEh";
+			class entityRespawned {};
+		};
+
+		class notifications { 
+			file = "\PATTY_ABILITIES\functions\notifications";
+			class crateDestroyedNotification {};
+			class showNotification           {};
+		};
+
 		class onEachFrameServer { 
 			file = "\PATTY_ABILITIES\functions\onEachFrame\server";
 			class onEachFrameServer          {};

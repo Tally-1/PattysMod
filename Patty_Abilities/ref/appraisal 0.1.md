@@ -8,8 +8,8 @@ Main Features:
    <!-- - When it is picked up -->
    <!-- - When it is destroyed -->
 
-5)  Notification on specific events:
-     - When it is destroyed.
+<!-- 5)  Notification on specific events: -->
+   <!-- - When it is destroyed. -->
 
 <!-- 6)  3D marker visible to all players within a certain distance (Addon option?). -->
 <!-- 7)  Map marker visible to all players. -->
@@ -21,7 +21,7 @@ Extra Features:
 <!-- 1) Arsenal script for saving player loadout to the crate.
     - Should be triggable by admin as well. -->
 <!-- 2) Crate Loadout should be applied by an action on the crate (resupply). -->
-3) Crate Loadout should be applied on respawn (resupply).
+<!-- 3) Crate Loadout should be applied on respawn (resupply). -->
 4) Zeus placeable version of the crate, with some adjustments:
     - Cannot be destroyed (proximity).
     - No Map marker.

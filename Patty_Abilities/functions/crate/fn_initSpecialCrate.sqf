@@ -3,7 +3,7 @@ params[
     ["_pos", nil,     [[]]],
     ["_dir", nil,      [0]]
 ];
-private _crate     = "Box_NATO_Equip_F" createVehicle _pos;
+private _crate     = "B_supplyCrate_F" createVehicle _pos;
 private _allCrates = missionNamespace getVariable "PSA_specialCrates";
 
 _allCrates pushBackUnique _crate;

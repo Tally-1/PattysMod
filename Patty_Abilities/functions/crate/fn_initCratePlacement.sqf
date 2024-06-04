@@ -4,7 +4,7 @@ params[
 
 if!([_man] call PSA_fnc_canPlaceCrate)exitWith{};
 
-private _crate      = createSimpleObject ["Box_NATO_Equip_F", _man modelToWorldVisualWorld [0,3,1], true];
+private _crate      = createSimpleObject ["B_supplyCrate_F", _man modelToWorldVisualWorld [0,3,1], true];
 private _display  = findDisplay 46;
 private _keyEh    = _display displayAddEventHandler ["KeyDown", {_this call PSA_fnc_cratePlacementKeyHandler}];
 private _frameEh  = [[_man, _crate],PSA_fnc_onEachCrateFrame] call PSA_fnc_addClientFrameTask;//addMissionEventHandler ["EachFrame", {call PSA_fnc_onEachCrateFrame}];
