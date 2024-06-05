@@ -10,20 +10,17 @@
 [200m] Dynamic timer display, client 1 second tasks.
 [28m]  Testing timer, Crate coolDown timer.
 [54m]  Code cleanup, bugfixing, crate placement tweaks.
-~14.03 hours (842 minutes)
----
 [50m]  Server Initial Taskmanager.
 [134m] Crate proximity destruction, Crate destruction timer.
----
 [186m] Arsenal Eventhandlers, bugfix, Loadout save
 [54m]  Resupply actions (ACE & vanilla)
----
 [20m]  Resupply on respawn.
 [73m]  Notifications
-~22.64 hours (1359 minutes)
-[44m] CBA settings, initial test (New bugs discovered)
-[39m] Bugfixing
-[35m] Curator crate (Only in 3DEN for now)
----
-[71m] Curator crate global init and functionality.
-[12m] ACE arsenal handlers.
+[44m]  CBA settings, initial test (New bugs discovered)
+[39m]  Bugfixing
+[35m]  Curator crate (Only in 3DEN for now)
+[71m]  Curator crate global init and functionality.
+[12m]  ACE arsenal handlers.
+[237m] Crate placement effects
+[29m]  Crate retrieval effects, code cleanup.
+~30.43 hours (1826 minutes)

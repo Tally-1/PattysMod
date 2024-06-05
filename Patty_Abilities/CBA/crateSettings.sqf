@@ -9,6 +9,14 @@ private _subCategoryCrate_Settings = "Resupply crate Settings";
 ] call CBA_fnc_addSetting;
 
 [
+	"PSA_cratePlacementTime",
+	"SLIDER",
+	["Crate Placement time","How long it takes for a crate to be placed."],
+	[_categoryName, _subCategoryCrate_Settings],
+	[5,120,30,0]
+] call CBA_fnc_addSetting;
+
+[
 	"PSA_crateProxDestrTimer",
 	"SLIDER",
 	["Crate Proximity destruction time","How long an enemy needs to be next to a crate for it to be destroyed"],

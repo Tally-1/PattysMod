@@ -26,4 +26,4 @@ Extra Features:
    <!-- - Cannot be destroyed (proximity). -->
    <!-- - No Map marker. -->
 
-   5) Placing/picking it up will put the player in an animation that lasts for 10s ( Customisable )
+   <!-- 5) Placing it up will put the player in an animation that lasts for 10s ( Customisable ) -->

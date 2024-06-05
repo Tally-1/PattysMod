@@ -28,6 +28,9 @@ class CfgFunctions {
 			class canPlaceCrate            {};
 			class initCratePlacement       {};
 			class cratePlacementHint       {};
+			class placeCrateAnim           {};
+			class endCrateAnim             {};
+			class cratePlacementEffects    {};
 			class onEachCrateFrame         {};
 			class endCratePlacement        {};
 			class initSpecialCrate         {};
@@ -45,7 +48,6 @@ class CfgFunctions {
 			class canRetrieveMyCrate       {};
 			class retrieveMyCrate          {};
 			class nearCrateEnemies         {};
-
 			class toggleContestedCrate     {};
 			class onContestedCrateStart    {};
 			class handleAllCrates          {};
@@ -53,8 +55,6 @@ class CfgFunctions {
 			class setSpecialCrateData      {};
 			class setSpecialCrateEvents    {};
 			
-			
-
 		};
 
 		class arsenal
@@ -133,6 +133,12 @@ class CfgFunctions {
 			class crateDestructionTimer      {};
 			class crateDestructionTimerAbort {};
 			class crateDestructionTimerEnd   {};
+		};
+
+		class progressBar {
+			file = "\PATTY_ABILITIES\functions\rscTimers\progressBar";
+			class progressBar    {};
+			class setProgressBar {};
 		};
 
 		class misc {

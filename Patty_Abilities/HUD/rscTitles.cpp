@@ -23,4 +23,22 @@ class RscTitles
 
 		class Controls{};
 	};
+
+	class PSA_progressBar 
+	{
+		idd              = -1;
+		name             = "PSA_progressBar";
+		movingEnable     = 0;
+		enableSimulation = 1;
+		enableDisplay    = 1;
+		fadein           = 0;
+		fadeout          = 0;
+		duration         = 10000;
+		onLoad           = "with uiNameSpace do { PSA_progressBar = _this select 0 }";
+		onUnLoad         = "with uiNameSpace do { PSA_progressBar = displayNull }";
+
+		class Controls{};
+	};
+
+	
 };
