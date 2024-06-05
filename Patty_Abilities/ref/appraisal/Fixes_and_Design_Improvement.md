@@ -14,7 +14,6 @@ You don't need anything crazy but do make it have some consistency with the Role
 
 Players cannot stop the destruction timer by being close to the crate when enemies are close to it.
 I believe this is something I mentioned when creating the contesting feature.
-
 --> Not mentioned in the document you sent me <--
 
 There also needs to be a sound when the crate is being contested that only the person who owns the crate can hear.

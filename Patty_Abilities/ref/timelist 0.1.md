@@ -24,3 +24,13 @@
 [237m] Crate placement effects
 [29m]  Crate retrieval effects, code cleanup.
 ~30.43 hours (1826 minutes)
+
+Price 10 USD pr Hour
+30.4 hours registered
+30.4 x 10 = 304 USD
+
+Min price = 140
+Max price = 280
+
+Final price for Abilities 0.1:
+280 USD
