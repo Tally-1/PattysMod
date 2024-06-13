@@ -7,6 +7,4 @@ _crateData set  ["retrieved",     true];
 _crateData call ["globalizeData", true];
 
 [["click", 1, 1]] remoteExecCall ["playSoundUI", _owner];
-[_owner, "Retrieving Crate"] remoteExec ["PSA_fnc_cratePlacementEffects", _owner];
-
-deleteVehicle _crate;
+[_owner, false] remoteExec ["PSA_fnc_cratePlacementEffects", _owner];

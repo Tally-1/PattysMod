@@ -8,15 +8,15 @@ if(_timeSincePrev < 1) exitWith{};
 if(_time < 1)          exitWith{};
 
 private _animState = animationState _man;
-private _anim      = "MountSide";
-private _animTime  = 6;
+private _anim      = "AinvPknlMstpSlayWrflDnon_medicOther";
+private _animTime  = 10;
 private _startTime = _man getVariable ["PSA_animStartTime",time];
 private _coef      = _animTime/_time;
 
 private _animEh    = 
 _man addEventHandler ["AnimDone", {
     params ["_man", "_anim"];
-    if(_anim != "MountSide")exitWith{};
+    if!("medic" in _anim)exitWith{};
     [_man, true] spawn PSA_fnc_endCrateAnim;
 }];
 

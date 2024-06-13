@@ -40,5 +40,21 @@ class RscTitles
 		class Controls{};
 	};
 
+	class PSA_hintDisplay 
+	{
+		idd              = -1;
+		name             = "PSA_hintDisplay";
+		movingEnable     = 0;
+		enableSimulation = 1;
+		enableDisplay    = 1;
+		fadein           = 0;
+		fadeout          = 0;
+		duration         = 10000;
+		onLoad           = "with uiNameSpace do { PSA_hintDisplay = _this select 0 }";
+		onUnLoad         = "with uiNameSpace do { PSA_hintDisplay = displayNull }";
+
+		class Controls{};
+	};
+
 	
 };

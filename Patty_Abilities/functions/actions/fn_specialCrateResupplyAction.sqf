@@ -1,8 +1,8 @@
 params[
 	["_crate",nil,[objNull]]
 ];
-private _statement = "[(_this#1)] call PSA_fnc_applyLoadOut";
-private _condition = "true";
+private _statement = "_this spawn PSA_fnc_crateResupplyLoadOut";
+private _condition = "_this call  PSA_fnc_canResupplyOnCrate";
 private _title     = "<t color='#f8aa45'>Resupply</t>";
 
 _crate addAction [

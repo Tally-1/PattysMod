@@ -1,10 +1,12 @@
 params[
-	["_man",  nil,        [objNull]],
-	["_text", "Placing crate", [""]]
+	["_man",       nil, [objNull]],
+	["_isPlacing", nil,    [true]]
 ];
 private _placeTime = PSA_cratePlacementTime;
-private _code      = [[_man], {_this spawn PSA_fnc_endCrateAnim}];
-[_man, _placeTime]                   call PSA_fnc_placeCrateAnim;
-[_text, _placeTime, _code] call PSA_fnc_progressBar;
+[_man, _placeTime] call PSA_fnc_placeCrateAnim;
+
+if(_isPlacing)exitWith{[_man] call PSA_fnc_cratePlaceProgressBar};
+
+[_man] call PSA_fnc_crateRetrieveProgressBar;
 
 true;

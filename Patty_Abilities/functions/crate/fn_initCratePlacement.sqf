@@ -15,6 +15,6 @@ _man setVariable ["PSA_crateKeyEh",        _keyEh];
 _man setVariable ["PSA_crateFrameEh",      _frameEh];
 _man setVariable ["PSA_cratePlaceDeathEh", _killedEh];
 
-call PSA_fnc_cratePlacementHint;
+[] spawn PSA_fnc_cratePlacementHint;
 
 true;

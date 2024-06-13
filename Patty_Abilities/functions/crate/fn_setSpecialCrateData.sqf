@@ -9,13 +9,14 @@ if(isNull _man)
 then{_side = civilian}
 else{_marker = [_crate, _side] call PSA_fnc_crateMarker};
 
-private _3dColor = [_side] call PSA_fnc_sideColor;
+private _3dColor = [0,0.3,0.6,1]; // [_side] call PSA_fnc_sideColor;
 private _dataArr = [
     ["owner",                                _man],
+	["type",                      "resupplyCrate"],
     ["side",                                _side],
     ["crate",                              _crate],
     ["color",                            _3dColor],
-	["zone",      [_pos, PSA_crateProxDestrDist]],
+	["zone",       [_pos, PSA_crateProxDestrDist]],
 	["destroyed",                           false],
 	["retrieved",                           false],
 	["contested",                           false],
@@ -25,11 +26,12 @@ private _dataArr = [
 	["destroy",                                   PSA_fnc_destroyCrate],
 	["globalizeData",                       PSA_fnc_globalizeCrateData],
 	["nearEnemies",                           PSA_fnc_nearCrateEnemies],
+	["nearFriends",                           PSA_fnc_nearCrateFriends],
 	
 	["toggleContested",                   PSA_fnc_toggleContestedCrate],
-	["contestedNow",    {(_self call ["nearEnemies"]) isNotEqualTo []}],
+	["contestedNow",                         PSA_fnc_crateContestedNow],
 	["onContestedStart",                 PSA_fnc_onContestedCrateStart],
-	["onContestedEnd",    {"Crate is no longer contested!" call p_dbg}]
+	["onContestedEnd",                     PSA_fnc_onContestedCrateEnd]
 ];
 
 private _crateData = createhashmapObject [_dataArr];

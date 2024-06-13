@@ -48,12 +48,25 @@ class CfgFunctions {
 			class canRetrieveMyCrate       {};
 			class retrieveMyCrate          {};
 			class nearCrateEnemies         {};
+			class nearCrateFriends         {};
+			class crateContestedNow        {};
 			class toggleContestedCrate     {};
+
 			class onContestedCrateStart    {};
+			class onContestedCrateEnd      {};
+
 			class handleAllCrates          {};
+			class handleCrateMarkers       {};
 
 			class setSpecialCrateData      {};
 			class setSpecialCrateEvents    {};
+
+			class crateResupplyAnim        {};
+			class endResupplyAnim          {};
+			class canResupplyOnCrate       {};
+			class crateResupplyLoadOut     {};
+
+			class initArsenalCrate         {};
 			
 		};
 
@@ -86,6 +99,8 @@ class CfgFunctions {
 		class notifications { 
 			file = "\PATTY_ABILITIES\functions\notifications";
 			class crateDestroyedNotification {};
+			class crateReadyNotification     {};
+			class contCrateNotification      {};
 			class showNotification           {};
 		};
 
@@ -93,11 +108,17 @@ class CfgFunctions {
 			file = "\PATTY_ABILITIES\functions\onEachFrame\server";
 			class onEachFrameServer          {};
 			class frameTasksServer           {};
+
 			class addServerFrameTask         {};
 			class removeServerFrameTask      {};
+
 			class addServer_1_secondTask     {};
 			class removeServer_1_secondTask  {};
 			class exec_1_secondTasksServer   {};
+
+			class addServer1minuteTask       {};
+			class removeServer1minuteTask    {};
+			class exec_1minuteTasksServer    {};
 		};
 
 		class onEachFrameClient { 
@@ -110,6 +131,7 @@ class CfgFunctions {
 			class addClientSecondTasks      {};
 			class removeClientSecondTask    {};
 			class 3dCrates                  {};
+			class drawCrate3D               {};
 			class execPrFrameTasks          {};
 			class execPrSecondTasks         {};
 		};
@@ -133,6 +155,9 @@ class CfgFunctions {
 			class crateDestructionTimer      {};
 			class crateDestructionTimerAbort {};
 			class crateDestructionTimerEnd   {};
+
+			class cratePlaceProgressBar      {};
+			class crateRetrieveProgressBar   {};
 		};
 
 		class progressBar {
@@ -150,13 +175,14 @@ class CfgFunctions {
 			class sideColor             {};
 			class debugMessage          {};
 			class stopVelocityAndDamage {};
-			
+			class RMHintDisplay         {};
 			
 		};
 
 		class objectDetection { 
 			file = "\PATTY_ABILITIES\functions\objectDetection";
 			class enemiesInZone   {};
+			class friendsInZone   {};
 			class hostile         {};
 			class validLandEntity {};
 			class validVehicle    {};
