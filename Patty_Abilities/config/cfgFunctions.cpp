@@ -176,6 +176,8 @@ class CfgFunctions {
 			class debugMessage          {};
 			class stopVelocityAndDamage {};
 			class RMHintDisplay         {};
+			class setBlockInputKeyEh    {};
+			class removeBlockInputKeyEh {};
 			
 		};
 

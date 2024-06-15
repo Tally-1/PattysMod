@@ -4,7 +4,7 @@ params[
 //Initializes the base category for all ACE self-actions
 private _categoryName = "PSA_abilitiesACE";
 private _baseCategory = _player getVariable "PSA_baseCategory";
-private _icon         = "\a3\ui_f\data\igui\cfg\simpletasks\letters\a_ca.paa";
+private _icon         = "\Patty_Abilities\textures\icons\SA.paa";
 if(!isNil "_baseCategory")exitWith{_categoryName;};
 
 private _baseCategory = [

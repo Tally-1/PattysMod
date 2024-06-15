@@ -2,8 +2,7 @@ params[
 	["_man",       nil, [objNull]],
 	["_isPlacing", nil,    [true]]
 ];
-private _placeTime = PSA_cratePlacementTime;
-[_man, _placeTime] call PSA_fnc_placeCrateAnim;
+_man playMoveNow "AinvPknlMstpSlayWrflDnon_medicOther";
 
 if(_isPlacing)exitWith{[_man] call PSA_fnc_cratePlaceProgressBar};
 

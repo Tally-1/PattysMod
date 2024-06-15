@@ -5,5 +5,6 @@
 #include "config\cfgFunctions.cpp"
 #include "config\cfgVehicles.cpp"
 #include "config\preInitEvents.cpp"
+#include "config\cfgMarkers.cpp"
 
 #include "HUD\rscTitles.cpp"

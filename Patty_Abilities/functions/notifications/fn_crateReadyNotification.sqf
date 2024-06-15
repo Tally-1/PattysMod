@@ -1,5 +1,5 @@
 private _title = "Resupply crate ready";
-private _text  = "Resupply crate is now available again!";
+private _text  = "Resupply Crate is now avaliable";
 private _icon  = "\Patty_Abilities\textures\icons\CrateReady.paa";
 
 [

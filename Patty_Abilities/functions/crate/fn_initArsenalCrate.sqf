@@ -4,14 +4,17 @@ params[
 private _pos    = getPosATLVisual _crate;
 private _colorM = "ColorWEST";
 private _color  = [0,0.3,0.6,1];
-private _icon   = "loc_Box";
-private _text   = "Arsenal";
-private _marker = [_pos, _text, 1, _colorM, _icon] call PSA_fnc_posMarker;
+private _iconM  = "PSA_arsenal_crate";
+private _text   = "Arsenal Crate";
+private _marker = [_pos, _text, 1, _colorM, _iconM] call PSA_fnc_posMarker;
 private _dataArr = [
-	["type", "arsenalCrate"],
-	["marker",      _marker],
-	["owner",       objNull],
-	["color",        _color]
+	["type",                                "arsenalCrate"],
+	["3Dtext",                                       _text],
+	["icon",      "\Patty_Abilities\textures\icons\AC.paa"],
+	["contested",                                    false],
+	["marker",                                     _marker],
+	["owner",                                      objNull],
+	["color",                                       _color]
 ];
 
 private _crateData = createhashmapObject [_dataArr];

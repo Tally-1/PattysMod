@@ -1,7 +1,8 @@
 params[
-    ["_text",    "",      [""]],
-    ["_time",    nil,      [0]],
-    ["_endCode", [[],{}], [[]]] // [[params],{code}]
+    ["_text",       "",        [""]],
+    ["_time",       nil,        [0]],
+    ["_endCode",    [[],{}],   [[]]], // [[params],{code}]
+	["_blockInput", false,   [true]]
 ];
 
 disableSerialization;
@@ -48,11 +49,16 @@ _bar progressSetPosition 0;
 
 private _frameEh = [[], PSA_fnc_setProgressBar] call PSA_fnc_addClientFrameTask;
 
-_bar setVariable ["PSA_startTime",   time];
-_bar setVariable ["PSA_runTime",    _time];
-_bar setVariable ["PSA_frameEh", _frameEh];
-_bar setVariable ["PSA_endCode", _endCode];
+_bar setVariable ["PSA_startTime",         time];
+_bar setVariable ["PSA_runTime",          _time];
+_bar setVariable ["PSA_frameEh",       _frameEh];
+_bar setVariable ["PSA_endCode",       _endCode];
 
+if(_blockInput)then{ 
+	private _display = findDisplay 46 createDisplay "RscDisplayEmpty";
+	[_display] call PSA_fnc_setBlockInputKeyEh;
+	_bar setVariable ["PSA_inputBlocker", _display];
+};
 
 
 [_display, _bar];

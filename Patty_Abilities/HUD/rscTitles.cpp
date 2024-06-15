@@ -56,5 +56,4 @@ class RscTitles
 		class Controls{};
 	};
 
-	
 };

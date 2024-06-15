@@ -12,10 +12,9 @@ private _code      = [
 		private _crate = _man getVariable "PSA_myCrate";
 		[_crate] remoteExecCall ["deleteVehicle",2];
 		playSoundUI ["click", 1, 1];
-		_this spawn PSA_fnc_endCrateAnim;
 	}
 ];
 
-[_text, _placeTime, _code] call PSA_fnc_progressBar;
+[_text, _placeTime, _code, true] call PSA_fnc_progressBar;
 
 true;

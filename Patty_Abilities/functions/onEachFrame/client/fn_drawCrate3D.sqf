@@ -4,20 +4,15 @@ params[
 private _data  = _crate getVariable "PSA_crateData";
 private _owner = _data getOrDefault ["owner", objNull];
 private _pos   = getPosATLVisual _crate;
-private _icon  = "\Patty_Abilities\textures\icons\RC.paa"; // "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa";
+private _icon  = _data get "icon";
 private _color = _data get "color";
 private _type  = _data get "type";
-private _txt   = "supplyCrate";
+private _txt   = _data get "3Dtext";
 
 if(_data get "contested")
-then{_txt = "supplyCrate (contested)"}
+then{_txt = [_txt," (contested)"]joinString""}
 else{if(_owner isEqualTo player)
 then{_color = [0.85,0.85,0,1]}};
-
-if(_type isEqualTo "arsenalCrate")then{
-	_txt = "Arsenal";
-	_icon = "\Patty_Abilities\textures\icons\AC.paa";
-};
 
 drawIcon3D 
 [

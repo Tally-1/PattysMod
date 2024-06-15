@@ -16,10 +16,9 @@ private _code      = [
 		];
 		playSoundUI ["click", 1, 1];
 		[_man, _pos, _dir] remoteExecCall ["PSA_fnc_initSpecialCrate",2];
-		_this spawn PSA_fnc_endCrateAnim;
 	}
 ];
 
-[_text, _placeTime, _code] call PSA_fnc_progressBar;
+[_text, _placeTime, _code, true] call PSA_fnc_progressBar;
 
 true;
