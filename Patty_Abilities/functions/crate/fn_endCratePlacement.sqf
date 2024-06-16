@@ -5,6 +5,7 @@ params[
 private _man      = player;
 private _crate    = _man getVariable "PSA_localCrate";
 private _keyEh    = _man getVariable "PSA_crateKeyEh";
+private _mouseEh  = _man getVariable "PSA_crateMouseEh";
 private _frameEh  = _man getVariable "PSA_crateFrameEh";
 private _deathEh  = _man getVariable "PSA_cratePlaceDeathEh";
 private _display  = findDisplay 46;
@@ -13,6 +14,7 @@ private _pos      = getPosATLVisual _crate;
 private _dir      = getDirVisual _crate;
 
 _display displayRemoveEventHandler ["KeyDown", _keyEh];
+_display displayRemoveEventHandler ["MouseZChanged", _mouseEh];
 [_frameEh] call PSA_fnc_removeClientFrameTask;
 _man removeEventHandler ["killed", _deathEh];
 
@@ -20,6 +22,7 @@ deleteVehicle _crate;
 
 _man setVariable ["PSA_localCrate",        nil];
 _man setVariable ["PSA_crateKeyEh",        nil];
+_man setVariable ["PSA_crateMouseEh",      nil];
 _man setVariable ["PSA_crateFrameEh",      nil];
 _man setVariable ["PSA_cratePlaceDeathEh", nil];
 

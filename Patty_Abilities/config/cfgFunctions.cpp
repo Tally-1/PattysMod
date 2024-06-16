@@ -21,54 +21,58 @@ class CfgFunctions {
 			class selfActionCategoryACE              {};
 		};
 
+
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
-			class addToAllCrates           {};
-			class cratePlacementKeyHandler {};
-			class canPlaceCrate            {};
-			class initCratePlacement       {};
-			class cratePlacementHint       {};
-			class placeCrateAnim           {};
-			class endCrateAnim             {};
-			class cratePlacementEffects    {};
-			class onEachCrateFrame         {};
-			class endCratePlacement        {};
-			class initSpecialCrate         {};
-			class initResupplyCrate        {};
-			class crateMarker              {};
-			class crateDamaged             {};
-			class destroyCrate             {};
-			class destroyCrateRemote       {};
-			class crateKilled              {};
-			class globalizeCrateData       {};
-			class retrieveCrate            {};
-			class crateDeleted             {};
-			class canPickupCrate           {};
-			class pickupCrate              {};
-			class canRetrieveMyCrate       {};
-			class retrieveMyCrate          {};
-			class nearCrateEnemies         {};
-			class nearCrateFriends         {};
-			class crateContestedNow        {};
-			class toggleContestedCrate     {};
+			class addToAllCrates             {};
+			class cratePlacementKeyHandler   {};
+			class cratePlacementMouseHandler {};
+			class canPlaceCrate              {};
+			class initCratePlacement         {};
+			class setLocalCrateDir           {};
+			class cratePlacementHint         {};
+			class placeCrateAnim             {};
+			class endCrateAnim               {};
+			class cratePlacementEffects      {};
+			class onEachCrateFrame           {};
+			class endCratePlacement          {};
+			class initSpecialCrate           {};
+			class initResupplyCrate          {};
+			class crateMarker                {};
+			class crateDamaged               {};
+			class destroyCrate               {};
+			class destroyCrateRemote         {};
+			class crateKilled                {};
+			class globalizeCrateData         {};
+			class retrieveCrate              {};
+			class crateDeleted               {};
+			class canPickupCrate             {};
+			class pickupCrate                {};
+			class canRetrieveMyCrate         {};
+			class retrieveMyCrate            {};
+			class nearCrateEnemies           {};
+			class nearCrateFriends           {};
+			class crateContestedNow          {};
+			class toggleContestedCrate       {};
 
-			class onContestedCrateStart    {};
-			class onContestedCrateEnd      {};
+			class onContestedCrateStart      {};
+			class onContestedCrateEnd        {};
 
-			class handleAllCrates          {};
-			class handleCrateMarkers       {};
+			class handleAllCrates            {};
+			class handleCrateMarkers         {};
 
-			class setSpecialCrateData      {};
-			class setSpecialCrateEvents    {};
+			class setSpecialCrateData        {};
+			class setSpecialCrateEvents      {};
 
-			class crateResupplyAnim        {};
-			class endResupplyAnim          {};
-			class canResupplyOnCrate       {};
-			class crateResupplyLoadOut     {};
+			class crateResupplyAnim          {};
+			class endResupplyAnim            {};
+			class canResupplyOnCrate         {};
+			class crateResupplyLoadOut       {};
 
-			class initArsenalCrate         {};
+			class initArsenalCrate           {};
 			
 		};
+
 
 		class arsenal
 		{
@@ -84,6 +88,7 @@ class CfgFunctions {
 			class applyLoadOut              {};
 		};
 
+
 		class init {
 			file = "\PATTY_ABILITIES\functions\init";
 			class mainInit       {postInit = 1;};
@@ -91,10 +96,12 @@ class CfgFunctions {
 			class serverInit                  {};
 		};
 
+
 		class missionEh {
 			file = "\PATTY_ABILITIES\functions\missionEh";
 			class entityRespawned {};
 		};
+
 
 		class notifications { 
 			file = "\PATTY_ABILITIES\functions\notifications";
@@ -103,6 +110,7 @@ class CfgFunctions {
 			class contCrateNotification      {};
 			class showNotification           {};
 		};
+
 
 		class onEachFrameServer { 
 			file = "\PATTY_ABILITIES\functions\onEachFrame\server";
@@ -120,6 +128,7 @@ class CfgFunctions {
 			class removeServer1minuteTask    {};
 			class exec_1minuteTasksServer    {};
 		};
+
 
 		class onEachFrameClient { 
 			file = "\PATTY_ABILITIES\functions\onEachFrame\client";
@@ -153,9 +162,9 @@ class CfgFunctions {
 			file = "\PATTY_ABILITIES\functions\rscTimers\taskTimers";
 			class crateCoolDownTimer         {};
 			class crateDestructionTimer      {};
+			class crateIsCountingDestruction {};
 			class crateDestructionTimerAbort {};
 			class crateDestructionTimerEnd   {};
-
 			class cratePlaceProgressBar      {};
 			class crateRetrieveProgressBar   {};
 		};
@@ -178,6 +187,8 @@ class CfgFunctions {
 			class RMHintDisplay         {};
 			class setBlockInputKeyEh    {};
 			class removeBlockInputKeyEh {};
+			class formatDir             {};
+			class getControlledMan      {};
 			
 		};
 
@@ -194,5 +205,4 @@ class CfgFunctions {
 			class unconscious     {};
 		};
 	};
-
 };

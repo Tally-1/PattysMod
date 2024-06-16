@@ -13,6 +13,6 @@ Fixes:
     <!-- - Check that Notifications are sent when cooldown timer is over. -->
 
 Tweaks/New features:
-    - Pause the destruction timer when both friendlies and enemies are near.
-    - Use bright green as map-marker color.
-    - Add the posibility to change crate direction by using scroll wheel.
+    <!-- - Pause the destruction timer when both friendlies and enemies are near. -->
+    <!-- - Use bright green as map-marker color. -->
+    <!-- - Add the posibility to change crate direction by using scroll wheel. -->

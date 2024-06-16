@@ -41,6 +41,7 @@ private _taskId   = _loopTask call PSA_fnc_addClientSecondTasks;
 _map set ["taskId", _taskId];
 _map call ["update"];
 _activeTimers pushBack _ctrl;
+_ctrl setVariable ["PSA_TimerData", _map];
 _display setVariable ["PSA_AllTimers", _activeTimers];
 
 _map;
