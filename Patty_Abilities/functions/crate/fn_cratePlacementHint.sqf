@@ -4,7 +4,8 @@ private _end       = "</t>";
 private _title     = "Keybinds";
 private _text      = [
 		"[<t color='#5eff4f'>SPACE</t>] Place crate",_newLine,
-        "[<t color='#ff3434'>ESC</t>] Abort"
+        "[<t color='#ff3434'>ESC</t>] Abort",_newLine,
+		"[<t color='#e1e37b'>SCROLL</t>] Rotate"
 	]joinString"";
 
 [_title,_text] call PSA_fnc_RMHintDisplay;

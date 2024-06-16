@@ -34,3 +34,5 @@ Max price = 280
 
 Final price for Abilities 0.1:
 280 USD
+
+**The work sessions listed here has been paid in full**

@@ -15,6 +15,8 @@ class CfgFunctions {
 			class setSpecialCrateActions             {};
 			class specialCrateResupplyAction         {};
 			class specialCrateResupplyActionACE      {};
+			class specialCrateRetrieveAction         {};
+			class specialCrateRetrieveActionACE      {};
 
 			class simpleSelfActionACE                {};
 			class simpleObjectActionACE              {};
@@ -24,52 +26,54 @@ class CfgFunctions {
 
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
-			class addToAllCrates             {};
-			class cratePlacementKeyHandler   {};
-			class cratePlacementMouseHandler {};
-			class canPlaceCrate              {};
-			class initCratePlacement         {};
-			class setLocalCrateDir           {};
-			class cratePlacementHint         {};
-			class placeCrateAnim             {};
-			class endCrateAnim               {};
-			class cratePlacementEffects      {};
-			class onEachCrateFrame           {};
-			class endCratePlacement          {};
-			class initSpecialCrate           {};
-			class initResupplyCrate          {};
-			class crateMarker                {};
-			class crateDamaged               {};
-			class destroyCrate               {};
-			class destroyCrateRemote         {};
-			class crateKilled                {};
-			class globalizeCrateData         {};
-			class retrieveCrate              {};
-			class crateDeleted               {};
-			class canPickupCrate             {};
-			class pickupCrate                {};
-			class canRetrieveMyCrate         {};
-			class retrieveMyCrate            {};
-			class nearCrateEnemies           {};
-			class nearCrateFriends           {};
-			class crateContestedNow          {};
-			class toggleContestedCrate       {};
+			class addToAllCrates                {};
+			class cratePlacementKeyHandler      {};
+			class cratePlacementMouseHandler    {};
+			class canPlaceCrate                 {};
+			class initCratePlacement            {};
+			class setLocalCrateDir              {};
+			class cratePlacementHint            {};
+			class placeCrateAnim                {};
+			class endCrateAnim                  {};
+			class cratePlacementEffects         {};
+			class onEachCrateFrame              {};
+			class endCratePlacement             {};
+			class initSpecialCrate              {};
+			class initResupplyCrate             {};
+			class crateMarker                   {};
+			class crateDamaged                  {};
+			class destroyCrate                  {};
+			class destroyCrateRemote            {};
+			class crateKilled                   {};
+			class globalizeCrateData            {};
+			class retrieveCrate                 {};
+			class crateDeleted                  {};
+			class canPickupCrate                {};
+			class canRetrieveThisCrate          {};
+			class pickupCrate                   {};
+			class canRetrieveMyCrate            {};
+			class retrieveMyCrate               {};
+			class nearCrateEnemies              {};
+			class nearCrateFriends              {};
+			class crateContestedNow             {};
+			class toggleContestedCrate          {};
 
-			class onContestedCrateStart      {};
-			class onContestedCrateEnd        {};
+			class onContestedCrateStart         {};
+			class onContestedCrateEnd           {};
 
-			class handleAllCrates            {};
-			class handleCrateMarkers         {};
+			class handleAllCrates               {};
+			class handleCrateMarkers            {};
 
-			class setSpecialCrateData        {};
-			class setSpecialCrateEvents      {};
+			class setSpecialCrateData           {};
+			class setSpecialCrateEvents         {};
+			
+			class crateResupplyAnim             {};
+			class endResupplyAnim               {};
+			class canResupplyOnCrate            {};
+			class crateResupplyLoadOut          {};
 
-			class crateResupplyAnim          {};
-			class endResupplyAnim            {};
-			class canResupplyOnCrate         {};
-			class crateResupplyLoadOut       {};
-
-			class initArsenalCrate           {};
+			class initArsenalCrate              {};
+			class setCrateMarkerColor           {};
 			
 		};
 
@@ -189,6 +193,7 @@ class CfgFunctions {
 			class removeBlockInputKeyEh {};
 			class formatDir             {};
 			class getControlledMan      {};
+			class addZ                  {};
 			
 		};
 

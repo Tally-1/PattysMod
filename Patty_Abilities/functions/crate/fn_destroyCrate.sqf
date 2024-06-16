@@ -5,7 +5,6 @@ if((!isNil "_owner")
 &&{!isNull _owner})then{ 
 	private _coolDownTime = time+PSA_crateDestructionCooldown;
 	_owner setVariable ["PSA_crateCooldown", _coolDownTime, true];
-	[["beep", 1, 1]] remoteExecCall ["playSoundUI",                        _owner];
 	[]               remoteExecCall ["PSA_fnc_crateDestroyedNotification", _owner];
 	[_coolDownTime]  remoteExec     ["PSA_fnc_crateCoolDownTimer",         _owner];
 };

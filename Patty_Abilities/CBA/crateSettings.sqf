@@ -17,6 +17,15 @@ private _subCategoryCrate_Settings = "Resupply crate Settings";
 ] call CBA_fnc_addSetting;
 
 [
+	"PSA_crateResupplyTime",
+	"SLIDER",
+	["Crate Resupply Time","How long it takes to resupply at a crate."],
+	[_categoryName, _subCategoryCrate_Settings],
+	[3,60,10,0]
+] call CBA_fnc_addSetting;
+
+
+[
 	"PSA_crateProxDestrTimer",
 	"SLIDER",
 	["Crate Proximity destruction time","How long an enemy needs to be next to a crate for it to be destroyed"],

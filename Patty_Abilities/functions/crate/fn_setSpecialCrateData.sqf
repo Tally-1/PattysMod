@@ -36,9 +36,9 @@ private _dataArr = [
 
 private _crateData = createhashmapObject [_dataArr];
 
-if(!isNil "_marker")
-then{_crateData set ["marker", _marker]};
+_crateData set ["marker", _marker];
 
 _crate setVariable ["PSA_crateData", _crateData, true];
+[_marker, _man, false] remoteExecCall ["PSA_fnc_setCrateMarkerColor", 0];
 
 _crateData;

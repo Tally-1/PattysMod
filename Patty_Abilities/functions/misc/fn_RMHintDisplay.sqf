@@ -23,18 +23,18 @@ private _textBox = _display ctrlCreate ["RscStructuredText", 1];
 private _frame   = _display ctrlCreate ["RscFrame", 2];
 private _text    = parseText _text;
 
-private _width    = 0.4;
-private _height   = 0.3;
+private _width    = 0.191 * safezoneW;
+private _height   = 0.14  * safezoneH;
 private _textH    = 0.05;
-private _xPos     = (1.8+ safeZoneX)+(_width*0.5);
-private _yPos     = (0.35+ safeZoneY)-_height*0.5;
+private _xPos     = (0.7 * safezoneW + safezoneX)+(_width*0.5);
+private _yPos     = (0.2 * safezoneH + safezoneY)-_height*0.5;
 private _backGPos = [_xPos,_yPos,_width,_height];
 private _txtPos   = [_xPos,_yPos+0.025,_width,_height];
 private _framePos = [
     _xPos, 
-    _yPos-(_textH*0.5), 
+    _yPos-(_textH*0.52), 
     _width, 
-    _height+(_textH*0.51)
+    _height+(_textH*0.52)
 ];
 
 _frame   ctrlSetPosition _framePos;

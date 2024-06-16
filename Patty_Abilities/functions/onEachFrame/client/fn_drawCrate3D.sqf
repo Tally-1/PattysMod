@@ -3,7 +3,7 @@ params[
 ];
 private _data  = _crate getVariable "PSA_crateData";
 private _owner = _data getOrDefault ["owner", objNull];
-private _pos   = getPosATLVisual _crate;
+private _pos   = [getPosATLVisual _crate, 1.5] call PSA_fnc_addZ;
 private _icon  = _data get "icon";
 private _color = _data get "color";
 private _type  = _data get "type";
