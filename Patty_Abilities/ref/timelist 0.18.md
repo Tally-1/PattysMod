@@ -1,0 +1,1 @@
+[20m] Changed code so that Special ability category is still visible.

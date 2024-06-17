@@ -1,0 +1,1 @@
+- Keep the Special Ability tab in the Self Interaction but an abiltiy is in-use/placed/destroyed/cooldown the option for that specific ability will dissappear and return when the ability is avaliable again

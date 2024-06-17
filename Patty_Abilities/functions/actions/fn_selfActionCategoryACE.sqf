@@ -11,7 +11,7 @@ private _baseCategory = [
 	_categoryName,
 	"Special Abilities",
 	_icon,
-	{},
+	{true},
 	{true}
 ] call ace_interact_menu_fnc_createAction;
 

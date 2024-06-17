@@ -1,4 +1,4 @@
-PSA_Version = 0.17;
+PSA_Version = 0.18;
 
 private _categoryName                    = ["PA - Abilities ", PSA_Version] joinString "";
 private _subCategoryAbilities_Keybinds = "Abilities Keybindings";
