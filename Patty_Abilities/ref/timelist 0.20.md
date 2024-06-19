@@ -1,0 +1,1 @@
+[20m] Completed details in appraisal 0.20
