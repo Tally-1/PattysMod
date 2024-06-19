@@ -2,13 +2,17 @@ params[
     ["_man",   nil, [objNull]],
     ["_crate", nil, [objNull]]
 ];
+private ["_marker"];
 private _pos     = getPosATLVisual _crate;
 private _side    = side group _man;
-private _3dColor = [0,0.3,0.6,1];
+private _3dColor = [0,0.8,0,1];
 private _colorM  = "ColorGreen";
 private _iconM   = "PSA_resupply_crate";
 private _text    = "Resupply Crate";
-private _marker  = [_pos, _text, 1, _colorM, _iconM] call PSA_fnc_posMarker;
+
+if(!isNull _man)
+then{_marker  = [_pos, _text, 1, _colorM, _iconM] call PSA_fnc_posMarker};
+
 private _dataArr = [
     ["owner",                                      _man],
 	["3Dtext",                                    _text],
@@ -36,9 +40,14 @@ private _dataArr = [
 
 private _crateData = createhashmapObject [_dataArr];
 
-_crateData set ["marker", _marker];
+if(!isNil "_marker")
+then{
+	_crateData set ["marker", _marker];
+	[_marker, _man, false] remoteExecCall ["PSA_fnc_setCrateMarkerColor", 0];
+};
+
 
 _crate setVariable ["PSA_crateData", _crateData, true];
-[_marker, _man, false] remoteExecCall ["PSA_fnc_setCrateMarkerColor", 0];
+
 
 _crateData;

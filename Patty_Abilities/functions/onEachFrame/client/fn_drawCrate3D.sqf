@@ -10,7 +10,7 @@ private _type  = _data get "type";
 private _txt   = _data get "3Dtext";
 
 if(_data get "contested")
-then{_txt = [_txt," (contested)"]joinString""}
+then{_txt = [_txt," (Contested)"]joinString""}
 else{if(_owner isEqualTo player)
 then{_color = [0.85,0.85,0,1]}};
 
