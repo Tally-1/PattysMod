@@ -11,6 +11,8 @@ class CfgFunctions {
 			
 			class placeCrateAction                   {};
 			class aceActionPlaceCrate                {};
+			class updateAceCrateAction               {};
+			class updateAcePlayerActions             {};
 
 			class setSpecialCrateActions             {};
 			class specialCrateResupplyAction         {};
@@ -19,8 +21,13 @@ class CfgFunctions {
 			class specialCrateRetrieveActionACE      {};
 
 			class simpleSelfActionACE                {};
+			class removeAceSelfAction                {};
+			class removeAllAbilitySelfActions        {};
 			class simpleObjectActionACE              {};
 			class selfActionCategoryACE              {};
+
+			class getAllACESelfActionNames           {};
+			class getAbilitySelfActionsACE           {};
 		};
 
 
@@ -104,6 +111,7 @@ class CfgFunctions {
 		class missionEh {
 			file = "\PATTY_ABILITIES\functions\missionEh";
 			class entityRespawned {};
+			class roleChanged     {};
 		};
 
 

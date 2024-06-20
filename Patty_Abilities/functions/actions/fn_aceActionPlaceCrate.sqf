@@ -1,9 +1,9 @@
-private _man       = player;
-private _title     = "Place Resupply Crate";
-private _condition = { [player] call PSA_fnc_canPlaceCrate};
-private _function  = { [player] call PSA_fnc_initCratePlacement};
-private _icon      = "\PATTY_ABILITIES\textures\icons\RC.paa";
-
+private _man        = player;
+private _title      = "Place Resupply Crate";
+private _condition  = { [player] call PSA_fnc_canPlaceCrate};
+private _function   = { [player] call PSA_fnc_initCratePlacement};
+private _icon       = "\PATTY_ABILITIES\textures\icons\RC.paa";
+private _actionData = 
 [
 	_man,
 	_title,
@@ -12,4 +12,6 @@ private _icon      = "\PATTY_ABILITIES\textures\icons\RC.paa";
 	_icon
 ] call PSA_fnc_simpleSelfActionACE;
 
-true;
+private _crateActionName = _actionData#1;
+
+_crateActionName;

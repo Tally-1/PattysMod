@@ -10,4 +10,6 @@ PSA_clientPrSecondTimer     = 0;
 call PSA_fnc_setPlayerActions;
 call PSA_fnc_frameLoop;
 
+["PTG_roleChanged", {_this call PSA_fnc_roleChanged}] call CBA_fnc_addEventHandler;
+
 true;

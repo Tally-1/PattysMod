@@ -1,3 +1,3 @@
-private _abilities = player getVariable ["PSA_abilities", []];
-if("crate" in _abilities)
-then{call PSA_fnc_aceActionPlaceCrate};
+PSA_crateAction = [player] call PSA_fnc_aceActionPlaceCrate;
+
+[player] call PSA_fnc_updateAcePlayerActions;

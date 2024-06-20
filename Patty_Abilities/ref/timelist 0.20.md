@@ -1,1 +1,1 @@
-[20m] Completed details in appraisal 0.20
+[20m] Completed details in appraisal 0.20 (points 1 & 2)

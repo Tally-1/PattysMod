@@ -1,0 +1,2 @@
+- (point 3 from appraisal 0.20) Make the ability tab visible to players that has an ability ONLY, but do not dissapear it for players that has an ability that is temporarily deactivated.
+This should be dynamically updated as roles are changed.
