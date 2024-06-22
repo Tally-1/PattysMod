@@ -7,7 +7,11 @@
 		private _markerPos = markerPos _marker;
 
 		if(_cratePos distance2D _markerPos > 2)
-		then{[_marker, _cratePos] remoteExecCall ["setMarkerPosLocal"]};
+		then{
+			_data set ["zone",   [_cratePos, PSA_crateProxDestrDist]];
+			_data call ["globalizeData"];
+			[_marker, _cratePos] remoteExecCall ["setMarkerPosLocal"];
+		};
 	
 }} forEach (PSA_specialCrates);
 
