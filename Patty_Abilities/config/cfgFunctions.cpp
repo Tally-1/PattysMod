@@ -33,54 +33,59 @@ class CfgFunctions {
 
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
-			class addToAllCrates                {};
-			class cratePlacementKeyHandler      {};
-			class cratePlacementMouseHandler    {};
-			class canPlaceCrate                 {};
-			class initCratePlacement            {};
-			class setLocalCrateDir              {};
-			class cratePlacementHint            {};
-			class placeCrateAnim                {};
-			class endCrateAnim                  {};
-			class cratePlacementEffects         {};
-			class onEachCrateFrame              {};
-			class endCratePlacement             {};
-			class initSpecialCrate              {};
-			class initResupplyCrate             {};
-			class crateMarker                   {};
-			class crateDamaged                  {};
-			class destroyCrate                  {};
-			class destroyCrateRemote            {};
-			class crateKilled                   {};
-			class globalizeCrateData            {};
-			class retrieveCrate                 {};
-			class crateDeleted                  {};
-			class canPickupCrate                {};
-			class canRetrieveThisCrate          {};
-			class pickupCrate                   {};
-			class canRetrieveMyCrate            {};
-			class retrieveMyCrate               {};
-			class nearCrateEnemies              {};
-			class nearCrateFriends              {};
-			class crateContestedNow             {};
-			class toggleContestedCrate          {};
+			class addToAllCrates                  {};
 
-			class onContestedCrateStart         {};
-			class onContestedCrateEnd           {};
+			class setCrateKeyAndMouseHandlers     {};
+			class cratePlacementKeyHandler        {};
+			class cratePlacementMouseHandler      {};
+			class removeCrateKeyAndMouseHandlers  {};
 
-			class handleAllCrates               {};
-			class handleCrateMarkers            {};
+			class canPlaceCrate                   {};
+			class initCratePlacement              {};
+			class setLocalCrateDir                {};
+			class setLocalCrateZ                  {};
+			class cratePlacementHint              {};
+			class placeCrateAnim                  {};
+			class endCrateAnim                    {};
+			class cratePlacementEffects           {};
+			class onEachCrateFrame                {};
+			class endCratePlacement               {};
+			class initSpecialCrate                {};
+			class initResupplyCrate               {};
+			class crateMarker                     {};
+			class crateDamaged                    {};
+			class destroyCrate                    {};
+			class destroyCrateRemote              {};
+			class crateKilled                     {};
+			class globalizeCrateData              {};
+			class retrieveCrate                   {};
+			class crateDeleted                    {};
+			class canPickupCrate                  {};
+			class canRetrieveThisCrate            {};
+			class pickupCrate                     {};
+			class canRetrieveMyCrate              {};
+			class retrieveMyCrate                 {};
+			class nearCrateEnemies                {};
+			class nearCrateFriends                {};
+			class crateContestedNow               {};
+			class toggleContestedCrate            {};
 
-			class setSpecialCrateData           {};
-			class setSpecialCrateEvents         {};
+			class onContestedCrateStart           {};
+			class onContestedCrateEnd             {};
+
+			class handleAllCrates                 {};
+			class handleCrateMarkers              {};
+
+			class setSpecialCrateData             {};
+			class setSpecialCrateEvents           {};
 			
-			class crateResupplyAnim             {};
-			class endResupplyAnim               {};
-			class canResupplyOnCrate            {};
-			class crateResupplyLoadOut          {};
+			class crateResupplyAnim               {};
+			class endResupplyAnim                 {};
+			class canResupplyOnCrate              {};
+			class crateResupplyLoadOut            {};
 
-			class initArsenalCrate              {};
-			class setCrateMarkerColor           {};
+			class initArsenalCrate                {};
+			class setCrateMarkerColor             {};
 			
 		};
 
@@ -202,6 +207,7 @@ class CfgFunctions {
 			class formatDir             {};
 			class getControlledMan      {};
 			class addZ                  {};
+			class numDiff               {};
 			
 		};
 

@@ -15,6 +15,6 @@ addMissionEventHandler ["EachFrame",       PSA_fnc_onEachFrameServer];
 addMissionEventHandler ["EntityRespawned", {_this call PSA_fnc_entityRespawned}];
 
 [[], PSA_fnc_handleAllCrates]    call PSA_fnc_addServer_1_secondTask;
-[[], PSA_fnc_handleCrateMarkers] call PSA_fnc_addServer1minuteTask;
+// [[], PSA_fnc_handleCrateMarkers] call PSA_fnc_addServer1minuteTask;
 
 true;

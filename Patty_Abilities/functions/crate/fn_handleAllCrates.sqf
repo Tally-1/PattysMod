@@ -8,4 +8,7 @@ PSA_specialCrates = PSA_specialCrates select {!isNull _x};
 	
 } forEach (PSA_specialCrates);
 
+// All markers are updated in case crates are moved.
+call PSA_fnc_handleCrateMarkers;
+
 true;
