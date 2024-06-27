@@ -15,3 +15,4 @@
 [26m] Crate marker tracking, Server 1 minute taskLoop.
 
 7.6 hours (456 minutes)
+**The work sessions listed here has been paid in full**

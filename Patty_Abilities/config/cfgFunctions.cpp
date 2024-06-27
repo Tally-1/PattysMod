@@ -28,6 +28,10 @@ class CfgFunctions {
 
 			class getAllACESelfActionNames           {};
 			class getAbilitySelfActionsACE           {};
+			class globalCrateUpdate                  {};
+			class updateAllCrateActionsACE           {};
+			class updateCrateActionsACE              {};
+			class getObjectActionsPSA                {};
 		};
 
 
