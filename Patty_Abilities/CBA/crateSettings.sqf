@@ -1,4 +1,4 @@
-private _subCategoryCrate_Settings = "Resupply crate Settings";
+private _subCategoryCrate_Settings = "Crate Settings";
 
 [
 	"PSA_crateDestructionCooldown",
@@ -22,6 +22,14 @@ private _subCategoryCrate_Settings = "Resupply crate Settings";
 	["Crate Resupply Time","How long it takes to resupply at a crate."],
 	[_categoryName, _subCategoryCrate_Settings],
 	[3,60,10,0]
+] call CBA_fnc_addSetting;
+
+[
+	"PSA_crateHealTime",
+	"SLIDER",
+	["Crate Heal Time","How long it takes to self heal at a arsenal crate."],
+	[_categoryName, _subCategoryCrate_Settings],
+	[5,60,6,0]
 ] call CBA_fnc_addSetting;
 
 
@@ -51,10 +59,10 @@ private _subCategoryCrate_Settings = "Resupply crate Settings";
 ] call CBA_fnc_addSetting;
 
 
-[
-	"PSA_3dCrateMarkerDistance",
-	"SLIDER",
-	["Crate 3D marker distance","How far away is a resupply crate 3D marker visible."],
-	[_categoryName, _subCategoryCrate_Settings],
-	[10,300,50,0]
-] call CBA_fnc_addSetting;
+// [
+// 	"PSA_3dCrateMarkerDistance",
+// 	"SLIDER",
+// 	["Crate 3D marker distance","How far away is a resupply crate 3D marker visible."],
+// 	[_categoryName, _subCategoryCrate_Settings],
+// 	[10,300,50,0]
+// ] call CBA_fnc_addSetting;

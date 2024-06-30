@@ -3,7 +3,7 @@ params[
 ];
 private _statement = "_this spawn PSA_fnc_crateResupplyLoadOut";
 private _condition = "_this call  PSA_fnc_canResupplyOnCrate";
-private _title     = "<t color='#f8aa45'>Resupply</t>";
+private _title     = "<t color='#e0f213'>Resupply</t>";
 
 _crate addAction [
     _title,     // title

@@ -1,26 +1,21 @@
-private _display   = uiNameSpace getVariable ["PSA_progressBar",displayNull];
-private _bar       = _display displayCtrl 1;
+private _display = uiNameSpace getVariable ["PSA_progressBar",displayNull];
+private _bar     = _display displayCtrl 1;
+
 private _startTime = _bar getVariable "PSA_startTime";
-
 if(isNil "_startTime")exitWith{};
-private _endCode    = _bar getVariable "PSA_endCode";
-private _runTime    = _bar getVariable "PSA_runTime";
-private _frameEh    = _bar getVariable "PSA_frameEh";
-private _inputBlock = _bar getVariable "PSA_inputBlocker";
-private _timeSpent  = time - _startTime;
-private _coef       = _timeSpent/_runTime;
+private _abort     = _display getVariable ["PSA_AbortProgress",false];
+private _condition = _bar getVariable "PSA_condition";
+private _runTime   = _bar getVariable "PSA_runTime";
+private _timeSpent = time - _startTime;
+private _coef      = _timeSpent/_runTime;
+private _complete  = _coef > 1;
+private _cancel    = !((_condition#0)call(_condition#1));
+private _aborted   = _abort || {_cancel};
 
-if(_coef > 1)exitWith{
+if(_complete) exitWith{[_display, _aborted] call PSA_fnc_closeProgressBar};
+if(_abort)    exitWith{[_display, _aborted] call PSA_fnc_closeProgressBar};
+if(_cancel)   exitWith{[_display, _aborted] call PSA_fnc_closeProgressBar};
 
-    [_frameEh] call PSA_fnc_removeClientFrameTask;
-    _display closeDisplay 1;
-    (_endCode#0) call (_endCode#1);
-
-	if(!isNil "_inputBlock")
-	then{_inputBlock closeDisplay 1};
-
-    true;
-};
 
 _bar progressSetPosition _coef;
 

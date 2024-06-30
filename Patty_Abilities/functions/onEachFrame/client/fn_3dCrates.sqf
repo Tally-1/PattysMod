@@ -1,7 +1,10 @@
-private _camPos     = (positionCameraToWorld [0,0,0]);
-private _allCrates  = missionNamespace getVariable ["PSA_specialCrates",[]];
-private _nearCrates = _allCrates select {_camPos distance2D _x < PSA_3dCrateMarkerDistance};
+private _crate  = PSA_cursorObject3D;
+if!(alive _crate)exitWith{};
 
-{[_x] call PSA_fnc_drawCrate3D} forEach _nearCrates;
+private _camPos = (positionCameraToWorld [0,0,0]);
+private _tooFar = _camPos distance2D _crate > PSA_3dCrateMarkerDistance;
+if(_tooFar)exitWith{};
+
+[_crate] call PSA_fnc_drawCrate3D;
 
 true;

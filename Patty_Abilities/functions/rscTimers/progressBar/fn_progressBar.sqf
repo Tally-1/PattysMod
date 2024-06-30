@@ -1,8 +1,10 @@
 params[
-    ["_text",       "",        [""]],
-    ["_time",       nil,        [0]],
-    ["_endCode",    [[],{}],   [[]]], // [[params],{code}]
-	["_blockInput", false,   [true]]
+    ["_text",       "",          [""]],
+    ["_time",       nil,          [0]],
+    ["_endCode",    [[],{}],     [[]]], // [[params],{code}]
+	["_abortCode",  [[],{}],     [[]]],
+	["_condition",  [[],{true}], [[]]],
+	["_blockInput", true,      [true]]
 ];
 
 disableSerialization;
@@ -53,6 +55,8 @@ _bar setVariable ["PSA_startTime",         time];
 _bar setVariable ["PSA_runTime",          _time];
 _bar setVariable ["PSA_frameEh",       _frameEh];
 _bar setVariable ["PSA_endCode",       _endCode];
+_bar setVariable ["PSA_abortCode",   _abortCode];
+_bar setVariable ["PSA_condition",   _condition];
 
 if(_blockInput)then{ 
 	private _display = findDisplay 46 createDisplay "RscDisplayEmpty";

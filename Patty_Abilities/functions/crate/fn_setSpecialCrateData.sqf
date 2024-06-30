@@ -10,8 +10,8 @@ private _colorM  = "ColorGreen";
 private _iconM   = "PSA_resupply_crate";
 private _text    = "Resupply Crate";
 
-if(!isNull _man)
-then{_marker  = [_pos, _text, 1, _colorM, _iconM] call PSA_fnc_posMarker};
+// if(!isNull _man)
+// then{_marker  = [_pos, _text, 1, _colorM, _iconM] call PSA_fnc_posMarker};
 
 private _dataArr = [
     ["owner",                                      _man],

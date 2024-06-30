@@ -15,5 +15,6 @@ _crate setVectorUp surfaceNormal _pos;
 [_crate, _man] call  PSA_fnc_initResupplyCrate;
 
 _man setVariable ["PSA_myCrate", _crate, true];
+remoteExecCall ["PSA_fnc_updateAllCrates"];
 
 };

@@ -4,7 +4,7 @@ params[
 private _text     = "Next crate available in: ";
 private _icon     = "\Patty_Abilities\textures\icons\RC.paa";
 private _while    = {};
-private _endCode  = {playSoundUI ["click",1,1]; call PSA_fnc_crateReadyNotification;};
+private _endCode  = { call PSA_fnc_crateReadyNotification};
 private _txtColor = [1,1,1,1];
 private _bckColor = [0,0,0,0.1];
 

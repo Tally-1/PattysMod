@@ -19,6 +19,7 @@ class CfgFunctions {
 			class specialCrateResupplyActionACE      {};
 			class specialCrateRetrieveAction         {};
 			class specialCrateRetrieveActionACE      {};
+			class arsenalCrateHealActionACE          {};
 
 			class simpleSelfActionACE                {};
 			class removeAceSelfAction                {};
@@ -28,7 +29,6 @@ class CfgFunctions {
 
 			class getAllACESelfActionNames           {};
 			class getAbilitySelfActionsACE           {};
-			class globalCrateUpdate                  {};
 			class updateAllCrateActionsACE           {};
 			class updateCrateActionsACE              {};
 			class getObjectActionsPSA                {};
@@ -38,7 +38,7 @@ class CfgFunctions {
 		class crate { 
 			file = "\PATTY_ABILITIES\functions\crate";
 			class addToAllCrates                  {};
-
+			class globalCrateUpdate               {};
 			class setCrateKeyAndMouseHandlers     {};
 			class cratePlacementKeyHandler        {};
 			class cratePlacementMouseHandler      {};
@@ -86,10 +86,9 @@ class CfgFunctions {
 			class crateResupplyAnim               {};
 			class endResupplyAnim                 {};
 			class canResupplyOnCrate              {};
-			class crateResupplyLoadOut            {};
-
 			class initArsenalCrate                {};
 			class setCrateMarkerColor             {};
+			class updateAllCrates                 {};
 			
 		};
 
@@ -162,8 +161,12 @@ class CfgFunctions {
 			class removeClientSecondTask    {};
 			class 3dCrates                  {};
 			class drawCrate3D               {};
+			class initMapDrawLoop           {};
+			class drawCratesMap             {};
+			class drawCrateOnMap            {};
 			class execPrFrameTasks          {};
 			class execPrSecondTasks         {};
+			class setCursorObject3D         {};
 		};
 
 		class rscTimers {
@@ -181,19 +184,30 @@ class CfgFunctions {
 
 		class taskTimers { 
 			file = "\PATTY_ABILITIES\functions\rscTimers\taskTimers";
-			class crateCoolDownTimer         {};
-			class crateDestructionTimer      {};
-			class crateIsCountingDestruction {};
-			class crateDestructionTimerAbort {};
-			class crateDestructionTimerEnd   {};
-			class cratePlaceProgressBar      {};
-			class crateRetrieveProgressBar   {};
+			class crateCoolDownTimer              {};
+			class crateDestructionTimer           {};
+			class crateIsCountingDestruction      {};
+			class crateDestructionTimerAbort      {};
+			class crateDestructionTimerEnd        {};
+			class cratePlaceProgressBar           {};
+			class crateRetrieveProgressBar        {};
+			class cratePlaceProgressBarEnded      {};
+			class cratePlaceProgressBarAborted    {};
+			class crateRetrieveProgressBarEnded   {};
+			class crateRetrieveProgressBarAborted {};
+			class resupplyBarCondition            {};
+			class resupplyBarAborted              {};
+			class crateResupplyLoadOut            {};
+			class selfHealProgressBar             {};
+			class postProgressAbortMan            {};
+
 		};
 
 		class progressBar {
 			file = "\PATTY_ABILITIES\functions\rscTimers\progressBar";
-			class progressBar    {};
-			class setProgressBar {};
+			class progressBar      {};
+			class setProgressBar   {};
+			class closeProgressBar {};
 		};
 
 		class misc {
@@ -212,6 +226,7 @@ class CfgFunctions {
 			class getControlledMan      {};
 			class addZ                  {};
 			class numDiff               {};
+			class playSoundList         {};
 			
 		};
 

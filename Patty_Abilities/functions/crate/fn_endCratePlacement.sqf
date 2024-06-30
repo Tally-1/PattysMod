@@ -11,20 +11,19 @@ private _dir      = getDirVisual _crate;
 
 []         call PSA_fnc_removeCrateKeyAndMouseHandlers;
 [_frameEh] call PSA_fnc_removeClientFrameTask;
-_man removeEventHandler ["killed", _deathEh];
 
+_man removeEventHandler ["killed", _deathEh];
+_displayH closeDisplay 1;
 deleteVehicle _crate;
+
 
 _man setVariable ["PSA_localCrate",        nil];
 _man setVariable ["PSA_crateFrameEh",      nil];
 _man setVariable ["PSA_cratePlaceDeathEh", nil];
 
-if!(isNull _displayH)then{
-	_displayH closeDisplay 1;
-};
 if!(_success)exitWith{
-    playSoundUI ["beep", 0.5, 1];
-    false;
+	playSound "hintCollapse";
+	false
 };
 
 [_man, true] call PSA_fnc_cratePlacementEffects;

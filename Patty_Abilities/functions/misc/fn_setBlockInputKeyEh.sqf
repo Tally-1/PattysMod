@@ -6,10 +6,15 @@ if(!isNil "_keyEh")exitWith{};
 
 _keyEh = _display displayAddEventHandler 
 ["KeyDown", {
-	params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];	
+	params ["_display", "_key", "_shift", "_ctrl", "_alt"];
+	private _progressBar = uiNameSpace getVariable ["PSA_progressBar",displayNull];
+
+	if(_key isEqualTo 1 &&{!isNull _progressBar})
+	then{_progressBar setVariable ["PSA_AbortProgress",true]};
+
 	true;
 }];
 
-_display getVariable ["PSA_keyBlocker", _keyEh];
+_display setVariable ["PSA_keyBlocker", _keyEh];
 
 true;
