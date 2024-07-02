@@ -35,4 +35,4 @@ Mintues spent = 1180
 Hours spent   = 19.66
 
 Price: 196 USD
-**The work sessions listed here has been paid in full**
+**The work sessions listed here has all been paid in full**

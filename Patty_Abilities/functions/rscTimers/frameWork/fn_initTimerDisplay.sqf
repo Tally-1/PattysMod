@@ -1,6 +1,6 @@
 disableSerialization;
 
-1 cutRsc ["PSA_timers","PLAIN"];
+("PSA_timerLayer" call BIS_fnc_rscLayer) cutRsc ["PSA_timers", "PLAIN"];
 
 waitUntil {!isNull (uiNameSpace getVariable "PSA_timers")};
 
