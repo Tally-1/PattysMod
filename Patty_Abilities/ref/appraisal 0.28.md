@@ -11,9 +11,9 @@
    <!-- - When player is knocked out / killed -->
 
 2) Redesign map markers.
-    - Remove all color diferences (Owner/Not-owner)
-    - Remove text.
-    - Show text when mouse is hovering over map-marker
+    <!-- - Remove all color diferences (Owner/Not-owner) -->
+    <!-- - Remove text. -->
+    <!-- - Show text when mouse is hovering over map-marker -->
 
 3) Redesign 3D markers
     <!-- - Only visible when the player is aiming directly at crate. -->
