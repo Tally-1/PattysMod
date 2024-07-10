@@ -14,10 +14,11 @@ private _crateTxt  = _data get "3Dtext";
 private _text      = "";
 private _font      = "PuristaMedium";
 
-if(_data get "contested"
-&&{_mouseOver isEqualTo false})then{
+if(_data get "contested")then{
 	_color = [0.9,0.1,0.1,1];
-	_text  = [_crateTxt, " (Contested)"]joinString "";
+	if(_mouseOver)
+	then{_text=[_crateTxt," (Contested)"]joinString ""};
+
 };
 
 if(_mouseOver)then{ 
