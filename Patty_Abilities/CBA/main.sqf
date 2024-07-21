@@ -13,3 +13,4 @@ private _subCategoryAbilities_Settings = "General Settings";
 ] call cba_settings_fnc_init;
 
 #include "\PATTY_ABILITIES\CBA\crateSettings.sqf"
+#include "\PATTY_ABILITIES\CBA\rallypointSettings.sqf"

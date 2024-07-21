@@ -1,0 +1,1 @@
+["PSA_removeRallypoint", [player]] call CBA_fnc_serverEvent;

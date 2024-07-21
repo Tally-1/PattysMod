@@ -13,6 +13,10 @@ class CfgFunctions {
 			class aceActionPlaceCrate                {};
 			class updateAceCrateAction               {};
 			class updateAcePlayerActions             {};
+			class updateAceRPAction                  {};
+
+			class aceActionPlaceRP                   {};
+			class canPlaceRP                         {};
 
 			class setSpecialCrateActions             {};
 			class specialCrateResupplyAction         {};
@@ -89,11 +93,41 @@ class CfgFunctions {
 			class initArsenalCrate                {};
 			class setCrateMarkerColor             {};
 			class updateAllCrates                 {};
+
+			class crateDataOnRespawn              {};
 			
 		};
 
+		class rallyPoint
+		{
+			file = "\PATTY_ABILITIES\functions\rallyPoint";
+			class setupRallyPoints           {};
+			class setRallyPoint              {};
+			class removeRallyPoint           {};
+			class rallyPointOnRespawn        {};
+			class playerSetRallyPoint        {};
+			class playerRemoveRallyPoint     {};
 
-		class arsenal
+			class handleRallyPoints          {};
+			class toggleContestedRallyPoint  {};
+			class rallyPointContestedNow     {};
+			class onContestedRallyPointStart {};
+			class onContestedRallyPointEnd   {};
+			class enableRP                   {};
+			class disableRP                  {};
+			class nearestRP                  {};
+			class onRespawnRP                {};
+		};
+
+		class respawn 
+		{
+			file = "\PATTY_ABILITIES\functions\respawn";
+			class disablecustomRespawns {};
+			class enableCustomRespawns  {};
+			class spawnRespawnModule    {};
+		};
+
+		class arsenal 
 		{
 			file = "\PATTY_ABILITIES\functions\arsenal";
 			class arsenalEh    {postInit = 1;};
@@ -108,7 +142,8 @@ class CfgFunctions {
 		};
 
 
-		class init {
+		class init 
+		{
 			file = "\PATTY_ABILITIES\functions\init";
 			class mainInit       {postInit = 1;};
 			class clientInit                  {};
@@ -118,17 +153,33 @@ class CfgFunctions {
 
 		class missionEh {
 			file = "\PATTY_ABILITIES\functions\missionEh";
-			class entityRespawned {};
-			class roleChanged     {};
+			class entityRespawned     {};
+			class entityCreated       {};
+			class EntityDeleted       {};
+			class roleChanged         {};
+			class rallyPointOnRespawn {};
 		};
 
 
 		class notifications { 
 			file = "\PATTY_ABILITIES\functions\notifications";
+			class showNotification           {};
+		};
+
+		class notifications_crate { 
+			file = "\PATTY_ABILITIES\functions\notifications\crate";
 			class crateDestroyedNotification {};
 			class crateReadyNotification     {};
 			class contCrateNotification      {};
-			class showNotification           {};
+		};
+
+		class notifications_rallyPoint { 
+			file = "\PATTY_ABILITIES\functions\notifications\rallyPoint";
+			class notifyContestedRP          {};
+			class notifyMovedRP              {};
+			class notifyPlacedRP             {};
+			class rallyPointNotifications    {};
+			
 		};
 
 
@@ -161,9 +212,13 @@ class CfgFunctions {
 			class removeClientSecondTask    {};
 			class 3dCrates                  {};
 			class drawCrate3D               {};
+			class drawRP3D                  {};
+			class rallyPointIcons           {};
 			class initMapDrawLoop           {};
 			class drawCratesMap             {};
+			class drawRallyPointsMap        {};
 			class drawCrateOnMap            {};
+			class drawRPMap                 {};
 			class execPrFrameTasks          {};
 			class execPrSecondTasks         {};
 			class setCursorObject3D         {};
@@ -199,8 +254,8 @@ class CfgFunctions {
 			class resupplyBarAborted              {};
 			class crateResupplyLoadOut            {};
 			class selfHealProgressBar             {};
-			class postProgressAbortMan            {};
-
+			
+			class postProgressAbortMan            {};			
 		};
 
 		class progressBar {
@@ -226,7 +281,10 @@ class CfgFunctions {
 			class getControlledMan      {};
 			class addZ                  {};
 			class numDiff               {};
+			class getNearest            {};
 			class playSoundList         {};
+			class setAnimDirAndPosATL   {};
+			class counterAttackEvents   {};
 			
 		};
 

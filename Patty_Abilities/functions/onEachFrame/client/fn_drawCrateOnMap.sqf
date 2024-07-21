@@ -18,7 +18,6 @@ if(_data get "contested")then{
 	_color = [0.9,0.1,0.1,1];
 	if(_mouseOver)
 	then{_text=[_crateTxt," (Contested)"]joinString ""};
-
 };
 
 if(_mouseOver)then{ 

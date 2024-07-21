@@ -8,3 +8,4 @@ if(_abilities isEqualTo [])
 exitWith{[_player] call PSA_fnc_removeAllAbilitySelfActions};
 
 [_player, _abilities, _abilityActions] call PSA_fnc_updateAceCrateAction;
+[_player, _abilities, _abilityActions] call PSA_fnc_updateAceRPAction;

@@ -6,6 +6,7 @@ PSA_clientPrSecondTaskCount = 0;
 PSA_clientPrSecondTimer     = 0;
 PSA_cursorObject3D          = objNull;
 PSA_3dCrateMarkerDistance   = 100;
+PSA_rp3DMarkerDistance      = 100;
 
 call PSA_fnc_setPlayerActions;
 call PSA_fnc_frameLoop;

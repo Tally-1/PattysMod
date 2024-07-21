@@ -1,1 +1,2 @@
 call PSA_fnc_3dCrates;
+call PSA_fnc_rallyPointIcons;
