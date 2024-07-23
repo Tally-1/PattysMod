@@ -15,8 +15,9 @@ private _count = 0;
 
 for "_i" from 0 to ((count PSA_respawnPositions)-1)do
 {
-    private _pos = PSA_respawnPositions#0;
-    [_pos] call PSA_fnc_spawnRespawnModule;
+    private _pos    = PSA_respawnPositions#0;
+    private _module = [_pos] call PSA_fnc_spawnRespawnModule;
+    [_module] call BIS_fnc_initModules;
     PSA_respawnPositions deleteAt 0;
 };
 
