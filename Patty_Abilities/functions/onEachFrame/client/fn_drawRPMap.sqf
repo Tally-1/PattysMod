@@ -3,11 +3,9 @@ params[
 ];
 private _position  = _self get "position";
 private _mouseOver = (_map ctrlMapWorldToScreen _position) distance2D getMousePosition < 0.02;
-private _status      = _self get"status";
 private _contested   = _status isEqualTo"contested";
 private _deactivated = _status isEqualTo"deactivated";
 private _icon      = "\Patty_Abilities\textures\icons\rp.paa";
-private _txt       = "Rally Point";
 private _font      = "PuristaMedium";
 private _size      = 25;
 private _yellow    = [0.85,0.85,0,1];
@@ -15,6 +13,7 @@ private _white     = [1,1,1,1];
 private _red       = [0.9,0,0,1];
 private _txtColor  = _yellow;
 private _iconColor = _white;
+private _txt       = _self get "name";
 
 if(_contested)then{
     _txt = [_txt," (Contested)"]joinString"";

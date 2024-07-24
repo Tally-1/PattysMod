@@ -1,5 +1,4 @@
-
-["PSA_counterAttackStart", {
+["PSA_counterAttackStart", {_this spawn{
 	private _activated = call PSA_fnc_disablecustomRespawns;
 	
 	if(_activated)then{
@@ -7,10 +6,10 @@
 		publicVariable "PSA_counterAttackActive";
 	};
 
-}] call CBA_fnc_addEventHandler;
+}}] call CBA_fnc_addEventHandler;
 
 
-["PSA_counterAttackEnd",   {
+["PSA_counterAttackEnd",{_this spawn{
 	private _deactivated = call PSA_fnc_enableCustomRespawns;
 	
 	if(_deactivated)then{
@@ -18,4 +17,4 @@
 		publicVariable "PSA_counterAttackActive";
 	};
 
-}] call CBA_fnc_addEventHandler;
+}}] call CBA_fnc_addEventHandler;

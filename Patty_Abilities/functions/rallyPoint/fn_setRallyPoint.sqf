@@ -1,18 +1,41 @@
 // Executed on server only.
 params[
-	["_man",nil, [objNull]],
-	["_clientId",nil,  [0]],
-	["_animState",nil,[""]]
+	["_man",          nil, [objNull]],
+	["_clientId",     nil,       [0]],
+	["_animState",    nil,      [""]],
+	["_reactivation", false,  [true]]
 ];
-private _status  = "placed";
-private _moved   = [_man, true] call PSA_fnc_removeRallyPoint;
-private _uid     = getPlayerUID _man;
-private _side    = side _man;
-private _pos     = getPosATLVisual _man;
-private _zone    = [_pos, PSA_rallyDisableDist];
-private _dir     = getDirVisual _man;
-private _name    = "Rally point";
-private _spawnId = [_side, _pos, _name] call BIS_fnc_addRespawnPosition;
+private ["_uid", "_side", "_spawnId"];
+
+private _isModule = _man isKindOf "logic";
+private _role     = _man getVariable ["ptg_role", ""];
+private _status   = "placed";
+private _pos      = getPosATLVisual _man;
+private _zone     = [_pos, PSA_rallyDisableDist];
+private _dir      = getDirVisual _man;
+private _name     = "Rally point";
+private _moved    = [_man, true] call PSA_fnc_removeRallyPoint;
+
+// This variable has to be declared before the "addRespawnPosition"
+// function so that the marker will be picked up as a respawn marker.
+PSA_lastRallyPoint = time;
+
+if(_isModule)then{
+	_uid     = str _man;
+	_side    = west;
+	_spawnId = [_man,0];
+	_man setVariable ["PSA_isRallyPoint", true, true];
+}else{ 
+	_uid     = getPlayerUID _man;
+	_side    = side _man;
+	_spawnId = [_side, _pos] call BIS_fnc_addRespawnPosition;
+};
+
+if(_role isNotEqualTo "")then{
+	private _roleName = [_role] call PSA_fnc_capFirstLetter;
+	_name = [_name, " (",_roleName,")"]joinString"";
+};
+
 
 if(_moved)then{_status = "moved"};
 
@@ -21,6 +44,7 @@ private _dataArr = [
 	["ownerId",         _uid],
 	["machine",    _clientId],
 	["spawnId",     _spawnId],
+	["name",           _name],
 	["position",        _pos],
 	["zone",           _zone],
 	["direction",       _dir],
@@ -28,6 +52,7 @@ private _dataArr = [
 	["side",           _side],
 	["status",       _status],
 	["enabled",         true],
+	["isModule",   _isModule],
 	
 	/*********************{METHODS}**********************/
 	["sendNotifications",   PSA_fnc_rallyPointNotifications],
@@ -47,11 +72,25 @@ private _dataArr = [
 ];
 
 private _rallyPoint = createHashmapObject [_dataArr];
-
 PSA_allRallypoints set [_uid, _rallyPoint];
-publicVariable "PSA_allRallypoints";
+
 
 _rallyPoint call ["sendNotifications"];
-[["Rallypoint ",_status," by ", name _man]] call P_dbg;
+private _idList = PSA_allRallypoints call ["getIDs"];
+[[count _idList, " rallypoint(s) active"]]  call p_dbg;
+
+if(_isModule)then{ 
+	_rallyPoint set ["enableRP",   PSA_fnc_enableModuleRP];
+	_rallyPoint set ["disableRP", PSA_fnc_disableModuleRP];
+	if(_reactivation)
+	then{"Rallypoint module reActivated"call P_dbg}
+	else{"Rallypoint module placed by curator"call P_dbg}
+}else{
+	[["Rallypoint ",_status," by ", name _man]] call P_dbg;
+};
+
+(str _idList) call p_dbg;
+
+publicVariable "PSA_allRallypoints";
 
 _rallyPoint;

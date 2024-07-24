@@ -114,9 +114,15 @@ class CfgFunctions {
 			class onContestedRallyPointStart {};
 			class onContestedRallyPointEnd   {};
 			class enableRP                   {};
+			class enableModuleRP             {};
 			class disableRP                  {};
+			class disableModuleRP            {};
 			class nearestRP                  {};
+			class getRPIds                   {};
 			class onRespawnRP                {};
+			class initRespawnModuleRP        {};
+			class rallypointModuleEdited     {};
+			class rallypointModuleDeleted    {};
 		};
 
 		class respawn 
@@ -125,6 +131,7 @@ class CfgFunctions {
 			class disablecustomRespawns {};
 			class enableCustomRespawns  {};
 			class spawnRespawnModule    {};
+			class isRespawnMarker       {};
 		};
 
 		class arsenal 
@@ -151,13 +158,16 @@ class CfgFunctions {
 		};
 
 
-		class missionEh {
-			file = "\PATTY_ABILITIES\functions\missionEh";
+		class globalEvents {
+			file = "\PATTY_ABILITIES\functions\globalEvents";
 			class entityRespawned     {};
 			class entityCreated       {};
 			class EntityDeleted       {};
+			class markerCreated       {};
 			class roleChanged         {};
 			class rallyPointOnRespawn {};
+			class curatorEvents       {};
+			class counterAttackEvents {};
 		};
 
 
@@ -281,10 +291,14 @@ class CfgFunctions {
 			class getControlledMan      {};
 			class addZ                  {};
 			class numDiff               {};
+			class roundPos              {};
 			class getNearest            {};
 			class playSoundList         {};
 			class setAnimDirAndPosATL   {};
-			class counterAttackEvents   {};
+			class delayedModulesInit    {};
+			class strIsNumber           {};
+			class strIsNumArr           {};
+			class capFirstLetter        {};
 			
 		};
 

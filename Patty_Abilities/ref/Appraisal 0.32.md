@@ -33,7 +33,7 @@
 <!-- - While contested the respawn is disabeled. -->
 
 [extra]
-- Disable All respawntypes on Counterattack (event)
-    1) Rally point.
-    2) Respawn on Player (Team Respawn Ability)
-    3) Default spawnpoint near AO
+<!-- - Disable All respawntypes on Counterattack (event) -->
+   <!-- 1) Rally point. -->
+   <!-- 2) Respawn on Player (Team Respawn Ability) -->
+   <!-- 3) Default spawnpoint near AO -->

@@ -3,6 +3,7 @@
 
 PSA_allRallypoints = createHashmapObject [[]];
 PSA_allRallypoints set ["getNearest", PSA_fnc_nearestRP];
+PSA_allRallypoints set ["getIDs",     PSA_fnc_getRPIds];
 
 publicVariable "PSA_allRallypoints";
 

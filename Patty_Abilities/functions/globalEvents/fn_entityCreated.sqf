@@ -3,10 +3,11 @@ params[
 ];
 private _type          = typeOf _entity;
 private _respawnModule = _type isEqualTo "ModuleRespawnPositionWest_F";
+
 if(_respawnModule)
 exitWith{
-	PSA_respawnModules pushBackUnique _entity;
-	"respawn module spawned in" call p_dbg;
+	_entity setVariable ["shownotification",false,true];
+	[_entity] spawn PSA_fnc_initRespawnModuleRP;
 };
 
 true;
