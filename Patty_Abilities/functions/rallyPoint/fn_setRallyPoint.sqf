@@ -5,30 +5,42 @@ params[
 	["_animState",    nil,      [""]],
 	["_reactivation", false,  [true]]
 ];
-private ["_uid", "_side", "_spawnId"];
+private [
+	"_uid", 
+	"_side", 
+	"_spawnId", 
+	"_disableFnc", 
+	"_enableFnc"
+];
 
-private _isModule = _man isKindOf "logic";
-private _role     = _man getVariable ["ptg_role", ""];
-private _status   = "placed";
-private _pos      = getPosATLVisual _man;
-private _zone     = [_pos, PSA_rallyDisableDist];
-private _dir      = getDirVisual _man;
-private _name     = "Rally point";
-private _moved    = [_man, true] call PSA_fnc_removeRallyPoint;
+private _isModule   = _man isKindOf "logic";
+private _role       = [_man]call PSA_fnc_getRoleName;
+private _status     = "placed";
+private _pos        = getPosATLVisual _man;
+private _zone       = [_pos, PSA_rallyDisableDist];
+private _dir        = getDirVisual _man;
+private _name       = "Rally point";
+private _moved      = [_man, true] call PSA_fnc_removeRallyPoint;
+
 
 // This variable has to be declared before the "addRespawnPosition"
 // function so that the marker will be picked up as a respawn marker.
 PSA_lastRallyPoint = time;
 
 if(_isModule)then{
-	_uid     = str _man;
-	_side    = west;
-	_spawnId = [_man,0];
+	_uid        = str _man;
+	_side       = west;
+	_role       = "Default";
+	_spawnId    = [_man,0];
+	_disableFnc = PSA_fnc_disableModuleRP;
+	_enableFnc  = PSA_fnc_enableModuleRP;
 	_man setVariable ["PSA_isRallyPoint", true, true];
 }else{ 
-	_uid     = getPlayerUID _man;
-	_side    = side _man;
-	_spawnId = [_side, _pos] call BIS_fnc_addRespawnPosition;
+	_uid        = getPlayerUID _man;
+	_side       = side _man;
+	_spawnId    = [_side, _pos] call BIS_fnc_addRespawnPosition;
+	_disableFnc = PSA_fnc_disableRP;
+	_enableFnc  = PSA_fnc_enableRP;
 };
 
 if(_role isNotEqualTo "")then{
@@ -62,8 +74,8 @@ private _dataArr = [
 	["contestedNow",         PSA_fnc_rallyPointContestedNow],
 	["onContestedStart", PSA_fnc_onContestedRallyPointStart],
 	["onContestedEnd",     PSA_fnc_onContestedRallyPointEnd],
-	["enableRP",                           PSA_fnc_enableRP],
-	["disableRP",                         PSA_fnc_disableRP],
+	["enableRP",                                 _enableFnc],
+	["disableRP",                               _disableFnc],
 	["onRespawn",                       PSA_fnc_onRespawnRP],
 
 	["nearEnemies",                PSA_fnc_nearCrateEnemies],
@@ -79,15 +91,12 @@ _rallyPoint call ["sendNotifications"];
 private _idList = PSA_allRallypoints call ["getIDs"];
 [[count _idList, " rallypoint(s) active"]]  call p_dbg;
 
-if(_isModule)then{ 
-	_rallyPoint set ["enableRP",   PSA_fnc_enableModuleRP];
-	_rallyPoint set ["disableRP", PSA_fnc_disableModuleRP];
+if(_isModule)then{
 	if(_reactivation)
 	then{"Rallypoint module reActivated"call P_dbg}
 	else{"Rallypoint module placed by curator"call P_dbg}
-}else{
-	[["Rallypoint ",_status," by ", name _man]] call P_dbg;
-};
+}
+else{[["Rallypoint ",_status," by ",name _man]]call P_dbg};
 
 (str _idList) call p_dbg;
 

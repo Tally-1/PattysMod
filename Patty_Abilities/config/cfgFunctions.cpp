@@ -299,7 +299,7 @@ class CfgFunctions {
 			class strIsNumber           {};
 			class strIsNumArr           {};
 			class capFirstLetter        {};
-			
+			class getRoleName           {};
 		};
 
 		class objectDetection { 

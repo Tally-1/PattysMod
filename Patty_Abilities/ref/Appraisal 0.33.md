@@ -15,5 +15,5 @@
    <!-- - Contested = "Rally Point Contested" -->
 
 [NEW-FEATURES]
-1) 3D & Map Marker for Zeus Placed respawn point.
-2) Enable contested functionality for Zeus Placed respawn point.
+<!-- 1) 3D & Map Marker for Zeus Placed respawn point. -->
+<!-- 2) Enable contested functionality for Zeus Placed respawn point. -->
