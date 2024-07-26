@@ -19,7 +19,7 @@ private _status     = "placed";
 private _pos        = getPosATLVisual _man;
 private _zone       = [_pos, PSA_rallyDisableDist];
 private _dir        = getDirVisual _man;
-private _name       = "Rally point";
+private _name       = "Rally Point";
 private _moved      = [_man, true] call PSA_fnc_removeRallyPoint;
 
 
