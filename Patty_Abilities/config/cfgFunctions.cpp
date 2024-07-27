@@ -123,6 +123,8 @@ class CfgFunctions {
 			class initRespawnModuleRP        {};
 			class rallypointModuleEdited     {};
 			class rallypointModuleDeleted    {};
+			class onRallyPointAborted        {};
+			class onRallyPointCompleted      {};
 		};
 
 		class respawn 
