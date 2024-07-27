@@ -21,7 +21,7 @@ private _iconColor   = _white;
 private _txtPos      = [_position, _txtZ] call PSA_fnc_addZ;
 private _iconPos     = [_position, _iconZ] call PSA_fnc_addZ;
 
-if(_contested)then{
+if(_contested)then{ 
     _txt = [_txt," (Contested)"]joinString"";
     _txtColor  = _red;
     _iconColor = _red;

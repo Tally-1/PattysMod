@@ -16,7 +16,7 @@ _module setVariable ["PSA_RPId",_uid,true];
 };
 
 _module setvariable ["BIS_fnc_initModules_disableAutoActivation",false,true];
-[_module] call BIS_fnc_initModules;
+[_module] spawn BIS_fnc_initModules;
 
 {_x addCuratorEditableObjects [[_module], true]} forEach allCurators;
 

@@ -2,9 +2,10 @@ params[
 	["_map",nil,[controlNull]]
 ];
 private _position  = _self get "position";
+private _status    = _self get "status";
 private _mouseOver = (_map ctrlMapWorldToScreen _position) distance2D getMousePosition < 0.02;
-private _contested   = _status isEqualTo"contested";
-private _deactivated = _status isEqualTo"deactivated";
+private _contested   = _status isEqualTo "contested";
+private _deactivated = _status isEqualTo "deactivated";
 private _icon      = "\Patty_Abilities\textures\icons\rp.paa";
 private _font      = "PuristaMedium";
 private _size      = 25;
