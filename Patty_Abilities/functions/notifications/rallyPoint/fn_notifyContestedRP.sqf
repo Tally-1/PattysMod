@@ -1,8 +1,8 @@
 params[
 	["_ownerName",nil,[""]]
 ];
-private _title  = "!Rally Point!";
-private _text   = "Rally Point Contested";
+private _title  = "Rally Point Contested!";
+private _text   = "Rally Point is now Disabled!";
 private _icon   = "\Patty_Abilities\textures\icons\RallyPointContested.paa";
 
 [
