@@ -13,6 +13,14 @@ class CfgFunctions
 			
 		};
 
+		class lifeMap 
+		{
+			file = "\pattysMod\functions\lifeMap";
+			class initLifeMap     {};
+			class updateLifeMap   {};
+			class reAssignLives   {};
+		};
+
 		class debug
 		{
 			file = "\pattysMod\functions\debug";
@@ -54,6 +62,7 @@ class CfgFunctions
 			class livesLeftNotification                     {};
 			class livesLeftColor                            {};
 			class livesLeftIcon                             {};
+			class lifeMenuToggleTransferButton              {};
 		};
 
 		class lifeAlterActions 
@@ -68,6 +77,8 @@ class CfgFunctions
 			class lifeGUIremoveAction   {};
 			class lifeGUIresetAction    {};
 			class lifeGUIresetAllAction {};
+
+			class canTransfer           {};
 		};
 
 		class init
@@ -79,11 +90,19 @@ class CfgFunctions
 
 		};
 
+		class counterAttack 
+		{
+			file = "\pattysMod\functions\counterAttack";
+			class serverAddLifeToRole          {};
+			class serverAddLifeToNoLifePlayers {};
+		}
+
 		class events
 		{
 			file = "\pattysMod\functions\events";
-			class respawnEh {};
-			class killedEh  {};
+			class respawnEh         {};
+			class killedEh          {};
+			class lifeManagerEvents {};
 		};
 	};
 

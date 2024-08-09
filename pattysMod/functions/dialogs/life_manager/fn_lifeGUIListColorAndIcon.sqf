@@ -13,7 +13,7 @@ params [
 private _colour = [_lifeCount] call PTTY_fnc_livesLeftColor;
 private _icon = "";
 
-if!(alive _unit)   then{_icon   = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa"};
+if!(alive _unit)then{_icon = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa"};
 
 _list lbSetColorRight   [_index, _colour];
 _list lbSetPictureRight [_index, _icon];

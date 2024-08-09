@@ -12,7 +12,9 @@ private _components = [_display] call PTTY_fnc_lifeGUIComponents;
 private _listbox    = _components#1;
 private _index      = lbCurSel _listbox;
 private _uid        = _listbox lbData _index;
- 
+
+[_listbox, _index] call PTTY_fnc_lifeMenuLbChange;
+
 if(_uid isEqualTo "")
 then{_uid = _listbox lbText _index;};
 _uid call PTDBG;

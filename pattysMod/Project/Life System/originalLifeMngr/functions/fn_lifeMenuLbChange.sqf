@@ -13,6 +13,7 @@ private _uid = _control lbData _index;
 private _unit = [_uid] call DT_fnc_findPlayerByUID;
 
 private _transferButton = _display displayCtrl 2400;
+private _canTransfer    = 
 if (_unit isEqualTo player) then {
 	_transferButton ctrlEnable false;
 } else {

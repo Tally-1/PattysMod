@@ -27,4 +27,6 @@ PSA_customRespawnsEnabled = false;
 PSA_lastRespawnDisable    = time;
 publicVariable "PSA_allRallypoints";
 
+PSA_mobileSpawnPoints call ["deactivateAll"];
+
 true;

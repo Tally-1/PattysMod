@@ -3,9 +3,11 @@ addMissionEventHandler ["EntityKilled", {
 	if!(_man isKindOf "caManBase") exitWith{};
 	if!(_man in allPlayers)        exitWith{};
 
+	call PTTY_fnc_updateLifeMap;
+
 	private _lives = [_man] call PTTY_fnc_getLives;
 	if(_lives > 0)exitWith{};
-	// private _excluded = 0-(owner _man);
+	
 	private _title    = "ALERT:";
 	private _text     = [name _man, " Has been eliminated"] joinString "";
 	private _icon     = "pattysMod\images\Dead4.paa";

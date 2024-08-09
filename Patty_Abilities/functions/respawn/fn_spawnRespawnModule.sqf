@@ -1,16 +1,28 @@
-params[
-    ["_pos",nil,[[]]],
-    ["_activate",true,[true]]
+params [
+    ["_pos",      nil,     [[]]],
+    ["_activate", true,  [true]],
+    ["_3DenType", false, [true]]
 ];
-private _moduleGroup = (group (missionNamespace getvariable ["BIS_functions_mainscope",objnull]));
-private _module      =  _moduleGroup createUnit ["ModuleRespawnPositionWest_F", _pos, [], 0, "CAN_COLLIDE"];
 
-_module setVariable ["shownotification",false,true];
+private _moduleGroup = (group (missionNamespace getVariable ["BIS_functions_mainscope", objNull]));
 
-{_x addCuratorEditableObjects [[_module], true]} forEach allCurators;
+// Choose module class based on _3DenType parameter
+private _moduleClass = if(_3DenType)
+then{"ModuleRespawnPosition_F"}
+else {"ModuleRespawnPositionWest_F"};
+
+private _module = _moduleGroup createUnit [_moduleClass, _pos, [], 0, "CAN_COLLIDE"];
+
+// Set variables for ModuleRespawnPosition_F if _3DenType is true
+if (_3DenType) 
+then{_module call PSA_fnc_init3DenSpawnModuleVars}
+else{
+	_module setVariable ["shownotification", false, true];
+	{_x addCuratorEditableObjects [[_module], true]} forEach allCurators;
+};
 
 if(_activate)then{
-    _module setvariable ["BIS_fnc_initModules_disableAutoActivation",false,true];
+    _module setVariable ["BIS_fnc_initModules_disableAutoActivation", false, true];
     [_module] call BIS_fnc_initModules;
 };
 

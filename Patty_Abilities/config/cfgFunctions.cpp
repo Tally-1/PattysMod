@@ -95,7 +95,7 @@ class CfgFunctions {
 			class updateAllCrates                 {};
 
 			class crateDataOnRespawn              {};
-			
+			class clearContainerGlobal            {};
 		};
 
 		class rallyPoint
@@ -130,10 +130,29 @@ class CfgFunctions {
 		class respawn 
 		{
 			file = "\PATTY_ABILITIES\functions\respawn";
-			class disablecustomRespawns {};
-			class enableCustomRespawns  {};
-			class spawnRespawnModule    {};
-			class isRespawnMarker       {};
+			class disablecustomRespawns   {};
+			class enableCustomRespawns    {};
+			class spawnRespawnModule      {};
+			class init3DenSpawnModuleVars {};
+			class isRespawnMarker         {};
+			class initMobileSpawnPoints   {};
+			class deactivateAllMRSPs      {};
+			class getMRSPowners           {};
+			class handleAllMRSPs          {};
+			class updateAllMRSPs          {};
+			class canInitMRSP             {};
+			class initNewMRSPs            {};
+			class onMobileRespawnChanged  {};
+			class handleMRSOnRespawn      {};
+			class mobileRespawnOnRespawn  {};
+			class nearestMRS              {};
+			class hasMRSP                 {};
+			class initMRSP                {};
+			class spawnMRSPModule         {};
+			class deactivateMRSP          {};
+			class activateMRSP            {};
+			class deleteMRSP              {};
+			class updateMRSP              {};
 		};
 
 		class arsenal 
@@ -157,6 +176,9 @@ class CfgFunctions {
 			class mainInit       {postInit = 1;};
 			class clientInit                  {};
 			class serverInit                  {};
+			class serverVariables             {};
+			class serverTasks                 {};
+			class serverEvents                {};
 		};
 
 
@@ -165,11 +187,14 @@ class CfgFunctions {
 			class entityRespawned     {};
 			class entityCreated       {};
 			class EntityDeleted       {};
+			class entityKilled        {};
 			class markerCreated       {};
 			class roleChanged         {};
 			class rallyPointOnRespawn {};
 			class curatorEvents       {};
 			class counterAttackEvents {};
+			class onWakeUp            {};
+			class onKnockout          {};
 		};
 
 

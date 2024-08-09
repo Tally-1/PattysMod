@@ -16,7 +16,7 @@ params[
 	"_closeBtn"
 ];
 
-_closeBtn    ctrlAddEventHandler ["ButtonClick", {closeDialog 1;}];
+_closeBtn    ctrlAddEventHandler ["ButtonClick", {["PTTY_livesChanged"] call CBA_fnc_serverEvent; closeDialog 1}];
 _transferBtn ctrlAddEventHandler ["ButtonClick", {["transfer"] call PTTY_fnc_lifeGUIalterLives; "transfer life" call PTDBG;}];
 _transferBtn ctrlEnable false;
 if!(_isAdmin)exitWith{_components call PTTY_fnc_LifeManagerDisableButtons;};

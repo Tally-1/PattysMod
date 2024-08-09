@@ -1,6 +1,7 @@
 class CfgFunctions {
 	
 	class PTG {
+
 		class groups {
 			file =          "\PATTY_ROLES\functions\groups";
 			class assignPlayer              {};

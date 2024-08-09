@@ -18,6 +18,6 @@ PTG_dynamicGroups = getArray(missionConfigFile >> "Dynamic_Groups" >> "group_set
 
 [PTG_dynamicGroups] remoteExecCall ["PTG_fnc_updateGroups",-2,"PTG_DG_JIP"];
 
-systemChat "Role Manager 0.60";
+systemChat "Role Manager 0.61";
 
 addMissionEventHandler ["HandleDisconnect",PTG_fnc_handleDisconnect];

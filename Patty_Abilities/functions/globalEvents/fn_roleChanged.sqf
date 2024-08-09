@@ -10,10 +10,21 @@ if!(_abilityDeclared)exitWith{
 	_player setVariable ["PSA_abilities", [], true];
 	[_player] call PSA_fnc_updateAcePlayerActions;
 };
+private _abilityVar   = toLower "PSA_abilities";
+private _oldAbilities = _player getVariable [_abilityVar,[]];
+private _index        = _customVars findIf {toLower(_x#0) isEqualTo _abilityVar};
+private _value        = call compile ((_customVars#_index)#1);
 
-private _index = _customVars findIf {toLower(_x#0) isEqualTo "psa_abilities"};
-private _value = call compile ((_customVars#_index)#1);
-
-_player setVariable ["PSA_abilities", _value, true];
+_player setVariable [_abilityVar, _value, true];
 
 [_player] call PSA_fnc_updateAcePlayerActions;
+
+private _newAbilities = _player getVariable [_abilityVar,[]];
+if(_oldAbilities isEqualTo _oldAbilities)exitWith{};
+
+private _oldMRS = "mobile_respawn" in _oldAbilities;
+private _newMRS = "mobile_respawn" in _newAbilities;
+private _noMRS  = (_oldMRS isEqualTo false && {_newMRS isEqualTo false});
+if(_noMRS)exitWith{};
+
+["PSA_mobileRespawnChanged"]call CBA_fnc_serverEvent;

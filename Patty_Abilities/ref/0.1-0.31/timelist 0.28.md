@@ -8,3 +8,5 @@
 [97m] Setting Map-marker-draw EH & text on mouse hover.
 [27m] Contested map-colors and text, testing.
 [26m] Packing, testing, tweaking & uploading.
+
+**The work sessions listed here has been paid in full**

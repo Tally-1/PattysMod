@@ -11,3 +11,5 @@
 [79m]  Respawn Dir, Anim & pos.
 [164m] Counter attack events.
 [29m]  Testing & tweaking (SP, LMP & DMP)
+
+**The work sessions listed here has been paid in full**

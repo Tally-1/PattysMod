@@ -19,4 +19,9 @@ PSA_customRespawnsEnabled = true;
 PSA_lastRespawnEnable    = time;
 publicVariable "PSA_allRallypoints";
 
+[] spawn{
+	sleep 1;
+	PSA_mobileSpawnPoints call ["updateAll"];
+};
+
 true;

@@ -9,3 +9,5 @@
 [26m]  2nd test, Minor fixes & cleanups.
 [220m] Implementing rallypoints on Curator placed respawn-modules.
 [28m]  Code cleanup, test & upload.
+
+**The work sessions listed here has been paid in full**

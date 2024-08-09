@@ -11,7 +11,7 @@ private _actionType = 0;
 private _actionName = ["PSA_ACE_MainActions ", _title]joinString"";
 
 if(_actionName in _actions)
-exitWith{"Duplicate action blocked" call p_dbg};
+exitWith{"Duplicate action blocked" call PSA_fnc_debugMessage};
 
 private _action = [
 	_actionName,
