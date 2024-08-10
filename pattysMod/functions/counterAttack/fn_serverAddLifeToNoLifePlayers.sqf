@@ -1,3 +1,4 @@
+// call PTTY_fnc_serverAddLifeToNoLifePlayers
 if(!isServer)exitWith{};
 
 private _noLifers = allPlayers select {
