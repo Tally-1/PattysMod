@@ -12,15 +12,21 @@ if!(_abilityDeclared)exitWith{
 };
 private _abilityVar   = toLower "PSA_abilities";
 private _oldAbilities = _player getVariable [_abilityVar,[]];
+
 private _index        = _customVars findIf {toLower(_x#0) isEqualTo _abilityVar};
-private _value        = call compile ((_customVars#_index)#1);
+private _strVal       = ((_customVars#_index)#1);
+
+if(typeName _strVal isEqualTo "ARRAY")
+then{_strVal = str _strVal};
+
+private _value        = call compile _strVal;
 
 _player setVariable [_abilityVar, _value, true];
 
 [_player] call PSA_fnc_updateAcePlayerActions;
 
-private _newAbilities = _player getVariable [_abilityVar,[]];
-if(_oldAbilities isEqualTo _oldAbilities)exitWith{};
+// private _newAbilities = _player getVariable [_abilityVar,[]];
+// if(_oldAbilities isEqualTo _newAbilities)exitWith{};
 
 private _oldMRS = "mobile_respawn" in _oldAbilities;
 private _newMRS = "mobile_respawn" in _newAbilities;

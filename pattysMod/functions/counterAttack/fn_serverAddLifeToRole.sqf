@@ -1,3 +1,4 @@
+// ["medic"] call PTTY_fnc_serverAddLifeToRole;
 params[
 	["_role",nil,[""]]
 ];
