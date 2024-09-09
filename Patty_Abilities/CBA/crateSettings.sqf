@@ -25,6 +25,22 @@ private _subCategoryCrate_Settings = "Crate Settings";
 ] call CBA_fnc_addSetting;
 
 [
+	"PSA_vehicleRearmTime",
+	"SLIDER",
+	["Vehicle Rearm Time","How long it takes to rearm a vehicle."],
+	[_categoryName, _subCategoryCrate_Settings],
+	[3,60,10,0]
+] call CBA_fnc_addSetting;
+
+[
+	"PSA_vehicleRearmDist",
+	"SLIDER",
+	["Vehicle Rearm Distance (m)","How close a vehicle must be in order to be able to rearm it using the special Ability crate."],
+	[_categoryName, _subCategoryCrate_Settings],
+	[10,100,20,0]
+] call CBA_fnc_addSetting;
+
+[
 	"PSA_crateHealTime",
 	"SLIDER",
 	["Crate Heal Time","How long it takes to self heal at a arsenal crate."],

@@ -36,6 +36,8 @@ class CfgFunctions {
 			class updateAllCrateActionsACE           {};
 			class updateCrateActionsACE              {};
 			class getObjectActionsPSA                {};
+
+			class vehicleRearmActionACE              {};
 		};
 
 
@@ -291,8 +293,10 @@ class CfgFunctions {
 			class resupplyBarAborted              {};
 			class crateResupplyLoadOut            {};
 			class selfHealProgressBar             {};
-			
-			class postProgressAbortMan            {};			
+			class postProgressAbortMan            {};
+			class vehicleRearmBarCondition        {};
+			class rearmNearestVehicle             {};
+			class vehicleRearmActionCondition     {};
 		};
 
 		class progressBar {
@@ -327,6 +331,17 @@ class CfgFunctions {
 			class strIsNumArr           {};
 			class capFirstLetter        {};
 			class getRoleName           {};
+			class objectName            {};
+		};
+
+		class vehicles
+		{
+			file = "\PATTY_ABILITIES\functions\vehicles";
+			class nearFriendlyVehicle      {};
+			class nearVehicles             {};
+			class getVehicleSide           {};
+			class rearmVehicle             {};
+			
 		};
 
 		class objectDetection { 
