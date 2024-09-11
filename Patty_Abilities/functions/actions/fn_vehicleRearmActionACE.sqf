@@ -3,7 +3,7 @@ params[
 ];
 private _condition = {_this call PSA_fnc_vehicleRearmActionCondition};
 private _statement = {_this call PSA_fnc_rearmNearestVehicle};
-private _title     = "<t color='#e0f213'>Rearm near vehicle</t>";
+private _title     = "<t color='#e0f213'>Rearm Vehicle</t>";
 private _icon      = "\Patty_Abilities\textures\icons\RC.paa";
 
 private _actionData = 

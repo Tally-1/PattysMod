@@ -3,6 +3,10 @@ params[
 	["_man",   nil,[objNull]]
 ];
 private _vehicle  = [_crate,PSA_vehicleRearmDist,_man] call PSA_fnc_nearFriendlyVehicle;
-private _canRearm = !isNil "_vehicle";
+if(isNil "_vehicle")exitWith{false};
 
-_canRearm;
+private _zone     = [getPosATLVisual _crate, PSA_crateProxDestrDist];
+private _enemies  = count ([_man,_zone] call PSA_fnc_enemiesInZone) > 0;
+if(_enemies)exitWith{false};
+
+true;
