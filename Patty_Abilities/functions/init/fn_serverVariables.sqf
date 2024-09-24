@@ -15,4 +15,6 @@ PSA_customRespawnsEnabled   = true;
 PSA_counterAttackActive     = false;
 
 missionNamespace setVariable ["PSA_specialCrates",[],true];
+missionNamespace setVariable ["PSA_specialDrones",[],true];
+
 publicVariable "PSA_counterAttackActive";

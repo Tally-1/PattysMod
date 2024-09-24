@@ -1,4 +1,4 @@
-PSA_Version = 0.41;
+PSA_Version = 0.42;
 
 private _categoryName                    = ["PA - Abilities ", PSA_Version] joinString "";
 private _subCategoryAbilities_Keybinds = "Abilities Keybindings";
@@ -14,3 +14,4 @@ private _subCategoryAbilities_Settings = "General Settings";
 
 #include "\PATTY_ABILITIES\CBA\crateSettings.sqf"
 #include "\PATTY_ABILITIES\CBA\rallypointSettings.sqf"
+#include "\PATTY_ABILITIES\CBA\droneSettings.sqf"

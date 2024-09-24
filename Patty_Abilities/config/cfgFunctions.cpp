@@ -38,6 +38,9 @@ class CfgFunctions {
 			class getObjectActionsPSA                {};
 
 			class vehicleRearmActionACE              {};
+
+			class aceActionPlaceDrone                {};
+			class updateAceDroneActions              {};
 		};
 
 
@@ -98,6 +101,29 @@ class CfgFunctions {
 
 			class crateDataOnRespawn              {};
 			class clearContainerGlobal            {};
+		};
+
+		class drones
+		{
+			file = "\PATTY_ABILITIES\functions\drones";
+			class canPlaceDrone            {};
+			class placeDrone               {};
+			class droneTypeToModel         {};
+			class deployDrone              {};
+			class safeDroneDeployment      {};
+			class initSpecialDrone         {};
+			
+			class initDroneOwnerData       {};
+			class droDataAddDrone          {};
+			class droDataActiveTypes       {};
+			class droDataglobalizeData     {};
+			class droDataRemainingCoolDown {};
+			class droDataOnDestruction     {};
+			class droneOwnerOnDestruction  {};
+			class specialDroneDestroyed    {};
+			class specialDroneEvents       {};
+			class droDataCooldownComplete  {};
+		
 		};
 
 		class rallyPoint
@@ -218,7 +244,11 @@ class CfgFunctions {
 			class notifyMovedRP              {};
 			class notifyPlacedRP             {};
 			class rallyPointNotifications    {};
-			
+		};
+
+		class notifications_drone { 
+			file = "\PATTY_ABILITIES\functions\notifications\drone";
+			class droneDestroyedNotification {};
 		};
 
 
@@ -297,6 +327,8 @@ class CfgFunctions {
 			class vehicleRearmBarCondition        {};
 			class rearmNearestVehicle             {};
 			class vehicleRearmActionCondition     {};
+			class droneDeploymentBar              {};
+			class droneCoolDownTimer              {};
 		};
 
 		class progressBar {
@@ -344,7 +376,8 @@ class CfgFunctions {
 			
 		};
 
-		class objectDetection { 
+		class objectDetection 
+		{ 
 			file = "\PATTY_ABILITIES\functions\objectDetection";
 			class enemiesInZone   {};
 			class friendsInZone   {};
@@ -355,6 +388,24 @@ class CfgFunctions {
 			class functionalMan   {};
 			class isRealMan       {};
 			class unconscious     {};
+		};
+
+		class objectPlacement
+		{
+			file = "\PATTY_ABILITIES\functions\objectPlacement";
+			class canPlaceObject                 {};
+			class initObjectPlacement            {};
+			class objectPlacementHint            {};
+			class eachFrameObjPlacement          {};
+			class objectPlacementEventsGUI       {};
+			class objectPlacementOnKeyDown       {};
+			class objectPlacementOnScroll        {};
+			
+			class endObjectPlacement             {};
+			class removeObjectPlacementEventsGUI {};
+			class setPlObjectDir                 {};
+			class setPlObjectZ                   {};
+			class secureObjectOnSpawn            {};
 		};
 	};
 };
