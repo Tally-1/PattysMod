@@ -14,4 +14,7 @@ _self call ["globalizeData"];
 
 [_drone,_owner] remoteExec ["PSA_fnc_droneOwnerOnDestruction", _owner];
 
+if(_type isEqualTo "bomb")
+then{[_drone] call PSA_fnc_bombDroneDestroyed};
+
 true;

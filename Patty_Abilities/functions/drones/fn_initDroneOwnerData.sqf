@@ -19,7 +19,8 @@ private _dataArr = [
 	["onDestruction",         PSA_fnc_droDataOnDestruction], // Called on "Killed" event.
 	["remainingCoolDown", PSA_fnc_droDataRemainingCoolDown],
 	["cooldownComplete",   PSA_fnc_droDataCooldownComplete],
-    ["activeTypes",             PSA_fnc_droDataActiveTypes]
+    ["activeTypes",             PSA_fnc_droDataActiveTypes],
+    ["onDeletion",               PSA_fnc_droDataOnDeletion]
 ];
 
 private _data = createHashmapObject [_dataArr];

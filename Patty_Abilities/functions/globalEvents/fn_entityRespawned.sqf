@@ -11,5 +11,6 @@ _man setVariable ["PSA_abilities", _abilities, true];
 [_man, _corpse] call  PSA_fnc_crateDataOnRespawn;
 [_man, _corpse] spawn PSA_fnc_mobileRespawnOnRespawn;
 [_man, _corpse] spawn PSA_fnc_rallyPointOnRespawn;
+[_man, _corpse] spawn PSA_fnc_dronesOnRespawn;
 
 true;

@@ -3,7 +3,7 @@ params[
     ["_type", nil,     [""]]
 ];
 private _typeName  = [_type] call PSA_fnc_capFirstLetter;
-private _icon      = "\A3\Air_F_Orange\UAV_06\Data\UI\Map_UAV_06_CA.paa";
+private _icon      = "\Patty_Abilities\textures\icons\DroneAbility.paa";
 private _title     = ["Deploy ",_typeName," Drone"]joinString"";
 private _function  = { ["recon", _this#0]call PSA_fnc_placeDrone};
 private _condition = { ["recon", _this#0]call PSA_fnc_canPlaceDrone};

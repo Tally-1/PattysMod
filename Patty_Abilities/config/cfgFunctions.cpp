@@ -41,6 +41,8 @@ class CfgFunctions {
 
 			class aceActionPlaceDrone                {};
 			class updateAceDroneActions              {};
+			class pickupDroneCondition               {};
+			class dronePickupAction                  {};
 		};
 
 
@@ -112,6 +114,7 @@ class CfgFunctions {
 			class deployDrone              {};
 			class safeDroneDeployment      {};
 			class initSpecialDrone         {};
+			class deleteSpecialDrone       {};
 			
 			class initDroneOwnerData       {};
 			class droDataAddDrone          {};
@@ -119,11 +122,36 @@ class CfgFunctions {
 			class droDataglobalizeData     {};
 			class droDataRemainingCoolDown {};
 			class droDataOnDestruction     {};
-			class droneOwnerOnDestruction  {};
-			class specialDroneDestroyed    {};
-			class specialDroneEvents       {};
+			class droDataOnDeletion        {};
 			class droDataCooldownComplete  {};
-		
+
+			class specialDroneEvents       {};
+			class specialDroneDestroyed    {};
+			class specialDroneDeleted      {};
+			class specialDroneFuel         {};
+			class droneOwnerOnDestruction  {};
+			class droneOwnerOnNoFuel       {};
+			
+			class bombDroneInit            {};
+			class bombDroneCollision       {};
+			class setDroneExplosives       {};
+			class bombDroneDestroyed       {};
+			class bombDroneRemoveEvent     {};
+			class detonateDroneCondition   {};
+			class detonateDroneAction      {};
+			class detonateBombDrone        {};
+
+			class combatDroneReady         {};
+			class initCombatDrone          {};
+			class combatDroneFired         {};
+			class setDroneWeapon           {};
+
+			class showSpecialDrone         {};
+			class hideSpecialDrone         {};
+			class handleAllDrones          {};
+			class handleSpecialDrone       {};
+			class linkDroneTerminal        {};
+			class dronesOnRespawn          {};
 		};
 
 		class rallyPoint
@@ -249,6 +277,8 @@ class CfgFunctions {
 		class notifications_drone { 
 			file = "\PATTY_ABILITIES\functions\notifications\drone";
 			class droneDestroyedNotification {};
+			class droneDeletionNotification  {};
+			class droneAvailableNotification {};
 		};
 
 
@@ -291,6 +321,8 @@ class CfgFunctions {
 			class execPrFrameTasks          {};
 			class execPrSecondTasks         {};
 			class setCursorObject3D         {};
+			class drawSpecialDronesOnMap    {};
+			class drawDroneOnMap            {};
 		};
 
 		class rscTimers {
@@ -328,6 +360,7 @@ class CfgFunctions {
 			class rearmNearestVehicle             {};
 			class vehicleRearmActionCondition     {};
 			class droneDeploymentBar              {};
+			class dronePickupBar                  {};
 			class droneCoolDownTimer              {};
 		};
 

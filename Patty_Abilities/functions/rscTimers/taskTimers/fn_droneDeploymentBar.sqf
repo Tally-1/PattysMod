@@ -12,6 +12,6 @@ private _condition   = [[_owner], PSA_fnc_functionalMan];
 
 [_text, _placeTime, _endCode, _abortCode, _condition, true] call PSA_fnc_progressBar;
 
-_man playMoveNow "AinvPknlMstpSlayWrflDnon_medicOther";
+_owner playMoveNow "AinvPknlMstpSlayWrflDnon_medicOther";
 
 true;
