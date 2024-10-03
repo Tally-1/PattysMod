@@ -15,6 +15,8 @@ _drone setUnitTrait ["camouflageCoef", 0];
 } forEach allGroups;
 
 _drone setVariable["PSA_hidden",true,true];
+_drone setVariable["PSA_hiddenTime",time,true];
+
 
 [["Drone hidden ",round time]] call p_dbg;
 

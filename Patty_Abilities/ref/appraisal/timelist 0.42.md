@@ -15,3 +15,5 @@
 
 [32m] CBA options, refactoring.
 13.4 hours (805 minutes)
+
+**The Worksessions above has been paid in full**

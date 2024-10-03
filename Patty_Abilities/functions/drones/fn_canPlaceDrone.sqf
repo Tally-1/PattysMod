@@ -2,8 +2,8 @@ params[
     ["_type", nil,     [""]],
     ["_man",  nil,[objNull]]
 ];
-private _abilities = _player getVariable ["PSA_abilities", []];
-if!("drone" in _abilities)exitWith{false};
+private _hasAbility = [_man, _type] call PSA_fnc_hasDroneAbility;
+if!(_hasAbility)exitWith{false};
 
 private _droneData = _man getVariable "PSA_droneOwnerData";
 if(isNil "_droneData")then{[_man]call PSA_fnc_initDroneOwnerData};

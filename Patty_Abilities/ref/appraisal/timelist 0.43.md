@@ -21,3 +21,7 @@
 -----
 
 [106m] Cooldown on no fuel, respawn handling, terminal on spawn, Refactoring, testing.
+
+13.35 hours (801 minutes)
+
+**The Worksessions above has been paid in full**

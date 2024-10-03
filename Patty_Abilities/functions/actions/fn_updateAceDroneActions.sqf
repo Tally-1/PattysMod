@@ -1,10 +1,8 @@
 params[
-	["_player",         nil,[objNull]],
-	["_abilities",      nil,     [[]]],
-	["_abilityActions", nil,     [[]]]
+	["_player",nil,[objNull]]
 ];
-private _hasDroneAbility = "drone" in _abilities;
-private _hasDroneAction  = PSA_droneActionRec in _abilityActions;
+private _hasDroneAbility = [_player, "any"] call PSA_fnc_hasDroneAbility;
+private _hasDroneAction  = [_player, "any"] call PSA_fnc_hasDroneAction;
 
 // Exit if both ability and action is present.
 if(_hasDroneAbility
@@ -18,7 +16,7 @@ exitWith{};
 
 // Apply drone Actions if the Ability is present but not the action.
 if(_hasDroneAbility isEqualTo true
-&&{_hasDroneAction isEqualTo false})exitWith{
+&&{_hasDroneAction isEqualTo false})exitWith{ 
 	PSA_droneActionRec = [player, "recon"]  call PSA_fnc_aceActionPlaceDrone;
 	PSA_droneActionGun = [player, "combat"] call PSA_fnc_aceActionPlaceDrone;
 	PSA_droneActionIED = [player, "bomb"]   call PSA_fnc_aceActionPlaceDrone;

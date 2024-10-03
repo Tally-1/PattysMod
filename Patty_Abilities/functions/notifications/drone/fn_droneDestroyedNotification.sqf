@@ -4,7 +4,7 @@ params[
 private _type     = _drone getVariable "PSA_droneType";
 private _typeName = [_type] call PSA_fnc_capFirstLetter;
 private _title    = [_typeName," Drone destroyed!"]joinString"";
-private _text     = "";
+private _text     = [_typeName," Drone Unavailable"]joinString"";
 private _icon     = "\Patty_Abilities\textures\icons\DroneCooldown.paa";
 
 [

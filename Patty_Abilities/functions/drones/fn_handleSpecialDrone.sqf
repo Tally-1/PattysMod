@@ -1,6 +1,11 @@
 params [
     ["_drone",nil,[objNull]]
 ];
+private _type = _drone getVariable "PSA_droneType";
+if(_type isEqualTo "bomb")
+exitWith{[_drone] call PSA_fnc_handleBombDroneVisibility};
+
+
 private _altitude      = (getPos _drone)#2;
 private _hidden        = _drone getVariable "PSA_hidden";
 private _hideAltitude  = _altitude >= PSA_droneVisibilityHeight;

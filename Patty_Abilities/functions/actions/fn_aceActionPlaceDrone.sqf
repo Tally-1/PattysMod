@@ -12,6 +12,7 @@ if(_type isEqualTo "combat")then{
     _function  = { ["combat", _this#0]call PSA_fnc_placeDrone};
     _condition = { ["combat", _this#0]call PSA_fnc_canPlaceDrone};
 };
+
 if(_type isEqualTo "bomb")then{
     _function  = { ["bomb", _this#0]call PSA_fnc_placeDrone};
     _condition = { ["bomb", _this#0]call PSA_fnc_canPlaceDrone};
@@ -26,6 +27,6 @@ private _actionData =
     _icon
 ] call PSA_fnc_simpleSelfActionACE;
 
-private _crateActionName = _actionData#1;
+private _actionName = _actionData#1;
 
-_crateActionName;
+_actionName;

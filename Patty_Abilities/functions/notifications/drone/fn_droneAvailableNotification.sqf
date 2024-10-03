@@ -3,7 +3,7 @@ params[
 ];
 // private _typeName = [_typeName, " Drone"]joinString"";
 private _title    = [_typeName," Available!"]joinString"";
-private _text     = ["You may deploy a ", _typeName, " again"]joinString"";
+private _text     = [_typeName, " Available"]joinString"";
 private _icon     = "\Patty_Abilities\textures\icons\DroneAvaliable.paa";
 
 [
