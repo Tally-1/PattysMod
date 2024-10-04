@@ -44,12 +44,23 @@ private _subCategory = "Drone Settings";
 
 ] call CBA_fnc_addSetting;
 
+// ""
+
 [
 	"PSA_combatDroneGun",
 	"EDITBOX",
 	["Combat Drone Weapon","The weapon a Combat drone starts with"],
 	[_categoryName, _subCategory],
 	"MMG_02_black_F"
+
+] call CBA_fnc_addSetting;
+
+[
+	"PSA_combatDroneMagazine",
+	"EDITBOX",
+	["Combat Drone Magazine","The Magazine a Combat drone starts with. Make sure it is compatible."],
+	[_categoryName, _subCategory],
+	"130Rnd_338_Mag"
 
 ] call CBA_fnc_addSetting;
 

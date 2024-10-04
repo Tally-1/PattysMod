@@ -4,7 +4,12 @@ params[
 private _soundObject = _drone getVariable "PSA_soundObject";
 private _type        = _drone getVariable "PSA_droneType";
 private _owner       = name (_drone getVariable ["PSA_droneOwner",objNull]);
-[_drone, PSA_combatDroneGun] call PSA_fnc_setDroneWeapon;
+[
+    _drone, 
+    PSA_combatDroneGun,
+    PSA_combatDroneMagazine
+
+] call PSA_fnc_setDroneWeapon;
 
 [[_owner,"'s drone was reloaded"]] call p_dbg;
 
