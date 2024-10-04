@@ -15,7 +15,7 @@ missionNamespace setVariable ["PSA_specialDrones",_allDrones,true];
 
 _owner setVariable["PSA_droneOwnerData", _self, true];
 
-if!(PSA_debug)then{
+if(PSA_debug)then{
     private _activeTypes = _self call ["activeTypes"];
     private _debugText   = parseText([
         _type, " drone deployed by ", name _owner,"<br/>",
