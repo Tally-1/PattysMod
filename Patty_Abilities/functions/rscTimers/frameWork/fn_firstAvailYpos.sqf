@@ -16,8 +16,8 @@ private ["_newYPos"];
 } forEach _allYpos;
 
 if(isNil "_newYPos")then{
-	copyToClipboard str [_allYpos, _inUseYArr];
-	systemChat str _i;
+	// copyToClipboard str [_allYpos, _inUseYArr];
+	"no new Y coordinate" call p_dbg;
 };
 
 _newYPos;

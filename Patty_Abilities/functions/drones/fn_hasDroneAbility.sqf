@@ -13,7 +13,6 @@ private _hasAbility = false;
 if(_type isEqualTo "any")then{
     {
         _specialAbility = [_x, "_drone"]joinString"";
-        systemChat str [_specialAbility, _abilities];
         if(_specialAbility in _abilities)
         exitWith{
             [[_specialAbility, " ability found"]] call p_dbg;
