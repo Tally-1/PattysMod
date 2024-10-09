@@ -3,7 +3,7 @@ params[
     ["_reason", nil,      [""]]
 ];
 
-_drone setVariable ["PSA_deletionReason", _reason];
+_drone setVariable ["PSA_deletionReason", _reason,true];
 {deleteVehicle _x} forEach crew _drone;
 
 deleteVehicle _drone;

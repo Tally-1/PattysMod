@@ -4,7 +4,6 @@ params[
 	["_type", nil,     [""]]
 ];
 private _ownerData = _owner getVariable "PSA_droneOwnerData";
-private _side      = side _owner;
 
 [_owner]        call PSA_fnc_linkDroneTerminal;
 [_drone, _type] call PSA_fnc_specialDroneEvents;
@@ -12,7 +11,6 @@ private _side      = side _owner;
 _drone setUnitTrait ["audibleCoef",    0];
 _drone setUnitTrait ["camouflageCoef", 0];
 _drone enableWeaponDisassembly false;
-_side  createVehicleCrew      _drone;
 _owner connectTerminalToUAV   _drone;
 
 _drone setVariable["PSA_droneType",  _type,  true];
@@ -21,7 +19,7 @@ _drone setVariable["PSA_birth",  round time, true];
 _drone setVariable["PSA_hidden",       true, true];
 
 if(isNil "_ownerData")
-then{_ownerData = [_owner] call PSA_fnc_initDroneOwnerData};
+then{ _ownerData = [_owner] call PSA_fnc_initDroneOwnerData};
 
 if(_type isEqualTo "bomb")
 then{[_drone]call PSA_fnc_bombDroneInit};
@@ -31,6 +29,6 @@ then{[_drone]spawn PSA_fnc_initCombatDrone};
 
 _ownerData call ["addDrone",[_drone, _type]];
 
-[_drone] call PSA_fnc_dronePickupAction;
+[_drone] remoteExecCall ["PSA_fnc_dronePickupAction"];
 
 true;

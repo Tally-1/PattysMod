@@ -1,7 +1,7 @@
 params[
     ["_drone",nil,[objNull]]
 ];
-private _statement = "_this call PSA_fnc_detonateBombDrone";
+private _statement = '_this remoteExecCall ["PSA_fnc_detonateBombDrone",2]';
 private _condition = "_this call PSA_fnc_detonateDroneCondition";
 private _title     = "<t color='#FF0000'>DETONATE</t>";
 

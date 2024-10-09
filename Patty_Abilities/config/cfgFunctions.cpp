@@ -113,6 +113,7 @@ class CfgFunctions {
 			class droneTypeToModel          {};
 			class deployDrone               {};
 			class safeDroneDeployment       {};
+			class safeDroneDeploymentServer {};
 			class initSpecialDrone          {};
 			class deleteSpecialDrone        {};
 			

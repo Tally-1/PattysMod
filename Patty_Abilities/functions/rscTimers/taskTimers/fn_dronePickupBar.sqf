@@ -7,7 +7,7 @@ private _droneModel  = [_type] call PSA_fnc_droneTypeToModel;
 private _displayName = getText (configfile >> "CfgVehicles" >> _droneModel >> "displayName");
 private _time        = PSA_dronePickupTime;
 private _text        = ["Picking up ", _displayName] joinString "";
-private _endCode     = [[_drone,"was picked up"], {[_this#0, _this#1] call PSA_fnc_deleteSpecialDrone}];
+private _endCode     = [[_drone,"was picked up"], {[_this#0, _this#1] remoteExecCall ["PSA_fnc_deleteSpecialDrone",2]}];
 private _abortCode   = [[_owner], PSA_fnc_cratePlaceProgressBarAborted];
 private _condition   = [[_owner], PSA_fnc_functionalMan];
 
