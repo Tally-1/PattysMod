@@ -108,6 +108,7 @@ class CfgFunctions {
 		class drones
 		{
 			file = "\PATTY_ABILITIES\functions\drones";
+			class DroneWeapon_lxWS          {description = "A sligthtly rewritten Version of the original init function"};
 			class canPlaceDrone             {};
 			class placeDrone                {};
 			class droneTypeToModel          {};

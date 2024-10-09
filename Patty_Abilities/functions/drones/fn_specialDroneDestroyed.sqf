@@ -4,9 +4,9 @@ params[
 private _owner = _drone getVariable "PSA_droneOwner";
 if(isNil "_owner")exitWith{"No Drone Owner found" call p_dbg;};
 
-_drone removeAllEventHandlers "Deleted";
-_drone removeAllEventHandlers "Fuel";
-_drone removeAllEventHandlers "Killed";
+[_drone, "Fuel"]    remoteExecCall ["removeAllEventHandlers"];
+[_drone, "Deleted"] remoteExecCall ["removeAllEventHandlers"];
+[_drone, "Killed"]  remoteExecCall ["removeAllEventHandlers"];
 
 private _reason = _drone getVariable "PSA_deletionReason";
 if(!isNil "_reason")exitWith{"Drone deleted" call p_dbg};

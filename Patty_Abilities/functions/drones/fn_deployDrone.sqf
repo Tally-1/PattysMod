@@ -7,7 +7,6 @@ private _dir         = (_owner getVariable "PSA_objectPosDir")#1;
 private _droneModel  = [_type] call PSA_fnc_droneTypeToModel;
 private _drone       = createVehicle [_droneModel, _pos, [], 0, "CAN_COLLIDE"];
 private _droneClient = groupOwner group _owner;
-
 (side _owner) createVehicleCrew _drone;
 
 [_drone, true]          call PSA_fnc_secureObjectOnSpawn;

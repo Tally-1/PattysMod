@@ -15,4 +15,8 @@ private _weaponData = [_weapon,"","","",[_magazine,_magCount],[],""];
 [_drone, "SetWeapon",[]]          call lxWS_fnc_DroneWeapon;
 [_drone, "SetWeapon",_weaponData] call lxWS_fnc_DroneWeapon;
 
+private _newWeaponVar = _drone getVariable "lxws_holdingweapon";
+_drone setVariable ["lxws_holdingweapon",_newWeaponVar,true];
+
+
 [_weapon, [_magazine,_magCount]];
