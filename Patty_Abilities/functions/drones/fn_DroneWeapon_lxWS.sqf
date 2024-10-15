@@ -444,29 +444,10 @@ getArray (configOf _uav >> "lxws_droneWeapon") params ["_weapon","_mag1","_mag2"
 
 
 };
-private _muzzles = getArray (configfile >> "CfgWeapons" >> _weapon >> "muzzles");
 
-
-private _getCompatMag = {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-(compatibleMagazines [_weapon,_this])#0
-};
-
-
-private _primMag = call {
+private _muzzles      = getArray (configfile >> "CfgWeapons" >> _weapon >> "muzzles");
+private _getCompatMag = {(compatibleMagazines [_weapon,_this])#0};
+private _primMag      = call {
 
 private _return = call {
 if (_mag1 == "") then {
