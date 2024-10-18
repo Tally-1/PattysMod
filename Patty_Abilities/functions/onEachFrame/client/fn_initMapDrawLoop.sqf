@@ -7,7 +7,7 @@ if(!isNil "_eh")exitWith{};
 _eh = _map ctrlAddEventHandler ["Draw",{
 	call PSA_fnc_drawCratesMap;
 	call PSA_fnc_drawRallyPointsMap;
-	call PSA_fnc_drawSpecialDronesOnMap;
+	// call PSA_fnc_drawSpecialDronesOnMap;
 }];
 
 _map setVariable ["PSA_drawEh", _eh];

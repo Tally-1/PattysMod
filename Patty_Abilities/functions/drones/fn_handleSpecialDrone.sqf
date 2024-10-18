@@ -5,10 +5,11 @@ private _type = _drone getVariable "PSA_droneType";
 if(_type isEqualTo "bomb")
 exitWith{[_drone] call PSA_fnc_handleBombDroneVisibility};
 
-
-private _altitude      = (getPos _drone)#2;
-private _hidden        = _drone getVariable "PSA_hidden";
-private _hideAltitude  = _altitude >= PSA_droneVisibilityHeight;
+private _varName         = ["PSA_",_type, "DroneVisibilityHeight"]joinString"";
+private _altitudeSetting = missionNamespace getVariable _varName;
+private _altitude        = (getPos _drone)#2;
+private _hidden          = _drone getVariable "PSA_hidden";
+private _hideAltitude    = _altitude >= _altitudeSetting;
 if(_hidden&&{_hideAltitude})exitWith{};
 
 private _visible       = _hidden isEqualTo false;

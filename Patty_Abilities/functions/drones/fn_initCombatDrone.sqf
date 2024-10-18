@@ -12,6 +12,10 @@ if(_extraMag)then{_drone removeMagazineGlobal _magType};
 [_drone] call PSA_fnc_droneReloadAction;
 
 _drone addEventHandler ["Fired", {_this call PSA_fnc_combatDroneFired}];
+if(!isServer)then{
+[_drone, ["Fired", {_this call PSA_fnc_combatDroneFired}]] remoteExecCall ["addEventHandler",2];
+};
+
 
 removeAllActions _drone;
 

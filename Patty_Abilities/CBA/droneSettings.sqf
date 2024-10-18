@@ -44,8 +44,6 @@ private _subCategory = "Drone Settings";
 
 ] call CBA_fnc_addSetting;
 
-// ""
-
 [
 	"PSA_combatDroneGun",
 	"EDITBOX",
@@ -66,9 +64,18 @@ private _subCategory = "Drone Settings";
 
 
 [
-	"PSA_droneVisibilityHeight",
+	"PSA_reconDroneVisibilityHeight",
 	"SLIDER",
-	["Visibility Height","Above this altitude(m) the drone is hidden from AI."],
+	["Recon Drone Visibility Height","Above this altitude(m) the recon-drone is hidden from AI."],
+	[_categoryName, _subCategory],
+	[1,600,50,0]
+
+] call CBA_fnc_addSetting;
+
+[
+	"PSA_combatDroneVisibilityHeight",
+	"SLIDER",
+	["Combat Drone Visibility Height","Above this altitude(m) the combat-drone is hidden from AI."],
 	[_categoryName, _subCategory],
 	[1,600,50,0]
 
@@ -76,10 +83,20 @@ private _subCategory = "Drone Settings";
 
 
 [
+	"PSA_bombDroneVisibilityTime",
+	"SLIDER",
+	["Bomb Drone Visibility Time","The bomb-drone switches between visible/invisible every time this amount of seconds pass."],
+	[_categoryName, _subCategory],
+	[1,600,5,0]
+
+] call CBA_fnc_addSetting;
+
+
+[
 	"PSA_droneVisibilityCooldown",
 	"SLIDER",
-	["Shot Visibility Cooldown","How long in seconds from a drone fires until it can be hidden from AI"],
+	["Combat Drone Visibility Cooldown","How many seconds from a combat-drone fires until it is invisible again"],
 	[_categoryName, _subCategory],
-	[1,60,10,0]
+	[1,20,5,0]
 
 ] call CBA_fnc_addSetting;

@@ -2,8 +2,8 @@ params[
 	["_owner", nil,[objNull]],
 	["_type",  nil,     [""]]
 ];
-private _droneModel = [_type] call PSA_fnc_droneTypeToModel;
-private _displayName = getText (configfile >> "CfgVehicles" >> _droneModel >> "displayName");
+private _droneModel  = [_type] call PSA_fnc_droneTypeToModel;
+private _displayName = [[_type] call PSA_fnc_capFirstLetter, " Drone"]joinString""; // getText (configfile >> "CfgVehicles" >> _droneModel >> "displayName");
 private _placeTime   = PSA_dronePlacementTime;
 private _text        = ["Placing ", _displayName] joinString "";
 private _endCode     = [[_owner,_type], {["PSA_DeployDrone", _this] call CBA_fnc_serverEvent}];

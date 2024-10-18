@@ -30,9 +30,9 @@ You might also wanna consider hiding the connect to drone action as well on the 
 making some adjustments to the spotting of Drones one more time.
 This is also to make sure the Drones are properly visible and not visible.
 
-Recon Drone: Invisible when flown above 100m ( Adjustable 50m - 200m )
+Recon Drone:  Invisible when flown above 100m ( Adjustable 50m - 200m )
 Combat Drone: visible upon being flown above 50m ( Adjustable 50m - 200m ) / only visible when it fires. Visiblity is 5s ( Adjustable 1s - 20s )
-Bomb Drone: Flicker between visible and invisible every 5s ( Adjustable 1s - 20s )
+Bomb Drone:   Flicker between visible and invisible every 5s ( Adjustable 1s - 20s )
 
 5) Drone Ability Name ( Tweak )
 

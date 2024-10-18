@@ -17,7 +17,7 @@ private _timelimit = round (time+_cooldown);
 _ownDrones deleteAt _ownIndex;
 _self call ["globalizeData"];
 
-if("fuel" in toLower _reason)exitWith{ 
+if("battery" in toLower _reason)exitWith{ 
     _self get "timeLimits" set [_type, _timelimit];
     _self call ["globalizeData"];
     [_type,_reason, _owner] remoteExec ["PSA_fnc_droneOwnerOnNoFuel", _owner];
