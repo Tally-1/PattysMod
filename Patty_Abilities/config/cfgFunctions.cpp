@@ -108,63 +108,64 @@ class CfgFunctions {
 		class drones
 		{
 			file = "\PATTY_ABILITIES\functions\drones";
-			class DroneWeapon_lxWS          {description = "A sligthtly rewritten Version of the original init function"};
-			class canPlaceDrone             {};
-			class placeDrone                {};
-			class droneTypeToModel          {};
-			class deployDrone               {};
-			class safeDroneDeployment       {};
-			class safeDroneDeploymentServer {};
-			class initSpecialDrone          {};
-			class deleteSpecialDrone        {};
+			class DroneWeapon_lxWS            {description = "A sligthtly rewritten Version of the original init function"};
+			class canPlaceDrone               {};
+			class placeDrone                  {};
+			class droneTypeToModel            {};
+			class deployDrone                 {};
+			class safeDroneDeployment         {};
+			class safeDroneDeploymentServer   {};
+			class initSpecialDrone            {};
+			class deleteSpecialDrone          {};
 			
-			class initDroneOwnerData        {};
-			class droDataAddDrone           {};
-			class droDataActiveTypes        {};
-			class droDataglobalizeData      {};
-			class droDataRemainingCoolDown  {};
-			class droDataOnDestruction      {};
-			class droDataOnDeletion         {};
-			class droDataCooldownComplete   {};
+			class initDroneOwnerData          {};
+			class droDataAddDrone             {};
+			class droDataActiveTypes          {};
+			class droDataglobalizeData        {};
+			class droDataRemainingCoolDown    {};
+			class droDataOnDestruction        {};
+			class droDataOnDeletion           {};
+			class droDataCooldownComplete     {};
 
-			class specialDroneEvents        {};
-			class specialDroneDestroyed     {};
-			class specialDroneDeleted       {};
-			class specialDroneFuel          {};
-			class droneOwnerOnDestruction   {};
-			class droneOwnerOnNoFuel        {};
+			class specialDroneEvents          {};
+			class specialDroneDestroyed       {};
+			class specialDroneDeleted         {};
+			class specialDroneFuel            {};
+			class droneOwnerOnDestruction     {};
+			class droneOwnerOnNoFuel          {};
 			
-			class bombDroneInit             {};
-			class bombDroneCollision        {};
-			class setDroneExplosives        {};
-			class bombDroneDestroyed        {};
-			class bombDroneRemoveEvent      {};
-			class detonateDroneCondition    {};
-			class detonateDroneAction       {};
-			class detonateBombDrone         {};
+			class bombDroneInit               {};
+			class bombDroneCollision          {};
+			class setDroneExplosives          {};
+			class bombDroneDestroyed          {};
+			class bombDroneRemoveEvent        {};
+			class detonateDroneCondition      {};
+			class detonateDroneAction         {};
+			class detonateBombDrone           {};
 
-			class combatDroneReady          {};
-			class initCombatDrone           {};
-			class combatDroneFired          {};
-			class setDroneWeapon            {};
+			class combatDroneReady            {};
+			class initCombatDrone             {};
+			class combatDroneFired            {};
+			class setDroneWeapon              {};
 
-			class showSpecialDrone          {};
-			class hideSpecialDrone          {};
-			class handleAllDrones           {};
-			class handleSpecialDrone        {};
-			class handleBombDroneVisibility {};
-			class linkDroneTerminal         {};
-			class dronesOnRespawn           {};
-			class playReloadSound           {};
-			class droneReloadComplete       {};
-			class droneReloadBarAborted     {};
-			class droneReloadBar            {};
-			class droneReloadCondition      {};
-			class droneReloadAction         {};
-			class droneAutoReload           {};
-			class handleDroneAmmo           {};
-			class hasDroneAbility           {};
-			class hasDroneAction            {};
+			class showSpecialDrone            {};
+			class hideSpecialDrone            {};
+			class handleAllDrones             {};
+			class handleSpecialDrone          {};
+			class handleBombDroneVisibility   {};
+			class linkDroneTerminal           {};
+			class dronesOnRespawn             {};
+			class playReloadSound             {};
+			class droneReloadComplete         {};
+			class droneReloadBarAborted       {};
+			class droneReloadBar              {};
+			class droneReloadCondition        {};
+			class droneReloadAction           {};
+			class droneAutoReload             {};
+			class handleDroneAmmo             {};
+			class hasDroneAbility             {};
+			class hasDroneAction              {};
+			class droneCooldownDisplayActive  {};
 		};
 
 		class rallyPoint
@@ -414,7 +415,7 @@ class CfgFunctions {
 
 		class vehicles
 		{
-			file = "\PATTY_ABILITIES\functions\vehicles";
+			file = "PATTY_ABILITIES\functions\vehicles";
 			class nearFriendlyVehicle      {};
 			class nearVehicles             {};
 			class getVehicleSide           {};

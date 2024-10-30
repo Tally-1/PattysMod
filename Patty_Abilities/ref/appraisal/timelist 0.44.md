@@ -12,3 +12,5 @@
 
 [90m] Specific drone abilities, autoreload tweak.
 [20m] Refactoring, packing, last test, upload.
+
+6.7 hours (402)

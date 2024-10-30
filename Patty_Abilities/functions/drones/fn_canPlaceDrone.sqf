@@ -2,6 +2,9 @@ params[
     ["_type", nil,     [""]],
     ["_man",  nil,[objNull]]
 ];
+private _cooldownActive = [_type] call PSA_fnc_droneCooldownDisplayActive;
+if(_cooldownActive)exitWith{false};
+
 private _hasAbility = [_man, _type] call PSA_fnc_hasDroneAbility;
 if!(_hasAbility)exitWith{false};
 
