@@ -3,3 +3,5 @@
 [64m] CBA options, Dedicated testing, minor fixes / tweaks.
 
 2.36 hours (142 minutes)
+
+**The Worksessions above has been paid in full**

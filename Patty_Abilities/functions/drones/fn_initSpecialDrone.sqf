@@ -22,7 +22,7 @@ if(isNil "_ownerData")
 then{ _ownerData = [_owner] call PSA_fnc_initDroneOwnerData};
 
 if(_type isEqualTo "bomb")
-then{[_drone]call PSA_fnc_bombDroneInit};
+then{[_drone, _owner]call PSA_fnc_bombDroneInit};
 
 if(_type isEqualTo "combat")
 then{[_drone]spawn PSA_fnc_initCombatDrone};

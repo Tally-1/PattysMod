@@ -14,3 +14,5 @@
 [20m] Refactoring, packing, last test, upload.
 
 6.7 hours (402)
+
+**The Worksessions above has been paid in full**

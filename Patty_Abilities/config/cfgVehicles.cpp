@@ -14,18 +14,6 @@ class CfgVehicles
         };
     };
 
-    class B_UAV_02_lxWS;
-    class PSA_combatDrone:B_UAV_02_lxWS
-    {
-        scope         = 2;
-        scopeCurator  = 2;
-        displayName   = "[ABILITIES] Combat Drone";
-        lxws_holdingWeapon[] = {};
-
-        class EventHandlers
-        {
-           init = "[_this#0,'Init',[]] spawn PSA_fnc_DroneWeapon_lxWS;";
-        };
-    };
+    #include "cfgDrones.cpp"
     
 };

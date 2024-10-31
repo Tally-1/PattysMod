@@ -4,6 +4,8 @@ params[
 private _abilities      = _player getVariable ["PSA_abilities", []];
 private _abilityActions = [_player] call PSA_fnc_getAllACESelfActionNames;
 
+[_player] call PSA_fnc_updateDetonateDroneActionPlayer;
+
 if(_abilities isEqualTo [])
 exitWith{[_player] call PSA_fnc_removeAllAbilitySelfActions};
 
