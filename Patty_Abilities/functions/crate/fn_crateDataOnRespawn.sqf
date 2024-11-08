@@ -14,9 +14,9 @@ if(!isNil "_crate")     then{
 	_crateData call ["globalizeData"];
 };
 
-if(!isNil "_loadOut")   then{
+if(!isNil "_loadOut")then{
 	_man setVariable ["PSA_loadOut", _loadOut, true];
-	_man setUnitLoadout _loadOut;
+	[_man]call PSA_fnc_applyLoadOut;
 };
 
 if(!isNil "_coolDown")

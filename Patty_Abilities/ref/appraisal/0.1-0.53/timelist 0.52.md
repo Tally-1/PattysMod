@@ -8,3 +8,5 @@
 
 [57m] Testing on dedicated with Patty.
 [62m] Implementing Compatibility fix, dedicated testing. Upload.
+
+**The Worksessions above has been paid in full**

@@ -13,7 +13,8 @@ params[
 	["_uniformName",  nil, [""]],
 	["_vestName",     nil, [""]],
 	["_backPackName", nil, [""]],
-	["_helmetName",   nil, [""]]
+	["_helmetName",   nil, [""]],
+	["_2ndRifleName", nil, [""]]
 ];
 _images
 params[
@@ -23,7 +24,8 @@ params[
 	["_uniformImage",  nil, [""]],
 	["_vestImage",     nil, [""]],
 	["_backPackImage", nil, [""]],
-	["_helmetImage",   nil, [""]]
+	["_helmetImage",   nil, [""]],
+	["_2ndRifleImage", nil, [""]]
 ];
 
 private _end       = "</t>";
@@ -36,6 +38,7 @@ private _brBold    = "<t align='Right' valign='bottom'>";
 
 private _loadOut   = localize "DEFAULT LOADOUT";
 private _primary   = localize "STR_A3_RSCDISPLAYGEAR_FILTERS_PRIMARY0";
+private _primary2  = "Second Primary";
 private _launcher  = localize "STR_A3_RSCDISPLAYARSENAL_TAB_SECONDARYWEAPON";
 private _secondary = localize "STR_A3_RSCDISPLAYGEAR_FILTERS_SECONDARY0";
 private _uniform   = localize "STR_A3_RSCDISPLAYARSENAL_TAB_UNIFORM";
@@ -44,6 +47,7 @@ private _backpack  = localize "STR_A3_RSCDISPLAYARSENAL_TAB_BACKPACK";
 private _headgear  = localize "STR_A3_RSCDISPLAYARSENAL_TAB_HEADGEAR";
 
 private _rifleVisual    = ["<t size='3'>", "<img image='",_rifleImage,    "'></img>", "</t>"]joinString "";
+private _rifleVisual2   = ["<t size='3'>", "<img image='",_2ndRifleImage, "'></img>", "</t>"]joinString "";
 private _launcherVisual = ["<t size='3'>", "<img image='",_launcherImage, "'></img>", "</t>"]joinString "";
 private _pistolVisual   = ["<t size='3'>", "<img image='",_pistolImage,   "'></img>", "</t>"]joinString "";
 
@@ -59,6 +63,9 @@ private _textArr = [
 
 	_NL,
 	_blLight,_primary,_end,       _brBold,_rifleName,_end,
+
+	_NL,
+	_blLight,_primary2,_end,       _brBold,_2ndRifleName,_end,
 
 	_NL,
 	_blLight,_launcher,_end,      _brBold,_launcherName,_end,
@@ -82,6 +89,7 @@ private _textArr = [
 ];
 
 if(_rifleImage isNotEqualTo "-")    then {_textArr pushBack _rifleVisual;};
+if(_2ndRifleImage isNotEqualTo "-") then {_textArr pushBack _rifleVisual2;};
 if(_launcherImage isNotEqualTo "-") then {_textArr pushBack _launcherVisual;};
 if(_pistolImage isNotEqualTo "-")   then {_textArr pushBack _pistolVisual;};
 
@@ -90,8 +98,6 @@ _textArr append [_NL,_NL];
 if(_helmetImage isNotEqualTo "-")   then {_textArr pushBack _helmetVisual;};
 if(_vestImage isNotEqualTo "-")     then {_textArr pushBack _vestVisual;};
 if(_backPackImage isNotEqualTo "-") then {_textArr pushBack _backPackVisual;};
-
-
 
 private _text = parseText(_textArr joinString "");
 

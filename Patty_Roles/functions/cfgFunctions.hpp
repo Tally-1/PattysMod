@@ -15,6 +15,7 @@ class CfgFunctions {
 			class setupPlayer               {};
 			class updateGroups              {};
 			class getLoadoutInfo            {};
+			class getSecondaryRifleData     {};
 			class roleDescriptionText       {};
 			class addGroupMenuEntry         {};
 			class addRoleEntry              {};

@@ -3,6 +3,8 @@ params[
 	["_role",       nil,      [""]],
 	["_customVars", nil,      [[]]]
 ];
+_this call PSA_fnc_WBK_updateRoleWeapon;
+
 private _varNames        = _customVars apply {toLower(_x#0)};
 private _abilityDeclared = "psa_abilities" in _varNames;
 
@@ -19,14 +21,10 @@ private _strVal       = ((_customVars#_index)#1);
 if(typeName _strVal isEqualTo "ARRAY")
 then{_strVal = str _strVal};
 
-private _value        = call compile _strVal;
-
+private _value = call compile _strVal;
 _player setVariable [_abilityVar, _value, true];
 
 [_player] call PSA_fnc_updateAcePlayerActions;
-
-// private _newAbilities = _player getVariable [_abilityVar,[]];
-// if(_oldAbilities isEqualTo _newAbilities)exitWith{};
 
 private _oldMRS = "mobile_respawn" in _oldAbilities;
 private _newMRS = "mobile_respawn" in _newAbilities;

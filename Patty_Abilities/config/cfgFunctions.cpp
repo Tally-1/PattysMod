@@ -234,6 +234,27 @@ class CfgFunctions {
 			class arsenalSaveNo             {};
 			class saveLoadOut               {};
 			class applyLoadOut              {};
+			
+		};
+
+		class WBK
+		{
+			file = "\PATTY_ABILITIES\functions\WBK";
+			class WBK_applySecondWeapon     {};
+			class WBK_reApplySecondWeapon   {};
+			class WBK_removeWeapon          {};
+			class WBK_removeAllWeaponVars   {};
+			class WBK_updateRoleWeapon      {};
+			class WBK_copyWeaponConfigVar   {};
+
+		};
+
+		class TFAR
+		{
+			file = "\PATTY_ABILITIES\functions\TFAR";
+			class TFAR_radiosOnRespawn {};
+			class TFAR_getUnitRadio    {};
+
 		};
 
 
@@ -408,6 +429,7 @@ class CfgFunctions {
 			class capFirstLetter        {};
 			class getRoleName           {};
 			class objectName            {};
+			class replaceBrackets       {};
 		};
 
 		class vehicles

@@ -42,11 +42,8 @@ private _roleData = missionConfigFile >> "Dynamic_Roles" >> _role;
 private _roleName = getText(_roleData >> "name");
 private _roleRank = getText(_roleData >> "rank");
 private _roleDesc = getText(_roleData >> "description");
-
-private _defaultLoadout = getArray(_roleData >> "defaultLoadout");
-
-private _infoArr = [_defaultLoadout] call PTG_fnc_getLoadoutInfo;
-private _text    = [_infoArr] call PTG_fnc_roleDescriptionText;
+private _infoArr  = [_roleData] call PTG_fnc_getLoadoutInfo;
+private _text     = [_infoArr] call PTG_fnc_roleDescriptionText;
 
 _textBox ctrlSetStructuredText _text;
 

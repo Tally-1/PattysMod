@@ -1,6 +1,4 @@
-class B_UAV_01_F;
-class B_UAV_02_lxWS;
-class B_UAV_06_F;
+
 
 class PSA_reconDrone:B_UAV_01_F
 {

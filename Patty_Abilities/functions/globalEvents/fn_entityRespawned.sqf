@@ -12,5 +12,6 @@ _man setVariable ["PSA_abilities", _abilities, true];
 [_man, _corpse] spawn PSA_fnc_mobileRespawnOnRespawn;
 [_man, _corpse] spawn PSA_fnc_rallyPointOnRespawn;
 [_man, _corpse] spawn PSA_fnc_dronesOnRespawn;
+[_man, _corpse] remoteExec ["PSA_fnc_TFAR_radiosOnRespawn", _man];
 
 true;
