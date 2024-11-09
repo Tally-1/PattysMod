@@ -246,7 +246,7 @@ class CfgFunctions {
 			class WBK_removeAllWeaponVars   {};
 			class WBK_updateRoleWeapon      {};
 			class WBK_copyWeaponConfigVar   {};
-
+			class WBK_deleteWpHolders       {};
 		};
 
 		class TFAR

@@ -16,7 +16,8 @@ if(!isNil "_crate")     then{
 
 if(!isNil "_loadOut")then{
 	_man setVariable ["PSA_loadOut", _loadOut, true];
-	[_man]call PSA_fnc_applyLoadOut;
+	[_man, ["PSA_loadOut", _loadOut]]remoteExecCall ["setVariable", _man];
+	[_man, _loadOut] remoteExec ["PSA_fnc_applyLoadOut", _man];
 };
 
 if(!isNil "_coolDown")
