@@ -11,7 +11,13 @@ params [
 
 private _roleConfig     = missionConfigFile >> "Dynamic_Roles" >> _desiredRole;
 private _defaultLoadout = getArray(_roleConfig >> "defaultLoadout");
-private _customVars      = getArray(_roleConfig >> "customVariables");
+private _customVars     = getArray(_roleConfig >> "customVariables");
+
+[player, _desiredRole, _customVars, _isRespawn] spawn {
+	sleep 0.1;
+	["PTG_roleChanged", _this] call CBA_fnc_localEvent;
+};
+
 
 if (_isRespawn) then {
 	player setUnitLoadout (missionNamespace getVariable ["PTG_savedLoadout",_defaultLoadout]);
@@ -49,5 +55,3 @@ if (_isRespawn) then {
 
 	player setVariable ["PTG_role",_desiredRole,true];
 };
-
-["PTG_roleChanged", [player, _desiredRole, _customVars]] call CBA_fnc_localEvent;

@@ -1,9 +1,13 @@
 params[
 	["_player",     nil, [objNull]],
 	["_role",       nil,      [""]],
-	["_customVars", nil,      [[]]]
+	["_customVars", nil,      [[]]],
+	["_isRespawn",  false,  [true]]
 ];
-_this call PSA_fnc_WBK_updateRoleWeapon;
+
+if(_isRespawn)
+then{[_player] call PSA_fnc_WBK_reApplySecondWeapon}
+else{_this call PSA_fnc_WBK_updateRoleWeapon};
 
 private _varNames        = _customVars apply {toLower(_x#0)};
 private _abilityDeclared = "psa_abilities" in _varNames;
@@ -27,8 +31,8 @@ _player setVariable [_abilityVar, _value, true];
 [_player] call PSA_fnc_updateAcePlayerActions;
 
 private _oldMRS = "mobile_respawn" in _oldAbilities;
-private _newMRS = "mobile_respawn" in _newAbilities;
-private _noMRS  = (_oldMRS isEqualTo false && {_newMRS isEqualTo false});
-if(_noMRS)exitWith{};
+// private _newMRS = "mobile_respawn" in _newAbilities;
+// private _noMRS  = (_oldMRS isEqualTo false && {_newMRS isEqualTo false});
+if!(_oldMRS)exitWith{};
 
 ["PSA_mobileRespawnChanged"]call CBA_fnc_serverEvent;
