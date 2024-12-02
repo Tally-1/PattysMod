@@ -5,6 +5,9 @@ params [
 private _uid   = [_player] call PTTY_fnc_getPlayerUID;
 private _lives = [_player] call PTTY_fnc_getLives;
 
+if(isNil "DT_transferOverrideUIDs")
+then{DT_transferOverrideUIDs = PTTY_transferOverrideUIDs};
+
 if(_lives < 1)                    exitWith{false};
 if(_player isEqualTo _targetUnit) exitWith{false};
 

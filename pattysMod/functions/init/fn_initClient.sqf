@@ -1,7 +1,7 @@
 if(!hasInterface)exitWith{};
 
 private _default    = PTTY_defaultLives;
-private _amount     = _default + 1;
+private _amount     = if(PTTY_ExtraLife)then{_default+1}else{_default};
 private _unitsLives = ([player] call PTTY_fnc_getLives);
 
 if(isNil "_unitsLives")
@@ -11,7 +11,6 @@ if(_unitsLives > 0)
 then{_amount = _amount-_unitsLives};
 
 [player, _amount] call BIS_fnc_respawnTickets;
-
 
 [] spawn{
 	private _timer = time+30;

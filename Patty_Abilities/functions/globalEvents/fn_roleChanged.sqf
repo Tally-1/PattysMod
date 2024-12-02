@@ -18,6 +18,7 @@ if!(_abilityDeclared)exitWith{
 };
 private _abilityVar   = toLower "PSA_abilities";
 private _oldAbilities = _player getVariable [_abilityVar,[]];
+// private _newAbilities = (_customVars select {(_x#0) == "PSA_abilities"})
 
 private _index        = _customVars findIf {toLower(_x#0) isEqualTo _abilityVar};
 private _strVal       = ((_customVars#_index)#1);

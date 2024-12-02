@@ -7,6 +7,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+	"PTTY_ExtraLife",
+	"CHECKBOX",
+	["Extra Life", "Adds one extra life at start"],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	true
+] call cba_settings_fnc_init;
+
+[
 	"PTTY_woundedGreen",
 	"SLIDER",
 	["Green Wounded Icon","How many (or more) lives left to show a green wounded icon."],
@@ -52,6 +60,17 @@
 	1
 ] call CBA_fnc_addSetting;
 
+
+[
+	"PTTY_eliminationText",
+	"EDITBOX",
+	["Elimination Text","Text on notification shown when a player is killed and has no more lives"],
+	[_categoryName, _subCategoryLifeManager_Settings],
+	"<name> Has been eliminated",
+	1
+] call CBA_fnc_addSetting;
+
+
 [
 	"PTTY_transferOverrideUIDs",
 	"EDITBOX",
@@ -61,21 +80,21 @@
 	1
 ] call CBA_fnc_addSetting;
 
-[
-	"PTTY_AdminBlue",
-	"CHECKBOX",
-	["Admin Blue Name", "Admins will be highlighted with blue names."],
-	[_categoryName, _subCategoryLifeManager_Settings],
-	true
-] call cba_settings_fnc_init;
+// [
+// 	"PTTY_AdminBlue",
+// 	"CHECKBOX",
+// 	["Admin Blue Name", "Admins will be highlighted with blue names."],
+// 	[_categoryName, _subCategoryLifeManager_Settings],
+// 	true
+// ] call cba_settings_fnc_init;
 
-[
-	"PTTY_MedicGreen",
-	"CHECKBOX",
-	["Medic Green Name", "Medics will be highlighted with green names."],
-	[_categoryName, _subCategoryLifeManager_Settings],
-	true
-] call cba_settings_fnc_init;
+// [
+// 	"PTTY_MedicGreen",
+// 	"CHECKBOX",
+// 	["Medic Green Name", "Medics will be highlighted with green names."],
+// 	[_categoryName, _subCategoryLifeManager_Settings],
+// 	true
+// ] call cba_settings_fnc_init;
 
 [
 	"PTTY_Debug",

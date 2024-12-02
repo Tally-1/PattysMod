@@ -13,7 +13,8 @@
 	[_categoryName, _subCategoryLifeManager_Keybinds],
 	"openLifeMenu",
 	"PTTY_openMenu",
-	{[] call PTTY_fnc_openLifeGUI},
+	// {[] call PTTY_fnc_openLifeGUI},
+	{[]spawn PTTY_fnc_initLifeMenu},
 	"",
 	[DIK_J, [true,false,false]]
 

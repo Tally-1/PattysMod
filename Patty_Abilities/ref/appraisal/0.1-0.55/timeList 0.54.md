@@ -7,3 +7,5 @@
 [46m]  Updating role menu to include second rifle data.
 [75m]  Custom key to parse and copy to clipboard current-weapon-config.
 [91m]  TFAR compatibility.
+
+**The Worksessions above has been paid in full**

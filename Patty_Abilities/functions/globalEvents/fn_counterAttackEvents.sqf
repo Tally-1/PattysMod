@@ -17,7 +17,7 @@
 		publicVariable "PSA_counterAttackActive";
 	};
 
-	if(!isNil "PTTY_fnc_serverAddLifeToNoLifePlayers")
-	then{call PTTY_fnc_serverAddLifeToNoLifePlayers};
+	// if(!isNil "PTTY_fnc_serverAddLifeToNoLifePlayers")
+	// then{call PTTY_fnc_serverAddLifeToNoLifePlayers};
 
 }}] call CBA_fnc_addEventHandler;
