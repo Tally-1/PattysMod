@@ -11,6 +11,9 @@ exitWith{false};
 
 if(_isAi)
 then{_man setVariable ["PTTY_aiLives", _default]}
-else{[_man, _newAmount] call BIS_fnc_respawnTickets};
+else{
+	[_man, _newAmount] call BIS_fnc_respawnTickets;
+	[_man]remoteExec["PTTY_fnc_handleLifeAdded",_man];
+};
 
 true;

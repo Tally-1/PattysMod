@@ -8,7 +8,10 @@ params["_actionMenu", "_man", "_isAi"];
 
 if(_isAi)
 then{[_man,1] call PTTY_fnc_addLifeToAi  }
-else{[_man,1] call BIS_fnc_respawnTickets};
+else{
+	[_man,1] call BIS_fnc_respawnTickets;
+	[_man]remoteExec["PTTY_fnc_handleLifeAdded",_man];
+};
 
 private _title = "New Life!";   
 private _icon  = "\pattysMod\images\Medic2.paa";

@@ -19,6 +19,10 @@ class CfgFunctions
             class rgbToA3           {};
             class capFirst          {};
             class parseNameString   {};
+            class enableRespawn     {};
+            class disableRespawn    {};
+            class handleLifeAdded   {};
+
         };
 
         class lifeMap 

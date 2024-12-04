@@ -3,8 +3,13 @@ params [
 ];
 call PTTY_fnc_updateLifeMap;
 
-private _lives = [_man] call PTTY_fnc_getLives;
-if(_lives > 0)exitWith{};
+private _lives  = [_player] call PTTY_fnc_getLives;
+
+if(_lives > 0)exitWith{
+	[_player] remoteExec ["PTTY_fnc_handleLifeAdded",_player];
+};
+
+[] remoteExec ["PTTY_fnc_disableRespawn",_player];
 
 private _title = "ALERT:";
 private _name  = name _player;

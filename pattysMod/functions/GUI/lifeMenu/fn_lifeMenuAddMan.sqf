@@ -4,12 +4,13 @@ params[
     ["_path",  nil,          [[]]]
 ];
 private _textMan   = name _man;
+private _iconSize  = 1.299 + (random 0.001);
 private _indexMan  = _ctrl tvAdd [[_indexGrp], _textMan];
 private _dataIdMan = ["man: ",_groupI,":",_manI]joinString"";
 private _path      = [_indexGrp, _indexMan];
 private _lives     = [_man]            call PTTY_fnc_getLives;
 private _rankIcon  = [rankId _man]     call PTTY_fnc_getRankIcon;
-private _lifeIcon  = [str _lives, 1.2] call PTTY_fnc_textTexture;;
+private _lifeIcon  = [str _lives, _iconSize] call PTTY_fnc_textTexture;;
 private _lifeColor = [_lives]          call PTTY_fnc_livesLeftColor;
 private _toolTip   = [_lives, " Lives"]joinString""; // rank _man;
 

@@ -22,10 +22,13 @@ then{_amount = _amount-_unitsLives};
 	
 	private _default    = PTTY_defaultLives;
 	private _unitsLives = ([player] call PTTY_fnc_getLives);
+	private _spawnTime  =  playerRespawnTime;
 	if (_unitsLives isNotEqualTo _default) 
 	then{[player, _default - _unitsLives] call BIS_fnc_respawnTickets};
 	
 	["PTTY_initLives", [player]] spawn CBA_fnc_serverEvent;
+	localNamespace setVariable ["PTTY_respawnDelay", getMissionConfigValue "RespawnDelay"];
+	localNamespace setVariable ["PTTY_respawnDisabled", false];
 };
 
 

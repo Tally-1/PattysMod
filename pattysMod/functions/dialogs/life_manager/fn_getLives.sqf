@@ -11,9 +11,9 @@ exitWith{
 	nil;
 };
 
-if ("Tickets" in _templatesUsed) then {
-	_lives = _lives - 1; //display 1 less life as we are subtracting on death
-};
+// if ("Tickets" in _templatesUsed) then {
+// 	_lives = _lives - 1; //display 1 less life as we are subtracting on death
+// };
 
 
 if!(_man in allPlayers)then{

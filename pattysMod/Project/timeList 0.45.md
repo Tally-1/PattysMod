@@ -1,3 +1,6 @@
+**The work sessions listed below has been paid in full**
+23.2 Hours (1397 minutes)
+
 [54m]  Removing code for re-applying lives, planning, initial disconnect handling.
 [107m] Disconnect-rewrite final build.
 [115m] Tranferring GUI dev-system, initial Tree-view build.
@@ -12,6 +15,8 @@
 [145m] Colored Life counter, Role text, Skull icons.
 [22m]  Refactoring, initial test.
 [5m]   Extra Life CBA option.
-[55m]  Rewriting adding man function, Skull icon & blurred text on dead players
+[55m]  Rewriting adding man function, Skull icon & blurred text on dead players.
 [68m]  Custom elimination text.
 [36m]  Dedicated test, global menu-update on respawn.
+
+**The work sessions listed above has been paid in full**
