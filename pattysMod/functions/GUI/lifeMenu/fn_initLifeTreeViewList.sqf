@@ -14,6 +14,7 @@ private _manI       = 0;
 {
 	private _groupName = groupId _x;
 	private _players   = [_x] call PTTY_fnc_getPlayersInGroup;
+	private _myGroup   = player in _players;
 	private _indexGrp  = _ctrl tvAdd [[], _groupName];
 	private _path      = [_indexGrp];
 	private _dataIdGrp = ["group: ",_groupI]joinString"";
@@ -28,6 +29,8 @@ private _manI       = 0;
 	_dataMap set       [_dataIdGrp,             _x];
 	_ctrl tvSetData    [_path,          _dataIdGrp];
 	_ctrl tvSetTooltip [_path,            _toolTip];
+
+	if(_myGroup)then{_ctrl tvExpand _path};
 	
 	_groupI=_groupI+1;
 } forEach _playerGrps;

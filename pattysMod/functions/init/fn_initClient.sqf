@@ -31,5 +31,6 @@ then{_amount = _amount-_unitsLives};
 	localNamespace setVariable ["PTTY_respawnDisabled", false];
 };
 
+["PTG_roleChanged",{["PTTY_roleChanged", _this] call CBA_fnc_serverEvent}] call CBA_fnc_addEventHandler;
 
 true;

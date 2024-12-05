@@ -13,5 +13,6 @@ call PTTY_fnc_respawnEh;
 call PTTY_fnc_killedEh;
 call PTTY_fnc_lifeManagerEvents;
 call PTTY_fnc_initLifeMap;
+call PTTY_fnc_roleChangeEvent;
 
 true;

@@ -12,8 +12,6 @@ params [
 ];
 private _admins = allPlayers select {[_x]call PTTY_fnc_isAdmin ||{[_x]call PTTY_fnc_isCurator}};
 
-// _admins pushBackUnique 2;
-
 [_name, _lives] remoteExecCall ["PTTY_fnc_disconnectNotification",_admins];
 
 [[_name, " disconnected at ",round (_time/60)," minutes. With ", _lives, " lives left"]] call PTDBG;

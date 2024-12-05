@@ -200,6 +200,7 @@ class CfgFunctions
             class lifeMenuManLifeIcon           {};
             class lifeMenuRoleText              {};
             class updateLifeTreeViewList        {};
+            class lifeMenuUpdateLight           {};
 
             class lifeMenuAddMan                {};
         };
@@ -215,6 +216,7 @@ class CfgFunctions
             class onDisconnect           {};
             class handleDisconnect       {};
             class disconnectNotification {};
+            class roleChangeEvent        {};
         };
     };
 

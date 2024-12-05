@@ -3,18 +3,15 @@ if(!isNull _display)then{
 	_display closeDisplay 1;
 	waitUntil {isNull _display};
 };
-if(isNull findDisplay 46)
-exitWith{};
 
-_display = (findDisplay 46) createDisplay "RscDisplayEmpty";
-uiNamespace setVariable ["PTTY_LifeMenuDisplay",_display];
-private _data = [_display, "PTTY_LifeMenuDisplay"] call PTTY_fnc_initDisplayData;
-
+private _display = createDialog ["PTTY_LifeMenuDisplay", true];
+private _data    = [_display, "PTTY_LifeMenuDisplay"] call PTTY_fnc_initDisplayData;
 private _methods = [
 	["initTreeView",       PTTY_fnc_initLifeTreeView],
 	["initTVFrame",   PTTY_fnc_initLifeTreeViewFrame],
 	["initTVList",     PTTY_fnc_initLifeTreeViewList],
 	["updateTVList", PTTY_fnc_updateLifeTreeViewList],
+	["lightUpdate",     PTTY_fnc_lifeMenuUpdateLight],
 	["initActionMenu",   PTTY_fnc_initLifeActionMenu],
 	["initActionFrame", PTTY_fnc_initLifeActionFrame]
 ];

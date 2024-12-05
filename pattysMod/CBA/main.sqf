@@ -1,4 +1,4 @@
-PTTY_Version = 0.46;
+PTTY_Version = 0.47;
 
 private _categoryName                    = ["PA - Life Manager ", PTTY_Version] joinString "";
 private _subCategoryLifeManager_Keybinds = "Life Manager Keybindings";
