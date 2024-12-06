@@ -24,7 +24,7 @@ if (_isRespawn) then {
 	{
 		_x params ["_trait","_value"];
 		if (_value isEqualType true && {_value}) then {
-			player setUnitTrait [_trait,false];
+			[player, [_trait,false]] remoteExecCall ["setUnitTrait"];
 		};
 	} forEach (getAllUnitTraits player);
 
