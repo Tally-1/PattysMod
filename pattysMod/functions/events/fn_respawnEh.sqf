@@ -4,7 +4,7 @@ addMissionEventHandler ["EntityRespawned", {
     if(!_isPlayer)exitWith{};
 
     [true] remoteExecCall ["PTTY_fnc_livesLeftNotification", _man];
-    [true] remoteExec     ["PTTY_fnc_remoteLifeMenuUpdate"];
+    // [true] remoteExec     ["PTTY_fnc_remoteLifeMenuUpdate"];
     
     call PTTY_fnc_updateLifeMap;
 }];

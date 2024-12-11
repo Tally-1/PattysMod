@@ -203,6 +203,7 @@ class CfgFunctions
             class lifeMenuUpdateLight           {};
 
             class lifeMenuAddMan                {};
+            class manLifeMenuButtonsEnable      {};
         };
 
         class events

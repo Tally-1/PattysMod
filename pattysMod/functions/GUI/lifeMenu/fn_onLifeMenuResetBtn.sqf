@@ -13,8 +13,8 @@ _actionMenu call ["updateManMenu"];
 if(!_validReset)exitWith{};
 
 private _icon  = "\pattysMod\images\Notification.paa";
-private _title = "Alert!";
-private _txt   = ["Your lives was reset by Admin"] joinString "";
+private _title = "Life Status";
+private _txt   = ["You're Lives have been Reset"] joinString "";
 [false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _man];
 
 true;

@@ -9,8 +9,8 @@ then{[_man,1] call PTTY_fnc_removeLifeFromAi}
 else{[_man,-1] call BIS_fnc_respawnTickets  };
 
 private _icon  = "\pattysMod\images\Notification.paa";
-private _title = "Alert!";
-private _txt   = ["One of your lives was removed by Admin"] joinString "";
+private _title = "Life Status";
+private _txt   = ["You have Lost a Life"] joinString "";
 [false, _title, _txt, _icon] remoteExecCall ["PTTY_fnc_livesLeftNotification", _man];
 
 [["Life Removed from ", name _man]]call PTDBG;

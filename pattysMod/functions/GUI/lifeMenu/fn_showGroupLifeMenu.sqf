@@ -37,9 +37,19 @@ _self  set  ["currentGroup",           _group];
 
 if(!_admin)
 then{_subTitleTxt call["setTextColor", [[1,1,1,0.3]]]};
-_editCtrl    ctrlEnable _admin;
-_buttonCtrl  ctrlEnable _admin;
-_buttonGCtrl ctrlEnable _admin;
+
+_editCtrl    ctrlEnable false;
+_buttonCtrl  ctrlEnable false;
+_buttonGCtrl ctrlEnable false;
+
+[_editCtrl, _buttonCtrl, _buttonGCtrl, _admin] spawn {
+	params["_editCtrl", "_buttonCtrl", "_buttonGCtrl", "_admin"];
+	sleep 1;
+	_editCtrl    ctrlEnable _admin;
+	_buttonCtrl  ctrlEnable _admin;
+	_buttonGCtrl ctrlEnable _admin;
+};
+
 
 private _newCtrls = [
 	_editBox, 

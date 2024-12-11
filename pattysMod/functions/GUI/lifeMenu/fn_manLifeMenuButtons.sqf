@@ -13,7 +13,9 @@ private _isAdmin     = [player] call PTTY_fnc_isAdmin;
 private _isMedic     = [player] call PTTY_fnc_isMedic;
 private _canTransfer = [player, _man] call PTTY_fnc_canTransfer;
 private _canRemove   = _isAdmin && {_livesTarget>0};
-// private _canTransfer = (_isAdmin or{_isMedic})&&{_lives>0 &&{_man!=player}};
+private _lastUpdate  = _self get"lastUpdate";
+private _timeSinUpdt = time - _lastUpdate;
+private _wait        = _timeSinUpdt > 1;
 
 private _transferPos = _self call ["getRelPos",[0.01, _topY, _broadW, _btnHeight]];
 private _removePos   = _self call ["getRelPos",[0.01, _lowY, _broadW, _btnHeight]];
@@ -27,22 +29,17 @@ private _removeBtn   = _displayData call ["addButton",[_removePos,   "Remove",  
 private _giveBtn     = _displayData call ["addButton",[_givePos,     "Give",          PTTY_fnc_onLifeMenuGiveBtn]];
 private _resetBtn    = _displayData call ["addButton",[_resetPos,    "Reset",        PTTY_fnc_onLifeMenuResetBtn]];
 private _resetAllBtn = _displayData call ["addButton",[_resetAllPos, "Reset All", PTTY_fnc_onLifeMenuResetAllBtn]];
+private _buttons     = [_transferBtn, _removeBtn, _giveBtn, _resetBtn,_resetAllBtn];
 
+{_x call ["enable",[false]]} forEach _buttons;
 
-_transferBtn call ["enable", [_canTransfer]];
-_removeBtn   call ["enable",   [_canRemove]];
-_giveBtn     call ["enable",     [_isAdmin]];
-_resetBtn    call ["enable",     [_isAdmin]];
-_resetAllBtn call ["enable",     [_isAdmin]];
-
-private _buttons =
 [
-	_transferBtn,
-	_removeBtn,
-	_giveBtn,
-	_resetBtn,
-	_resetAllBtn
-];
+	_buttons,
+	_canTransfer,
+	_canRemove,
+	_isAdmin,
+	_wait
 
+] spawn  PTTY_fnc_ManLifeMenuButtonsEnable;
 
 _buttons;

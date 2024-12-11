@@ -13,7 +13,7 @@ _data spawn {
 	sleep 0.1;
 
 	_this call ["updateTVList"];
-	[] remoteExec ["PTTY_fnc_remoteLifeMenuUpdate",-clientOwner];
+	[true] remoteExec ["PTTY_fnc_remoteLifeMenuUpdate",-clientOwner];
 };
 
 [_actionMenu, _man, _isAi];
