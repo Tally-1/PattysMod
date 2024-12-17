@@ -13,10 +13,10 @@ exitWith{hint "Do not spam the menu!"};
 // Store the time if it the menu was just opened.
 if(_newOpen)then{localNamespace setVariable ["PTTY_lastMenuInit",time]};
 
-private _data         = call PTTY_fnc_initLifeMenuDisplay;
-private _treeView     = _data call ["initTreeView"];
-private _actionMenu   = _data call ["initActionMenu"];
-private _treeCtrl     = _treeView get "ctrl";
+private _data       = call PTTY_fnc_initLifeMenuDisplay;
+private _actionMenu = _data call ["initActionMenu"];
+private _treeView   = _data call ["initTreeView"];
+private _treeCtrl   = _treeView get "ctrl";
 
 _data set ["actionMenu", _actionMenu];
 _data set ["treeView",     _treeView];

@@ -1,8 +1,12 @@
 params[
 	["_actionItem",nil,[grpNull,objNull]]
 ];
-private _grouMenu = typeName _actionItem isEqualTo "GROUP";
-private _ctrls    = _self get "tempControls";
+private _grouMenu   = typeName _actionItem isEqualTo "GROUP";
+private _ctrls      = _self get "tempControls";
+private _background = _self get "backGround";
+private _canvas     = "#(argb,8,8,3)color(0.1,0.1,0.1,0.500000,ca)";
+
+_background call ["setImage", [_canvas]];
 
 {_x call ["delete"]} forEach _ctrls;
 _self set ["tempControls",  []];

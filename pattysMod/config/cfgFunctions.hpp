@@ -204,6 +204,7 @@ class CfgFunctions
 
             class lifeMenuAddMan                {};
             class manLifeMenuButtonsEnable      {};
+            class loadScreenImage               {};
         };
 
         class events
